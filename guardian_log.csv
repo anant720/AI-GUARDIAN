@@ -1,0 +1,177 @@
+timestamp,message,level,score,reasons
+2025-10-04T13:57:21.171651,"Hello, how are you?",Safe,0,
+2025-10-04T13:57:21.174656,You have won a lottery!,Suspicious,5,"Message contains suspicious keyword: 'lottery', Message contains suspicious keyword: 'won'"
+2025-10-04T13:58:56.648748,"Hello, how are you?",Safe,0,
+2025-10-04T13:58:56.652925,You have won a lottery!,Suspicious,5,"Message contains suspicious keyword: 'lottery', Message contains suspicious keyword: 'won'"
+2025-10-04T14:03:45.082100,"Hello, how are you?",Safe,0,
+2025-10-04T14:03:45.084463,You have won a lottery!,Suspicious,5,"Message contains suspicious keyword: 'lottery', Message contains suspicious keyword: 'won'"
+,hello,Safe,0,
+,hello i need 5000 urgently,Dangerous,12,Message contains suspicious keyword: 'urgent'; Detected suspicious pattern: URGENCY_PATTERN; Detected suspicious pattern: SUSPICIOUS_NUMBERS
+,URGENT: Your account has been suspended due to suspicious activity. Please verify your identity immediately by clicking this link: bit.ly/verify-account-now,Dangerous,28,Message contains suspicious keyword: 'urgent'; Message contains suspicious keyword: 'immediate'; Message contains suspicious keyword: 'suspended'; Detected suspicious pattern: SHORTENED_URL; Detected suspicious pattern: URGENCY_PATTERN; Detected suspicious pattern: ACTION_WORDS; Detected suspicious pattern: EXCESSIVE_CAPS; Message contains 1 link(s): bit.ly/verify
+,"💰 EARN ₹50,000/WEEK from home! No experience needed. Guaranteed income. Apply now: telegram.me/job-offer",Dangerous,14,Message contains suspicious keyword: 'guaranteed income'; Detected suspicious pattern: MONEY_AMOUNT; Detected suspicious pattern: EXCESSIVE_CAPS; Message contains 1 link(s): telegram.me/job
+,"🎉 Congratulations! You've won $10,000 in our lottery! Click here to claim your prize: short.ly/claim-prize-now",Dangerous,31,Message contains suspicious keyword: 'lottery'; Message contains suspicious keyword: 'won'; Message contains suspicious keyword: 'prize'; Message contains suspicious keyword: 'congratulations'; Detected suspicious pattern: SHORTENED_URL; Detected suspicious pattern: MONEY_AMOUNT; Detected suspicious pattern: ACTION_WORDS; Detected suspicious pattern: EXCESSIVE_CAPS; Message contains 1 link(s): short.ly/claim
+,"🎉 Congratulations! You've won $10,000 in our lottery! Click here to claim your prize: short.ly/claim-prize-now",Dangerous,31,Message contains suspicious keyword: 'lottery'; Message contains suspicious keyword: 'won'; Message contains suspicious keyword: 'prize'; Message contains suspicious keyword: 'congratulations'; Detected suspicious pattern: SHORTENED_URL; Detected suspicious pattern: MONEY_AMOUNT; Detected suspicious pattern: ACTION_WORDS; Detected suspicious pattern: EXCESSIVE_CAPS; Message contains 1 link(s): short.ly/claim
+,Hi! How are you doing? Just wanted to check if you're free for lunch tomorrow.,Safe,0,
+,Your package delivery is pending. A customs fee of ₹49 is required to release it. Pay now: paypal.me/delivery-fee,Dangerous,15,Message contains suspicious keyword: 'customs fee'; Detected suspicious pattern: MONEY_AMOUNT; Detected suspicious pattern: ACTION_WORDS; Message contains 1 link(s): paypal.me/delivery
+,Your package delivery is pending. A customs fee of ₹49 is required to release it. Pay now: paypal.me/delivery-fee,Dangerous,15,Message contains suspicious keyword: 'customs fee'; Detected suspicious pattern: MONEY_AMOUNT; Detected suspicious pattern: ACTION_WORDS; Message contains 1 link(s): paypal.me/delivery
+,hii this is aryaa. i am in your radius. wanna do something to night . can you please tell me your phone number,Safe,0,
+,"MSEB: Your electricity bill is due. Please make the payment at your earliest convenience. For assistance, contact +91 7976150636.",Dangerous,15,Detected suspicious pattern: PHONE_NUMBER; Detected suspicious pattern: EXCESSIVE_CAPS; Detected suspicious pattern: SUSPICIOUS_NUMBERS
+,Your Myntra OTP for delivery is 123456,Dangerous,11,Message contains suspicious keyword: 'otp'; Detected suspicious pattern: SUSPICIOUS_NUMBERS
+,Your Myntra OTP for delivery is 123456,Dangerous,11,Message contains suspicious keyword: 'otp'; Detected suspicious pattern: SUSPICIOUS_NUMBERS
+,Your Myntra OTP for delivery is 123456,Dangerous,11,Message contains suspicious keyword: 'otp'; Detected suspicious pattern: SUSPICIOUS_NUMBERS
+,"""Your Myntra OTP for delivery is 123456",Dangerous,11,Message contains suspicious keyword: 'otp'; Detected suspicious pattern: SUSPICIOUS_NUMBERS
+,Your Amazon order #123-456 has been shipped. The tracking ID is AMZ98765. It will be delivered by our executive tomorrow. Do not share any OTP with anyone.,Suspicious,6,Message contains suspicious keyword: 'otp'
+,We saw your profile and have a part time work from home job offer for you. Earn easy money daily.,Suspicious,7,Message contains suspicious keyword: 'job offer'; Message contains suspicious keyword: 'work from home'; Message contains suspicious keyword: 'easy money'; Message contains suspicious keyword: 'part time'
+,This is Myntra support. Your account is locked due to a payment issue. Please share your card details and OTP to unlock it,Dangerous,21,Message contains suspicious keyword: 'otp'; Message contains suspicious keyword: 'share your'; Message contains suspicious keyword: 'card details'; Detected suspicious pattern: ACTION_WORDS
+,"You’re invited to the Annual Cultural Fest 2025 on October 15th, 5:00 PM onwards at the Main Auditorium.
+Enjoy live performances, food stalls, games, and DJ night!
+✨ Entry is free for all students with a valid ID card.",Dangerous,10,Detected suspicious pattern: EXCESSIVE_CAPS; Detected suspicious pattern: SUSPICIOUS_NUMBERS
+,"You’re invited to the Annual Cultural Fest 2025 on October 15th, 5:00 PM onwards at the Main Auditorium.
+Enjoy live performances, food stalls, games, and DJ night!
+✨ Entry is free for all students with a valid ID card.",Dangerous,10,Detected suspicious pattern: EXCESSIVE_CAPS; Detected suspicious pattern: SUSPICIOUS_NUMBERS
+,"You’re invited to the Annual Cultural Fest 2025 on October 15th, 5:00 PM onwards at the Main Auditorium.
+Enjoy live performances, food stalls, games, and DJ night!
+✨ Entry is free for all students with a valid ID card.",Dangerous,10,Detected suspicious pattern: EXCESSIVE_CAPS; Detected suspicious pattern: SUSPICIOUS_NUMBERS
+,"You’re invited to the Annual Cultural Fest 2025 on October 15th, 5:00 PM onwards at the Main Auditorium.
+Enjoy live performances, food stalls, games, and DJ night!
+✨ Entry is free for all students with a valid ID card.",Dangerous,10,Detected suspicious pattern: EXCESSIVE_CAPS; Detected suspicious pattern: SUSPICIOUS_NUMBERS
+,"Dangerous
+Risk Score: 10
+🚨 Detection Reasons:
+Detected suspicious pattern: EXCESSIVE_CAPS
+Detected suspicious pattern: SUSPICIOUS_NUMBERS
+💡 Safety Tip:
+🚨 DO NOT click any links or provide personal information. This is likely a scam!",Dangerous,10,Detected suspicious pattern: ACTION_WORDS; Detected suspicious pattern: EXCESSIVE_CAPS
+,"You’re invited to the Annual Cultural Fest 2025 on October 15th, 5:00 PM onwards at the Main Auditorium. Enjoy live performances, food stalls, games, and DJ night! ✨ Entry is free for all students with a valid ID card.",Dangerous,10,Detected suspicious pattern: EXCESSIVE_CAPS; Detected suspicious pattern: SUSPICIOUS_NUMBERS
+,"Electricity Board: Your power will be disconnected tonight due to unpaid bills. Pay immediately at http://bit.ly/quick-pay123
+ or call 8927364521 to avoid disconnection.",Dangerous,28,Message contains suspicious keyword: 'immediate'; Detected suspicious pattern: SHORTENED_URL; Detected suspicious pattern: PHONE_NUMBER; Detected suspicious pattern: URGENCY_PATTERN; Detected suspicious pattern: EXCESSIVE_CAPS; Detected suspicious pattern: SUSPICIOUS_NUMBERS; Message contains 1 link(s): http://bit.ly/quick
+,"Dear Kritika Kalal (Student ID: S20CSE0123),
+
+The Semester 2 examination timetable has been published. Please review your schedule and exam instructions at the official portal: https://mituniversity.edu.in/exams/timetable
+.
+
+Important:
+
+Check your reporting time and exam centre one day prior.
+
+Carry your student ID and a printed admit card to the exam hall.
+
+For discrepancies or support, email examcell@mituniversity.edu.in
+ or call 020-1234-5678 (Mon–Fri, 10:00–17:00).
+
+Regards,
+Examinations Office
+MIT ADT University",Dangerous,13,"Message contains suspicious keyword: 'pan'; Detected suspicious pattern: EXCESSIVE_CAPS; Detected suspicious pattern: SUSPICIOUS_NUMBERS; Message contains 2 link(s): https://mituniversity.edu.in/exams/timetable, mituniversity.edu.in"
+,"Dear Kritika Kalal (Student ID: S20CSE0123),
+
+The Semester 2 examination timetable has been published. Please review your schedule and exam instructions at the official portal: https://mituniversity.edu.in/exams/timetable
+.
+
+Important:
+
+Check your reporting time and exam centre one day prior.
+
+Carry your student ID and a printed admit card to the exam hall.
+
+For discrepancies or support, email examcell@mituniversity.edu.in
+ or call 020-1234-5678 (Mon–Fri, 10:00–17:00).
+
+Regards,
+Examinations Office
+MIT ADT University",Dangerous,13,"Message contains suspicious keyword: 'pan'; Detected suspicious pattern: EXCESSIVE_CAPS; Detected suspicious pattern: SUSPICIOUS_NUMBERS; Message contains 2 link(s): https://mituniversity.edu.in/exams/timetable, mituniversity.edu.in"
+,"Dear Kritika Kalal (Student ID: S20CSE0123),
+
+The Semester 2 examination timetable has been published. Please review your schedule and exam instructions at the official portal: https://mituniversity.edu.in/exams/timetable
+.
+
+Important:
+
+Check your reporting time and exam centre one day prior.
+
+Carry your student ID and a printed admit card to the exam hall.
+
+For discrepancies or support, email examcell@mituniversity.edu.in
+ or call 020-1234-5678 (Mon–Fri, 10:00–17:00).
+
+Regards,
+Examinations Office
+MIT ADT University",Dangerous,13,"Message contains suspicious keyword: 'pan'; Detected suspicious pattern: EXCESSIVE_CAPS; Detected suspicious pattern: SUSPICIOUS_NUMBERS; Message contains 2 link(s): https://mituniversity.edu.in/exams/timetable, mituniversity.edu.in"
+,"Dear Kritika Kalal (Student ID: S20CSE0123),
+
+The Semester 2 examination timetable has been published. Please review your schedule and exam instructions at the official portal: https://mituniversity.edu.in/exams/timetable
+.
+
+Important:
+
+Check your reporting time and exam centre one day prior.
+
+Carry your student ID and a printed admit card to the exam hall.
+
+For discrepancies or support, email examcell@mituniversity.edu.in
+ or call 020-1234-5678 (Mon–Fri, 10:00–17:00).
+
+Regards,
+Examinations Office
+MIT ADT University",Dangerous,13,"Message contains suspicious keyword: 'pan'; Detected suspicious pattern: EXCESSIVE_CAPS; Detected suspicious pattern: SUSPICIOUS_NUMBERS; Message contains 2 link(s): https://mituniversity.edu.in/exams/timetable, mituniversity.edu.in"
+,"Dear Kritika Kalal (Student ID: S20CSE0123),
+
+The Semester 2 examination timetable has been published. Please review your schedule and exam instructions at the official portal: https://mituniversity.edu.in/exams/timetable
+.
+
+Important:
+
+Check your reporting time and exam centre one day prior.
+
+Carry your student ID and a printed admit card to the exam hall.
+
+For discrepancies or support, email examcell@mituniversity.edu.in
+ or call 020-1234-5678 (Mon–Fri, 10:00–17:00).
+
+Regards,
+Examinations Office
+MIT ADT University",Dangerous,13,"Message contains suspicious keyword: 'pan'; Detected suspicious pattern: EXCESSIVE_CAPS; Detected suspicious pattern: SUSPICIOUS_NUMBERS; Message contains 2 link(s): https://mituniversity.edu.in/exams/timetable, mituniversity.edu.in"
+,"🎉 Congratulations! You've won $10,000 in our lottery! Click here to claim your prize: short.ly/claim-prize-now",Dangerous,31,Message contains suspicious keyword: 'lottery'; Message contains suspicious keyword: 'won'; Message contains suspicious keyword: 'prize'; Message contains suspicious keyword: 'congratulations'; Detected suspicious pattern: SHORTENED_URL; Detected suspicious pattern: MONEY_AMOUNT; Detected suspicious pattern: ACTION_WORDS; Detected suspicious pattern: EXCESSIVE_CAPS; Message contains 1 link(s): short.ly/claim
+,amzon.com/login,Safe,1,Message contains 1 link(s): amzon.com/login
+,g00gle.com/secure,Safe,1,Message contains 1 link(s): g00gle.com/secure
+,g00gle.com/secure,Safe,1,Message contains 1 link(s): g00gle.com/secure
+,paypal.verification.xyz.com,Suspicious,6,Detected suspicious pattern: EXCESSIVE_CAPS; Message contains 1 link(s): paypal.verification.xyz.com
+,paypal.verification.xyz.com,Suspicious,6,Detected suspicious pattern: EXCESSIVE_CAPS; Message contains 1 link(s): paypal.verification.xyz.com
+,paypal.verification.xyz.com,Suspicious,6,Detected suspicious pattern: EXCESSIVE_CAPS; Message contains 1 link(s): paypal.verification.xyz.com
+,paypal.verification.xyz.com,Suspicious,6,Detected suspicious pattern: EXCESSIVE_CAPS; Message contains 1 link(s): paypal.verification.xyz.com
+,paypal.verification.xyz.com,Suspicious,6,Detected suspicious pattern: EXCESSIVE_CAPS; Message contains 1 link(s): paypal.verification.xyz.com
+,paypal.verification.xyz.com,Suspicious,6,Detected suspicious pattern: EXCESSIVE_CAPS; Message contains 1 link(s): paypal.verification.xyz.com
+,Your account is suspended. Click here to verify: https://faecbook.com/verify,Suspicious,9,Message contains suspicious keyword: 'suspended'; Detected suspicious pattern: ACTION_WORDS; Message contains 1 link(s): https://faecbook.com/verify
+,Your account is suspended. Click here to verify: https://faecbook.com/verify,Suspicious,9,Message contains suspicious keyword: 'suspended'; Detected suspicious pattern: ACTION_WORDS; Message contains 1 link(s): https://faecbook.com/verify
+2025-10-08T05:48:01.062542,"Hello, how are you?",Safe,0,
+2025-10-08T05:48:03.156840,URGENT: Your account suspended. Send OTP now!,Dangerous,17,Message has suspicious words like 'urgent' that scammers often use.; Message has suspicious words like 'account suspended' that scammers often use.; Message has suspicious words like 'otp' that scammers often use.; Message has suspicious words like 'suspended' that scammers often use.; Tries to rush you with words like 'urgent' or 'now'. Don't panic!
+2025-10-08T05:48:05.270217,You won a lottery!,Suspicious,5,Message has suspicious words like 'lottery' that scammers often use.; Message has suspicious words like 'won' that scammers often use.
+2025-10-08T05:50:34.578616,Urgent security alert: login here: https://paypal.verification.xyz.com,Dangerous,30,Message has suspicious words like 'urgent' that scammers often use.; Message has suspicious words like 'security alert' that scammers often use.; Tries to rush you with words like 'urgent' or 'now'. Don't panic!; Message contains 1 link(s): https://paypal.verification.xyz.com; Link ends with weird stuff like .xyz. Fake sites often use these.; Link 'paypal.verification.xyz.com' looks like it copies 'paypal'. Double-check the address!; Site's safety is broken. Connection isn't secure - don't trust it.
+2025-10-08T05:53:17.994720,https://www.google.com/safety/security-checkup,Safe,0,Message contains 1 link(s): https://www.google.com/safety/security-checkup
+2025-10-08T06:05:55.556184,ATTENTION! Your ACCT is SUSPENDED immediately! We have detected FRAUD and you must VERIFY your details NOW! CLICK this SECURE link URGENTLY or your funds will be GONE!,Suspicious,8,Message has suspicious words like 'urgent' that scammers often use.; Message has suspicious words like 'immediate' that scammers often use.; Message has suspicious words like 'suspended' that scammers often use.; Lots of BIG LETTERS. Scammers shout to scare you.
+2025-10-08T06:07:11.523884,CONGRATULATIONS! You have won a FREE APPLE WATCH! CLAIM your PRIZE now before it EXPIRES! Click NOW: https://www.apple.com/shop/buy-watch/apple-watch,Suspicious,7,Message has suspicious words like 'won' that scammers often use.; Message has suspicious words like 'prize' that scammers often use.; Message has suspicious words like 'congratulations' that scammers often use.; Message contains 1 link(s): https://www.apple.com/shop/buy-watch/apple-watch
+2025-10-08T06:07:23.221007, https://www.apple.com/shop/buy-watch/apple-watch,Safe,0,Message contains 1 link(s): https://www.apple.com/shop/buy-watch/apple-watch
+2025-10-08T06:08:07.337063,https://griitx.store,Safe,0,Message contains 1 link(s): https://griitx.store
+2025-10-08T06:08:47.053395,https://www.facebo0k.com/login_verify,Safe,0,Message contains 1 link(s): https://www.facebo0k.com/login_verify
+2025-10-08T06:18:09.252781,http://www.netflix.net/account_update,Dangerous,10,Message contains 1 link(s): http://www.netflix.net/account_update; Link 'www.netflix.net' looks like it copies 'netflix'. Double-check the address!
+2025-10-08T06:18:39.069503,https://www.amazn.com/orders/verify,Safe,0,Message contains 1 link(s): https://www.amazn.com/orders/verify
+2025-10-08T06:20:36.511757,https://www.amazn.com/orders/verify,Safe,0,Message contains 1 link(s): https://www.amazn.com/orders/verify
+2025-10-08T06:21:44.436978,https://www.amazn.com/orders/verify,Safe,0,Message contains 1 link(s): https://www.amazn.com/orders/verify
+2025-10-08T06:22:27.658655,https://www.amazn.com/orders/verify,Safe,0,Message contains 1 link(s): https://www.amazn.com/orders/verify
+2025-10-08T06:24:16.422937,https://www.amazn.com/orders/verify,Safe,0,Message contains 1 link(s): https://www.amazn.com/orders/verify
+2025-10-08T06:28:34.739657,https://www.amazn.com/orders/verify,Safe,0,Message contains 1 link(s): https://www.amazn.com/orders/verify
+2025-10-08T06:30:56.819744,https://www.amazn.com/orders/verify,Safe,0,Message contains 1 link(s): https://www.amazn.com/orders/verify
+2025-10-08T06:31:56.183774,https://www.amazn.com/orders/verify,Safe,0,Message contains 1 link(s): https://www.amazn.com/orders/verify
+2025-10-08T06:33:03.538873,https://www.xn--pple-43d.com/login,Safe,0,Message contains 1 link(s): https://www.xn--pple-43d.com/login
+2025-10-08T06:35:57.768809,https://www.xn--pple-43d.com/login,Safe,0,Message contains 1 link(s): https://www.xn--pple-43d.com/login
+2025-10-08T06:51:10.894171,G00GLE.COM,Safe,0,Message contains 1 link(s): G00GLE.COM
+2025-10-08T06:51:27.538976,https//:g00gle.com,Safe,0,
+2025-10-08T06:51:29.071047,https//:g00gle.com,Safe,0,
+2025-10-08T13:01:56.167008,Your account is suspended: https://www.amazn.com/orders/verify,Safe,3,Message has suspicious words like 'suspended' that scammers often use.; Message contains 1 link(s): https://www.amazn.com/orders/verify
+2025-10-08T13:02:10.242964,Your account is suspended: https://www.amazn.com/orders/verify,Safe,3,Message has suspicious words like 'suspended' that scammers often use.; Message contains 1 link(s): https://www.amazn.com/orders/verify
+2025-10-08T17:44:56.712681,"Hello, how are you?",Safe,0,
+2025-10-08T17:45:09.164423,"Hello, how are you?",Safe,0,
+2025-10-08T17:45:20.342127,URGENT: Your account has been suspended. Please verify your identity immediately!,Dangerous,11,Message has suspicious words like 'urgent' that scammers often use.; Message has suspicious words like 'immediate' that scammers often use.; Message has suspicious words like 'suspended' that scammers often use.; Tries to rush you with words like 'urgent' or 'now'. Don't panic!; Lots of BIG LETTERS. Scammers shout to scare you.
+2025-10-08T17:46:37.694345,,Safe,0,
+2025-10-08T17:47:04.026656,Click here to verify: https://google.com,Safe,0,Message contains 1 link(s): https://google.com
+2025-10-08T17:47:17.386068,URGENT: Verify your account at http://bit.ly/fake-bank-login,Dangerous,12,Message has suspicious words like 'urgent' that scammers often use.; Message has suspicious words like 'verify your account' that scammers often use.; Tries to rush you with words like 'urgent' or 'now'. Don't panic!; Message contains 1 link(s): http://bit.ly/fake-bank-login; Link is shortened (like bit.ly). It hides where it really goes.; Our smart AI thinks this looks exactly like scam messages it's seen before.
+2025-10-08T17:58:23.066976,Amazon Prime membership expired. Update payment at http://amzan-prime.com to continue service,Safe,-4,Message has suspicious words like 'expired' that scammers often use.; Lots of BIG LETTERS. Scammers shout to scare you.; Message contains a known safe keyword: 'amazon' (Score adjusted); Message contains 1 link(s): http://amzan-prime.com

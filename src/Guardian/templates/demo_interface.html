@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardian - Fraud Detection Demo</title>
+    <style>
+        :root {
+            --bg-color: #1a1a1a;
+            --surface-color: #2c2c2c;
+            --text-color: #e0e0e0;
+            --primary-color: #4CAF50;
+            --accent-color: #03a9f4;
+            --safe-color: #2e7d32;
+            --suspicious-color: #ffc107;
+            --dangerous-color: #d32f2f;
+            --border-color: #444;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 700px;
+            background-color: var(--surface-color);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        header {
+            background-color: #333;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+        header h1 svg {
+            margin-right: 10px;
+            width: 32px;
+            height: 32px;
+        }
+        main {
+            padding: 2rem;
+        }
+        textarea {
+            width: 100%;
+            min-height: 150px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            font-size: 1rem;
+            resize: vertical;
+            box-sizing: border-box;
+            margin-bottom: 1.5rem;
+        }
+        textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(3, 169, 244, 0.3);
+        }
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button:disabled {
+            background-color: #555;
+            cursor: not-allowed;
+        }
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 3px solid #fff;
+            width: 18px;
+            height: 18px;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        #results {
+            margin-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+        }
+        .result-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .result-header.Safe { background-color: var(--safe-color); }
+        .result-header.Suspicious { background-color: var(--suspicious-color); color: #111; }
+        .result-header.Dangerous { background-color: var(--dangerous-color); }
+        .result-header h2 { margin: 0; font-size: 1.5rem; }
+        .result-header span { font-size: 1.2rem; font-weight: bold; }
+        .reasons-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .reasons-list li {
+            background-color: #3a3a3a;
+            padding: 0.8rem 1rem;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"></path></svg>
+            Guardian Demo
+        </h1>
+    </header>
+    <main>
+        <textarea id="messageInput" placeholder="Enter a message to analyze... e.g., 'Hi, your account is locked. Please verify your identity at http://g00gle-verify.com to unlock it.'"></textarea>
+        <button id="analyzeBtn">
+            <span id="btnText">Analyze Message</span>
+        </button>
+        <div id="results" style="display: none;">
+            <div id="resultHeader" class="result-header">
+                <h2 id="resultLevel"></h2>
+                <span id="resultScore"></span>
+            </div>
+            <h3>Analysis Details:</h3>
+            <ul id="reasonsList" class="reasons-list"></ul>
+            <button id="reportBtn" style="display: none; background-color: var(--dangerous-color); margin-top: 1rem;">Report as Dangerous</button>
+        </div>
+    </main>
+</div>
+
+<script>
+    const messageInput = document.getElementById('messageInput');
+    const analyzeBtn = document.getElementById('analyzeBtn');
+    const btnText = document.getElementById('btnText');
+    const resultsDiv = document.getElementById('results');
+    const resultHeader = document.getElementById('resultHeader');
+    const resultLevel = document.getElementById('resultLevel');
+    const resultScore = document.getElementById('resultScore');
+    const reasonsList = document.getElementById('reasonsList');
+    const reportBtn = document.getElementById('reportBtn');
+
+    analyzeBtn.addEventListener('click', async () => {
+        const message = messageInput.value;
+        if (!message.trim()) {
+            alert('Please enter a message.');
+            return;
+        }
+
+        // Show loading state
+        analyzeBtn.disabled = true;
+        btnText.textContent = 'Analyzing...';
+        const spinner = document.createElement('div');
+        spinner.className = 'spinner';
+        analyzeBtn.prepend(spinner);
+        resultsDiv.style.display = 'none';
+
+        try {
+            const response = await fetch('/analyse', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: message })
+            });
+            const data = await response.json();
+            displayResults(data);
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while analyzing the message.');
+        } finally {
+            // Reset button state
+            analyzeBtn.disabled = false;
+            btnText.textContent = 'Analyze Message';
+            analyzeBtn.removeChild(spinner);
+        }
+    });
+
+    reportBtn.addEventListener('click', async () => {
+        const message = messageInput.value;
+        if (!message.trim()) {
+            alert('No message to report.');
+            return;
+        }
+
+        try {
+            const response = await fetch('/report', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: message })
+            });
+            if (response.ok) {
+                alert('Thank you for reporting. This will help improve detection.');
+                reportBtn.style.display = 'none';
+            } else {
+                alert('Failed to report. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while reporting.');
+        }
+    });
+
+    function displayResults(data) {
+        resultLevel.textContent = data.level;
+        resultScore.textContent = `Score: ${data.score}`;
+        resultHeader.className = `result-header ${data.level}`;
+
+        reasonsList.innerHTML = '';
+        if (data.reasons && data.reasons.length > 0) {
+            data.reasons.forEach(reason => {
+                const li = document.createElement('li');
+                li.textContent = reason;
+                reasonsList.appendChild(li);
+            });
+        } else {
+            const li = document.createElement('li');
+            li.textContent = 'No specific threats found.';
+            reasonsList.appendChild(li);
+        }
+
+        // Show report button only if result is Safe
+        const reportBtn = document.getElementById('reportBtn');
+        if (data.level === 'Safe') {
+            reportBtn.style.display = 'block';
+        } else {
+            reportBtn.style.display = 'none';
+        }
+
+        resultsDiv.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
