@@ -1,89 +1,125 @@
-AI Guardian - Scam Detection Engine
-AI Guardian is a tool to detect scam and phishing messages in real time.
-It uses machine learning and rule-based checks to give a risk score.
-It was made for a hackathon as a practical AI security project.
+# 🛡️ AI Guardian – Scam Detection Engine
 
-Features
+AI Guardian is an AI-powered security tool designed to detect scam and phishing messages in real time.
+It combines machine learning and rule-based security checks to analyze messages and generate a risk score.
 
-Uses scikit-learn model and rule checks for better accuracy
-Scans for suspicious keywords, urgent phrases, risky links, and malicious domains
-Gives risk score and marks message as Safe, Suspicious, or Dangerous
-Simple web demo to test messages live
-REST API endpoint /analyse for integration
-Logs all analyses in guardian_log.csv
-/report endpoint to flag wrong detections
-Getting Started
+This project was built as a hackathon project to demonstrate a practical and real-world application of AI in cybersecurity.
 
-Install Python 3.8 or above
+---
 
-Go to project folder using cd path/to/your/Guardian
+## 🚀 Features
 
-Install requirements using pip install -r requirements.txt
+* Uses a scikit-learn machine learning model combined with rule-based checks for better accuracy
+* Detects suspicious keywords, urgent or threatening phrases, risky links, and malicious domains
+* Generates a risk score and classifies messages as **Safe**, **Suspicious**, or **Dangerous**
+* Simple web-based demo to test messages live
+* REST API endpoint `/analyse` for easy integration
+* Logs all analyses in `guardian_log.csv`
+* `/report` endpoint to flag incorrect detections
 
-Run demo using python start_demo.py
+---
 
-Open browser and go to http://127.0.0.1:5000
+## 🧑‍💻 Getting Started
 
-Project Structure
+### Prerequisites
+
+* Python 3.8 or above
+
+### Installation & Setup
+
+1. Navigate to the project folder:
+
+   ```bash
+   cd path/to/your/Guardian
+   ```
+
+2. Install required dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run the demo application:
+
+   ```bash
+   python start_demo.py
+   ```
+
+4. Open your browser and visit:
+
+   ```
+   http://127.0.0.1:5000
+   ```
+
+---
+
+## 📂 Project Structure
+
+```
 Guardian/
+├── .gitignore
+├── config.py
+├── LICENSE.md
+├── README.md
+├── requirements.txt
+├── start_demo.py
+│
+├── src/
+│   ├── __init__.py
+│   ├── analyser.py
+│   ├── rules.py
+│   ├── ml_model.pkl
+│   └── utils.py
+│
+├── webapp/
+│   ├── app.py
+│   ├── static/
+│   │   └── style.css
+│   └── templates/
+│       └── index.html
+│
+├── guardian_log.csv
+│
+└── tests/
+    ├── __init__.py
+    └── test_analyser.py
+```
 
-.gitignore
+---
 
-config.py
+## ⚙️ How It Works
 
-LICENSE.md
+1. The user submits a message
+2. The message is cleaned and tokenized
+3. Rule-based checks analyze keywords, urgency patterns, and suspicious links
+4. The machine learning model predicts scam probability
+5. A final risk score is calculated
+6. The message is classified as **Safe**, **Suspicious**, or **Dangerous**
 
-README.md
+---
 
-requirements.txt
+## 🌐 Live Demo
 
-start_demo.py
+Run locally at:
 
-src/
+```
+http://127.0.0.1:5000
+```
 
-init.py
+---
 
-analyser.py
+## 🤝 Contributing
 
-rules.py
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Submit a pull request
 
-ml_model.pkl
+All contributions are welcome.
 
-utils.py
+---
 
-webapp/
+## 📜 License
 
-static/style.css
-
-templates/index.html
-
-app.py
-
-guardian_log.csv
-
-tests/
-
-init.py
-
-test_analyser.py
-
-How It Works
-
-Message is cleaned and tokenized
-
-Rules check for keywords, suspicious links, formats
-
-ML model predicts scam probability
-
-Risk score is calculated
-
-Message is classified as Safe, Suspicious, or Dangerous
-
-Live Demo
-Run locally on http://127.0.0.1:5000
-
-Contributing
-You can fork the repo, make changes, and create a pull request
-
-License
-MIT License, see LICENSE.md
+This project is licensed under the MIT License.
+See `LICENSE.md` for more information.
