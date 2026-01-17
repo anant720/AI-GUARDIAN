@@ -18,8 +18,7 @@ app = Flask('Guardian', template_folder=template_path)
 CORS(app, resources={
     r"/analyse": {"origins": config.API_CONFIG['CORS_ORIGINS']},
     r"/report": {"origins": config.API_CONFIG['CORS_ORIGINS']},
-    r"/api/health": {"origins": ["*"]},
-    r"/test": {"origins": ["*"]}
+    r"/health": {"origins": ["*"]}
 })
 
 setup_csv_logging(app) # Integrate our custom CSV logger
@@ -27,12 +26,7 @@ setup_csv_logging(app) # Integrate our custom CSV logger
 @app.errorhandler(Exception)
 def handle_exception(e):
     """Handle generic exceptions."""
-    import traceback
-    error_details = traceback.format_exc()
     app.logger.error(f"An unexpected error occurred: {e}")
-    app.logger.error(f"Traceback: {error_details}")
-    print(f"Flask error handler: {e}")
-    print(f"Traceback: {error_details}")
     return jsonify(error="An internal server error occurred."), 500
 
 @app.route("/health")
@@ -41,15 +35,21 @@ def health():
     Health check endpoint to monitor system status.
     Shows whether models are loaded and system is ready.
     """
-    return jsonify({
-        "status": "ready",
-        "version": "2.0"
-    }), 200
+    from .detection import _ml_model_loaded, _model_load_error
 
-@app.route("/test")
-def test():
-    """Simple test endpoint"""
-    return "TEST OK", 200
+    status = {
+        "status": "ready" if _ml_model_loaded else "initializing",
+        "models_loaded": _ml_model_loaded,
+        "timestamp": os.environ.get('SOURCE_VERSION', 'unknown'),
+        "version": "2.0"
+    }
+
+    if _model_load_error:
+        status["model_error"] = _model_load_error
+
+    # Return 200 if ready, 503 if initializing
+    status_code = 200 if _ml_model_loaded else 503
+    return jsonify(status), status_code
 
 
 @app.route("/analyse", methods=['POST'])

@@ -129,19 +129,17 @@ def start_server():
 
         # Only open browser locally, not on Railway
         if not os.environ.get('RAILWAY_ENVIRONMENT'):
-            try:
-                demo_url = f"http://127.0.0.1:{port}/"
-                print(f"Opening demo interface at {demo_url} in your browser...")
-                webbrowser.open_new_tab(demo_url)
-            except Exception as browser_error:
-                print(f"Could not open browser: {browser_error}")
+            demo_url = f"http://127.0.0.1:{port}/"
+            print(f"Opening demo interface at {demo_url} in your browser...")
+            webbrowser.open_new_tab(demo_url)
 
-        # Use Flask development server (waitress was causing issues)
-        print(f"Starting Flask development server on {config.FLASK_HOST}:{port}")
+        # Use a production-ready server instead of Flask's development server
+        print(f"Starting waitress server on {config.FLASK_HOST}:{port}")
         try:
-            app.run(host=config.FLASK_HOST, port=port, debug=True)
+            serve(app, host=config.FLASK_HOST, port=port)
         except Exception as server_error:
             print(f"Failed to start server: {server_error}")
+            print("This might be due to port binding issues or missing dependencies")
             raise
 
     except Exception as e:
@@ -166,12 +164,18 @@ def main():
 
     # Note: Model files are loaded lazily now, so we don't require them at startup
     # This allows the app to start even on Railway where file paths might be different
-    model_path = Path(__file__).parent / config.MODEL_CONFIG['MODEL_PATH']
-    if not model_path.exists():
-        print(f"Warning: Model file not found at '{model_path}' - models will load lazily on first request")
-        print("This is normal for Railway deployment - models will be loaded when first needed")
-    else:
-        print(f"Model file found at '{model_path}' - ready for lazy loading")
+    try:
+        script_dir = Path(__file__).parent
+        model_path = script_dir / config.MODEL_CONFIG['MODEL_PATH']
+        if not model_path.exists():
+            print(f"Warning: Model file not found at '{model_path}' - models will load lazily on first request")
+            print("This is normal for Railway deployment - models will be loaded when first needed")
+        else:
+            print(f"Model file found at '{model_path}' - ready for lazy loading")
+    except NameError:
+        # __file__ might not be available in some environments
+        print("Model files will be loaded lazily on first request")
+        print("This is normal for Railway deployment")
 
     # Start the server
     print("\n" + "=" * 50)

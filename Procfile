@@ -1,1 +1,1 @@
-web: python start_demo.py
+web: python wsgi.py
