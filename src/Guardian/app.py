@@ -9,9 +9,12 @@ from .logger import setup_csv_logging
 try:
     from .detection import analyse_message
     DETECTION_AVAILABLE = True
+    print("✅ Detection module loaded successfully")
 except ImportError as e:
-    print(f"Warning: Detection module not available: {e}")
-    print("This is normal during Railway deployment - dependencies will be installed shortly")
+    print(f"❌ Detection module import failed: {e}")
+    print("This may be due to missing dependencies during Railway deployment")
+    import traceback
+    traceback.print_exc()
     DETECTION_AVAILABLE = False
     analyse_message = None
 
