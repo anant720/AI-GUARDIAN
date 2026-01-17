@@ -1,1 +1,1 @@
-web: python -c "import os,sys; sys.path.insert(0,'src'); from Guardian.app import app; print(f'Template folder: {app.template_folder}'); print(f'Templates exist: {os.path.exists(app.template_folder)}'); from waitress import serve; serve(app, host='0.0.0.0', port=int(os.environ['PORT']))"
+web: python -c "import os,sys; sys.path.insert(0,'src'); from Guardian.app import app; print('Templates loaded'); from waitress import serve; serve(app, host='0.0.0.0', port=int(os.environ['PORT']))"
