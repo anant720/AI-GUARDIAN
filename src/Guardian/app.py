@@ -56,6 +56,15 @@ def ping():
     """
     return "pong", 200
 
+@app.route("/railway")
+def railway():
+    """
+    Dedicated Railway health check endpoint.
+    Returns plain text "OK" in under 10ms.
+    No imports, no processing - just confirms service is alive.
+    """
+    return "OK", 200
+
 @app.route("/health")
 def health():
     """
