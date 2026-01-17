@@ -2,9 +2,18 @@
 
 from flask import Flask, request, jsonify, render_template # Removed send_file
 from flask_cors import CORS
-from .detection import analyse_message
 import config
 from .logger import setup_csv_logging
+
+# Lazy import for detection module to handle Railway deployment gracefully
+try:
+    from .detection import analyse_message
+    DETECTION_AVAILABLE = True
+except ImportError as e:
+    print(f"Warning: Detection module not available: {e}")
+    print("This is normal during Railway deployment - dependencies will be installed shortly")
+    DETECTION_AVAILABLE = False
+    analyse_message = None
 
 # The template folder is inside the Guardian package, so we specify the path relative to the package.
 import os
@@ -29,6 +38,14 @@ def analyse():
     Expects a JSON payload with a "message" key.
     e.g., {"message": "your message text here"}
     """
+    if not DETECTION_AVAILABLE:
+        return jsonify({
+            "error": "Detection module not available. Dependencies may still be installing.",
+            "level": "UNKNOWN",
+            "score": 0,
+            "reasons": ["System is initializing - please try again in a moment"]
+        }), 503
+
     data = request.get_json()
     if not data or 'message' not in data:
         return jsonify({"error": "Invalid request. JSON with 'message' key required."}), 400
