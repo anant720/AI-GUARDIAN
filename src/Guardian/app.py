@@ -1,46 +1,24 @@
 # src/Guardian/app.py
 
-from flask import Flask, request, jsonify, render_template # Removed send_file
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import config
-from .logger import setup_csv_logging
-import logging
 import os
-
-# Set up basic logging for Railway
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
-
-logger.info("Starting AI Guardian Flask application...")
-
-# Always import detection module - it handles lazy loading internally
-logger.info("Importing detection module...")
+from .logger import setup_csv_logging
 from .detection import analyse_message
-logger.info("Detection module imported (models will load lazily)")
 
-# The template folder is inside the Guardian package, so we specify the path relative to the package.
+# Simple Flask app setup
 template_path = os.path.join(os.path.dirname(__file__), 'templates')
-logger.info(f"Template path: {template_path}")
-logger.info(f"Template directory exists: {os.path.exists(template_path)}")
-
 app = Flask('Guardian', template_folder=template_path)
-logger.info(f"Flask app created: {app.name}")
 
-# Enable CORS to allow the demo interface (and other origins) to make API requests.
+# Enable CORS
 CORS(app, resources={
     r"/analyse": {"origins": config.API_CONFIG['CORS_ORIGINS']},
     r"/report": {"origins": config.API_CONFIG['CORS_ORIGINS']},
     r"/health": {"origins": ["*"]}
 })
-logger.info("CORS enabled")
 
-setup_csv_logging(app) # Integrate our custom CSV logger
-logger.info("CSV logging setup completed")
-
-logger.info("AI Guardian Flask application initialization complete")
+setup_csv_logging(app)
 
 @app.errorhandler(Exception)
 def handle_exception(e):
@@ -161,5 +139,18 @@ def home():
     """
     Serve the main demo interface.
     """
-    # Flask's render_template will automatically look in the 'templates' folder
-    return render_template("demo_interface.html")
+    return """<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Guardian - Scam Detection</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        h1 { color: #4CAF50; }
+    </style>
+</head>
+<body>
+    <h1>AI Guardian is running</h1>
+    <p>Scam detection service is operational.</p>
+    <p><a href="/railway">Railway Health Check</a></p>
+</body>
+</html>""", 200
