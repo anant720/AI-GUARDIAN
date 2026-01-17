@@ -5,18 +5,9 @@ from flask_cors import CORS
 import config
 from .logger import setup_csv_logging
 
-# Lazy import for detection module to handle Railway deployment gracefully
-try:
-    from .detection import analyse_message
-    DETECTION_AVAILABLE = True
-    print("✅ Detection module loaded successfully")
-except ImportError as e:
-    print(f"❌ Detection module import failed: {e}")
-    print("This may be due to missing dependencies during Railway deployment")
-    import traceback
-    traceback.print_exc()
-    DETECTION_AVAILABLE = False
-    analyse_message = None
+# Always import detection module - it handles lazy loading internally
+from .detection import analyse_message
+print("✅ Detection module imported (models will load lazily)")
 
 # The template folder is inside the Guardian package, so we specify the path relative to the package.
 import os
@@ -24,7 +15,11 @@ template_path = os.path.join(os.path.dirname(__file__), 'templates')
 app = Flask('Guardian', template_folder=template_path)
 
 # Enable CORS to allow the demo interface (and other origins) to make API requests.
-CORS(app, resources={r"/analyse": {"origins": config.API_CONFIG['CORS_ORIGINS']}, r"/report": {"origins": config.API_CONFIG['CORS_ORIGINS']}})
+CORS(app, resources={
+    r"/analyse": {"origins": config.API_CONFIG['CORS_ORIGINS']},
+    r"/report": {"origins": config.API_CONFIG['CORS_ORIGINS']},
+    r"/health": {"origins": ["*"]}
+})
 
 setup_csv_logging(app) # Integrate our custom CSV logger
 
@@ -34,28 +29,44 @@ def handle_exception(e):
     app.logger.error(f"An unexpected error occurred: {e}")
     return jsonify(error="An internal server error occurred."), 500
 
+@app.route("/health")
+def health():
+    """
+    Health check endpoint to monitor system status.
+    Shows whether models are loaded and system is ready.
+    """
+    from .detection import _ml_model_loaded, _model_load_error
+
+    status = {
+        "status": "ready" if _ml_model_loaded else "initializing",
+        "models_loaded": _ml_model_loaded,
+        "timestamp": os.environ.get('SOURCE_VERSION', 'unknown'),
+        "version": "2.0"
+    }
+
+    if _model_load_error:
+        status["model_error"] = _model_load_error
+
+    # Return 200 if ready, 503 if initializing
+    status_code = 200 if _ml_model_loaded else 503
+    return jsonify(status), status_code
+
+
 @app.route("/analyse", methods=['POST'])
 def analyse():
     """
     API endpoint to analyse a message.
+    Always responds immediately - models load lazily if needed.
     Expects a JSON payload with a "message" key.
     e.g., {"message": "your message text here"}
     """
-    if not DETECTION_AVAILABLE:
-        return jsonify({
-            "error": "Detection module not available. Dependencies may still be installing.",
-            "level": "UNKNOWN",
-            "score": 0,
-            "reasons": ["System is initializing - please try again in a moment"]
-        }), 503
-
     data = request.get_json()
     if not data or 'message' not in data:
         return jsonify({"error": "Invalid request. JSON with 'message' key required."}), 400
 
     message = data['message']
     result = analyse_message(message)
-    
+
     # Log the analysis result using the app's logger.
     # The custom handler will pick this up and write it to the CSV.
     log_details = {

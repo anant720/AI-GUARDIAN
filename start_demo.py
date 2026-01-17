@@ -108,18 +108,23 @@ def start_server():
         from Guardian.app import app
         from waitress import serve # waitress import can stay here
 
-        print(f"Server starting on http://{config.FLASK_HOST}:{config.FLASK_PORT}")
-        print(f"Open the demo interface at: http://127.0.0.1:{config.FLASK_PORT}/")
-        print(f"API endpoint is available at: http://127.0.0.1:{config.FLASK_PORT}/analyse")
+        # Use Railway's PORT environment variable, fallback to config
+        port = int(os.environ.get('PORT', config.FLASK_PORT))
+
+        print(f"Server starting on http://{config.FLASK_HOST}:{port}")
+        print(f"Open the demo interface at: http://127.0.0.1:{port}/")
+        print(f"API endpoint is available at: http://127.0.0.1:{port}/analyse")
+        print(f"Health check available at: http://127.0.0.1:{port}/health")
         print("\nPress Ctrl+C to stop the server")
 
-        # Open the demo page in the default web browser after a short delay
-        demo_url = f"http://127.0.0.1:{config.FLASK_PORT}/"
-        print(f"Opening demo interface at {demo_url} in your browser...")
-        webbrowser.open_new_tab(demo_url)
+        # Only open browser locally, not on Railway
+        if not os.environ.get('RAILWAY_ENVIRONMENT'):
+            demo_url = f"http://127.0.0.1:{port}/"
+            print(f"Opening demo interface at {demo_url} in your browser...")
+            webbrowser.open_new_tab(demo_url)
 
         # Use a production-ready server instead of Flask's development server
-        serve(app, host=config.FLASK_HOST, port=config.FLASK_PORT)
+        serve(app, host=config.FLASK_HOST, port=port)
 
     except Exception as e:
         print(f"Error starting server: {e}")

@@ -40,26 +40,46 @@ LEVEL_SAFE = "Safe"
 LEVEL_SUSPICIOUS = "Suspicious"
 LEVEL_DANGEROUS = "Dangerous"
 
-# Load ML models if available
+# Lazy loading configuration - models load on first request
 VECTORIZER_PATH = config.MODEL_CONFIG['VECTORIZER_PATH']
 MODEL_PATH = config.MODEL_CONFIG['MODEL_PATH']
 
-ML_MODEL = None
-VECTORIZER = None
+# Global model state
+_ml_model_loaded = False
+_ml_model = None
+_vectorizer = None
+_model_load_error = None
 
-if ML_AVAILABLE:
+def _load_ml_models():
+    """
+    Lazy load ML models on first request.
+    Thread-safe and handles Railway cold start issues.
+    """
+    global _ml_model_loaded, _ml_model, _vectorizer, _model_load_error
+
+    if _ml_model_loaded:
+        return _ml_model, _vectorizer
+
+    if not ML_AVAILABLE:
+        logging.info("ML libraries not available, using rule-based analysis only.")
+        _ml_model_loaded = True
+        return None, None
+
     try:
+        logging.info("Loading ML models...")
         if os.path.exists(MODEL_PATH) and os.path.exists(VECTORIZER_PATH):
-            ML_MODEL = joblib.load(MODEL_PATH)
-            VECTORIZER = joblib.load(VECTORIZER_PATH)
-            logging.info("Successfully loaded ML model and vectorizer.")
+            _ml_model = joblib.load(MODEL_PATH)
+            _vectorizer = joblib.load(VECTORIZER_PATH)
+            logging.info("✅ Successfully loaded ML model and vectorizer.")
         else:
-            logging.warning("ML model or vectorizer not found. Detection will proceed with rule-based analysis only.")
+            logging.warning("ML model files not found. Using rule-based analysis only.")
+            _model_load_error = "Model files not found"
     except Exception as e:
-        logging.error(f"Error loading ML model: {e}. Detection will proceed without ML analysis.")
-        ML_MODEL, VECTORIZER = None, None
-else:
-    logging.info("ML libraries not available, using rule-based analysis only.")
+        logging.error(f"❌ Error loading ML model: {e}")
+        _model_load_error = str(e)
+
+    _ml_model_loaded = True
+    return _ml_model, _vectorizer
 
 def analyse_message(text: str) -> dict:
     """
@@ -180,18 +200,20 @@ def analyse_message(text: str) -> dict:
                 reasons.append(f"Safe keyword detected: '{keyword}'")
 
     # ========================================================================
-    # ML MODEL ANALYSIS (if available)
+    # ML MODEL ANALYSIS (lazy loaded)
     # ========================================================================
-    if ML_AVAILABLE and ML_MODEL and VECTORIZER and risk_score > 0:  # Only run ML if there are already signals
+    if risk_score > 0:  # Only run ML if there are already signals
         try:
-            vectorized_text = VECTORIZER.transform([text_without_links])
-            scam_probability = ML_MODEL.predict_proba(vectorized_text)[0][1]
-            if scam_probability > 0.8:
-                risk_score += 6
-                reasons.append("ML model confirms high scam probability")
-            elif scam_probability > 0.6:
-                risk_score += 3
-                reasons.append("ML model suggests suspicious content")
+            ml_model, vectorizer = _load_ml_models()
+            if ml_model and vectorizer:
+                vectorized_text = vectorizer.transform([text_without_links])
+                scam_probability = ml_model.predict_proba(vectorized_text)[0][1]
+                if scam_probability > 0.8:
+                    risk_score += 6
+                    reasons.append("ML model confirms high scam probability")
+                elif scam_probability > 0.6:
+                    risk_score += 3
+                    reasons.append("ML model suggests suspicious content")
         except Exception as e:
             logging.warning(f"ML model prediction failed: {e}")
 

@@ -184,3 +184,25 @@ MIT ADT University",Dangerous,13,"Message contains suspicious keyword: 'pan'; De
 2026-01-17T13:34:45.686886,hii ,Safe,0,
 2026-01-17T13:34:50.673007,URGENT: Your account is suspended!,Suspicious,8,Message has suspicious words like 'urgent' that scammers often use.; Message has suspicious words like 'suspended' that scammers often use.; Tries to rush you with words like 'urgent' or 'now'. Don't panic!; Our smart AI thinks this looks exactly like scam messages it's seen before.
 2026-01-17T13:34:58.821991,hii please send me 100000 ruppe,Safe,1,Detected pattern: SUSPICIOUS_NUMBERS; Our smart AI thinks this looks exactly like scam messages it's seen before.
+2026-01-17T13:42:19.558810,"Dear Valued Customer,
+
+We have detected unusual login activity on your bank account during our routine security monitoring process. As a precautionary measure, access to certain services has been temporarily limited to protect your funds.
+
+To restore full access, you must verify your account details immediately. If verification is not completed within the next 12 hours, your account may be permanently suspended as per security policy.
+
+Please complete verification using the secure portal below:
+
+👉 https://secure-bank-verification[.]com/login
+
+Failure to act promptly may result in irreversible account restrictions. This is an automated message. Do not ignore this notice.",Dangerous,20,Message has suspicious words like 'immediate' that scammers often use.; Message has suspicious words like 'verify your account' that scammers often use.; Message has suspicious words like 'suspended' that scammers often use.; Message has suspicious words like 'account details' that scammers often use.; Message has suspicious words like 'bank account' that scammers often use.; Message has suspicious words like 'limited' that scammers often use.; Message has suspicious words like 'unusual login' that scammers often use.; Lots of BIG LETTERS. Scammers shout to scare you.; Our smart AI thinks this looks exactly like scam messages it's seen before.
+2026-01-17T13:45:38.592043,"Dear Valued Customer,
+
+We have detected unusual login activity on your bank account during our routine security monitoring process. As a precautionary measure, access to certain services has been temporarily limited to protect your funds.
+
+To restore full access, you must verify your account details immediately. If verification is not completed within the next 12 hours, your account may be permanently suspended as per security policy.
+
+Please complete verification using the secure portal below:
+
+👉 https://secure-bank-verification[.]com/login
+
+Failure to act promptly may result in irreversible account restrictions. This is an automated message. Do not ignore this notice.",Dangerous,20,Message has suspicious words like 'immediate' that scammers often use.; Message has suspicious words like 'verify your account' that scammers often use.; Message has suspicious words like 'suspended' that scammers often use.; Message has suspicious words like 'account details' that scammers often use.; Message has suspicious words like 'bank account' that scammers often use.; Message has suspicious words like 'limited' that scammers often use.; Message has suspicious words like 'unusual login' that scammers often use.; Lots of BIG LETTERS. Scammers shout to scare you.; Our smart AI thinks this looks exactly like scam messages it's seen before.
