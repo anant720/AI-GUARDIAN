@@ -6,18 +6,35 @@ Enhanced version that provides meaningful risk scores
 import re
 import os
 import logging
-import requests
-import joblib
 from urllib.parse import urlparse
 from . import rules
 from . import utils
-import socket, ipaddress
-import ssl
 from datetime import datetime
-from .errors import ModelLoadError
 import config
-import codecs
 from typing import List, Tuple
+
+# Optional imports with fallbacks
+try:
+    import requests
+    REQUESTS_AVAILABLE = True
+except ImportError:
+    REQUESTS_AVAILABLE = False
+    print("Warning: requests not available, link analysis will be limited")
+
+try:
+    import joblib
+    import sklearn
+    ML_AVAILABLE = True
+except ImportError:
+    ML_AVAILABLE = False
+    print("Warning: ML libraries not available, using rule-based analysis only")
+
+try:
+    import socket, ipaddress, ssl
+    NETWORK_AVAILABLE = True
+except ImportError:
+    NETWORK_AVAILABLE = False
+    print("Warning: Network libraries not available, link analysis disabled")
 
 LEVEL_SAFE = "Safe"
 LEVEL_SUSPICIOUS = "Suspicious"
@@ -30,16 +47,19 @@ MODEL_PATH = config.MODEL_CONFIG['MODEL_PATH']
 ML_MODEL = None
 VECTORIZER = None
 
-try:
-    if os.path.exists(MODEL_PATH) and os.path.exists(VECTORIZER_PATH):
-        ML_MODEL = joblib.load(MODEL_PATH)
-        VECTORIZER = joblib.load(VECTORIZER_PATH)
-        logging.info("Successfully loaded ML model and vectorizer.")
-    else:
-        logging.warning("ML model or vectorizer not found. Detection will proceed with rule-based analysis only.")
-except Exception as e:
-    logging.error(f"Error loading ML model: {e}. Detection will proceed without ML analysis.")
-    ML_MODEL, VECTORIZER = None, None
+if ML_AVAILABLE:
+    try:
+        if os.path.exists(MODEL_PATH) and os.path.exists(VECTORIZER_PATH):
+            ML_MODEL = joblib.load(MODEL_PATH)
+            VECTORIZER = joblib.load(VECTORIZER_PATH)
+            logging.info("Successfully loaded ML model and vectorizer.")
+        else:
+            logging.warning("ML model or vectorizer not found. Detection will proceed with rule-based analysis only.")
+    except Exception as e:
+        logging.error(f"Error loading ML model: {e}. Detection will proceed without ML analysis.")
+        ML_MODEL, VECTORIZER = None, None
+else:
+    logging.info("ML libraries not available, using rule-based analysis only.")
 
 def analyse_message(text: str) -> dict:
     """
@@ -143,11 +163,12 @@ def analyse_message(text: str) -> dict:
                     risk_score += weight
                     reasons.append(rules.FRIENDLY_REASONS.get(pattern_name, f"Link pattern: {pattern_name}"))
 
-            # Advanced link analysis
-            link_score, link_reasons = analyse_link_advanced(link)
-            if link_score > 0:
-                risk_score += link_score
-                reasons.extend(link_reasons)
+            # Advanced link analysis (if network libraries available)
+            if NETWORK_AVAILABLE:
+                link_score, link_reasons = analyse_link_advanced(link)
+                if link_score > 0:
+                    risk_score += link_score
+                    reasons.extend(link_reasons)
 
     # ========================================================================
     # SAFE KEYWORD ADJUSTMENT
@@ -159,9 +180,9 @@ def analyse_message(text: str) -> dict:
                 reasons.append(f"Safe keyword detected: '{keyword}'")
 
     # ========================================================================
-    # ML MODEL ANALYSIS
+    # ML MODEL ANALYSIS (if available)
     # ========================================================================
-    if ML_MODEL and VECTORIZER and risk_score > 0:  # Only run ML if there are already signals
+    if ML_AVAILABLE and ML_MODEL and VECTORIZER and risk_score > 0:  # Only run ML if there are already signals
         try:
             vectorized_text = VECTORIZER.transform([text_without_links])
             scam_probability = ML_MODEL.predict_proba(vectorized_text)[0][1]
@@ -231,6 +252,9 @@ def analyse_link_advanced(link: str) -> tuple:
     """
     risk_score = 0
     reasons = []
+
+    if not NETWORK_AVAILABLE:
+        return 0, ["Link analysis unavailable - network libraries not loaded"]
 
     try:
         domain = urlparse(link).netloc
