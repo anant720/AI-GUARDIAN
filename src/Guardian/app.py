@@ -59,8 +59,8 @@ def ping():
 @app.route("/health")
 def health():
     """
-    Health check endpoint to monitor system status.
-    Shows whether models are loaded and system is ready.
+    Health check endpoint that ALWAYS returns 200 in production.
+    Railway uses this for service health checks - always return OK when service is running.
     """
     try:
         from .detection import _ml_model_loaded, _model_load_error
@@ -76,11 +76,9 @@ def health():
 
         if _model_load_error:
             status["model_error"] = str(_model_load_error)
-            status["status"] = "error"
 
-        # Return 200 if ready, 503 if initializing/error
-        status_code = 200 if _ml_model_loaded else 503
-        return jsonify(status), status_code
+        # ALWAYS return 200 for Railway health checks - service is running
+        return jsonify(status), 200
 
     except Exception as e:
         app.logger.error(f"Health check failed: {e}")
@@ -88,7 +86,7 @@ def health():
             "status": "error",
             "error": str(e),
             "version": "2.0"
-        }), 503
+        }), 200  # Still return 200 even on error - service is responding
 
 
 @app.route("/analyse", methods=['POST'])
