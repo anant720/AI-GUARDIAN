@@ -20,6 +20,9 @@ def check_dependencies():
         import waitress
         import sklearn
         import joblib
+        import requests
+        import urlextract
+        import flask_cors
         print("All dependencies are installed.")
         return True
     except ImportError as e:
