@@ -4,15 +4,30 @@ from flask import Flask, request, jsonify, render_template # Removed send_file
 from flask_cors import CORS
 import config
 from .logger import setup_csv_logging
+import logging
+import os
+
+# Set up basic logging for Railway
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+logger.info("Starting AI Guardian Flask application...")
 
 # Always import detection module - it handles lazy loading internally
+logger.info("Importing detection module...")
 from .detection import analyse_message
-print("Detection module imported (models will load lazily)")
+logger.info("Detection module imported (models will load lazily)")
 
 # The template folder is inside the Guardian package, so we specify the path relative to the package.
-import os
 template_path = os.path.join(os.path.dirname(__file__), 'templates')
+logger.info(f"Template path: {template_path}")
+logger.info(f"Template directory exists: {os.path.exists(template_path)}")
+
 app = Flask('Guardian', template_folder=template_path)
+logger.info(f"Flask app created: {app.name}")
 
 # Enable CORS to allow the demo interface (and other origins) to make API requests.
 CORS(app, resources={
@@ -20,8 +35,12 @@ CORS(app, resources={
     r"/report": {"origins": config.API_CONFIG['CORS_ORIGINS']},
     r"/health": {"origins": ["*"]}
 })
+logger.info("CORS enabled")
 
 setup_csv_logging(app) # Integrate our custom CSV logger
+logger.info("CSV logging setup completed")
+
+logger.info("AI Guardian Flask application initialization complete")
 
 @app.errorhandler(Exception)
 def handle_exception(e):
@@ -29,27 +48,47 @@ def handle_exception(e):
     app.logger.error(f"An unexpected error occurred: {e}")
     return jsonify(error="An internal server error occurred."), 500
 
+@app.route("/ping")
+def ping():
+    """
+    Simple ping endpoint that responds immediately.
+    Used for health checks and to verify the app is responding.
+    """
+    return "pong", 200
+
 @app.route("/health")
 def health():
     """
     Health check endpoint to monitor system status.
     Shows whether models are loaded and system is ready.
     """
-    from .detection import _ml_model_loaded, _model_load_error
+    try:
+        from .detection import _ml_model_loaded, _model_load_error
 
-    status = {
-        "status": "ready" if _ml_model_loaded else "initializing",
-        "models_loaded": _ml_model_loaded,
-        "timestamp": os.environ.get('SOURCE_VERSION', 'unknown'),
-        "version": "2.0"
-    }
+        status = {
+            "status": "ready" if _ml_model_loaded else "initializing",
+            "models_loaded": _ml_model_loaded,
+            "timestamp": os.environ.get('SOURCE_VERSION', 'unknown'),
+            "version": "2.0",
+            "environment": os.environ.get('RAILWAY_ENVIRONMENT', 'unknown'),
+            "port": os.environ.get('PORT', 'unknown')
+        }
 
-    if _model_load_error:
-        status["model_error"] = _model_load_error
+        if _model_load_error:
+            status["model_error"] = str(_model_load_error)
+            status["status"] = "error"
 
-    # Return 200 if ready, 503 if initializing
-    status_code = 200 if _ml_model_loaded else 503
-    return jsonify(status), status_code
+        # Return 200 if ready, 503 if initializing/error
+        status_code = 200 if _ml_model_loaded else 503
+        return jsonify(status), status_code
+
+    except Exception as e:
+        app.logger.error(f"Health check failed: {e}")
+        return jsonify({
+            "status": "error",
+            "error": str(e),
+            "version": "2.0"
+        }), 503
 
 
 @app.route("/analyse", methods=['POST'])
