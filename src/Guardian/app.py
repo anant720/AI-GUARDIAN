@@ -139,18 +139,4 @@ def home():
     """
     Serve the main demo interface.
     """
-    return """<!DOCTYPE html>
-<html>
-<head>
-    <title>AI Guardian - Scam Detection</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #4CAF50; }
-    </style>
-</head>
-<body>
-    <h1>AI Guardian is running</h1>
-    <p>Scam detection service is operational.</p>
-    <p><a href="/railway">Railway Health Check</a></p>
-</body>
-</html>""", 200
+    return render_template("demo_interface.html")
