@@ -181,3 +181,6 @@ MIT ADT University",Dangerous,13,"Message contains suspicious keyword: 'pan'; De
 ",Safe,0,
 2026-01-17T12:21:01.555514,"Hiii How are you? Hii i want 5000 ruppe urgently? can u give me ?
 ",Safe,2,Message has suspicious words like 'urgent' that scammers often use.; Our smart AI thinks this looks exactly like scam messages it's seen before.
+2026-01-17T13:34:45.686886,hii ,Safe,0,
+2026-01-17T13:34:50.673007,URGENT: Your account is suspended!,Suspicious,8,Message has suspicious words like 'urgent' that scammers often use.; Message has suspicious words like 'suspended' that scammers often use.; Tries to rush you with words like 'urgent' or 'now'. Don't panic!; Our smart AI thinks this looks exactly like scam messages it's seen before.
+2026-01-17T13:34:58.821991,hii please send me 100000 ruppe,Safe,1,Detected pattern: SUSPICIOUS_NUMBERS; Our smart AI thinks this looks exactly like scam messages it's seen before.
