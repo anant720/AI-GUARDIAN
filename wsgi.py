@@ -81,9 +81,7 @@ except Exception as e:
     logger.error(traceback.format_exc())
 
 logger.info("WSGI initialization complete - ready for Railway")
+logger.info(f"App object type: {type(app)} - Railway can now serve this WSGI application")
 
-# For debugging - Railway logs will show this
-if __name__ == "__main__":
-    port = int(os.environ.get('PORT', 5000))
-    logger.info(f"Starting development server on port {port}")
-    app.run(host='0.0.0.0', port=port, debug=False)
+# Note: No if __name__ == "__main__" block needed
+# Railway imports the 'app' object directly and serves it with Waitress

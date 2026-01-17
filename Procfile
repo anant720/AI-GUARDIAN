@@ -1,1 +1,1 @@
-web: python wsgi.py
+web: python -c "from wsgi import app; from waitress import serve; serve(app, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))"
