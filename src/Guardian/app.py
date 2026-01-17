@@ -139,4 +139,66 @@ def home():
     """
     Serve the main demo interface.
     """
-    return render_template("demo_interface.html")
+    try:
+        return render_template("demo_interface.html")
+    except Exception as e:
+        # Fallback: serve basic HTML if template fails
+        app.logger.error(f"Template rendering failed: {e}")
+        return """<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Guardian - Scam Detection</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #1a1a1a; color: #e0e0e0; }
+        .container { max-width: 600px; margin: 0 auto; background: #2c2c2c; padding: 2rem; border-radius: 12px; }
+        textarea { width: 100%; height: 150px; margin: 1rem 0; padding: 1rem; background: #1a1a1a; color: #e0e0e0; border: 1px solid #444; }
+        button { background: #4CAF50; color: white; padding: 0.8rem 1.5rem; border: none; border-radius: 8px; cursor: pointer; }
+        h1 { color: #4CAF50; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Guardian - Scam Detection Demo</h1>
+        <p>Enter a message to analyze for potential scams:</p>
+        <textarea id="message" placeholder="Paste suspicious message here..."></textarea>
+        <br>
+        <button onclick="analyze()">Analyze Message</button>
+        <div id="result" style="margin-top: 2rem; display: none;"></div>
+    </div>
+    <script>
+        async function analyze() {
+            const message = document.getElementById('message').value;
+            const resultDiv = document.getElementById('result');
+
+            if (!message.trim()) {
+                resultDiv.innerHTML = '<p style="color: #ff6b6b;">Please enter a message to analyze.</p>';
+                resultDiv.style.display = 'block';
+                return;
+            }
+
+            try {
+                const response = await fetch('/analyse', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: message })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    resultDiv.innerHTML = `
+                        <h3>Risk Level: <span style="color: ${data.level === 'Safe' ? '#4CAF50' : data.level === 'Suspicious' ? '#ffc107' : '#f44336'}">${data.level}</span></h3>
+                        <p>Score: ${data.score}</p>
+                        <ul>${data.reasons.map(r => `<li>${r}</li>`).join('')}</ul>
+                    `;
+                } else {
+                    resultDiv.innerHTML = '<p style="color: #ff6b6b;">Error analyzing message.</p>';
+                }
+            } catch (error) {
+                resultDiv.innerHTML = '<p style="color: #ff6b6b;">Network error. Please try again.</p>';
+            }
+
+            resultDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>""", 200
