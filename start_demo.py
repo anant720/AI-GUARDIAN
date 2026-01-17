@@ -153,10 +153,14 @@ def main():
     print("=" * 50)
     print(f"Current working directory: {os.getcwd()}")
     print(f"Python path: {sys.path[:3]}...")  # Show first 3 paths
+    print("Starting Flask app import...")
 
-    # Check dependencies
-    if not check_dependencies():
-        sys.exit(1)
+    # Check dependencies (skip on Railway for faster startup)
+    if not os.environ.get('RAILWAY_ENVIRONMENT'):
+        if not check_dependencies():
+            sys.exit(1)
+    else:
+        print("Running on Railway - skipping dependency checks for faster startup")
 
     # Note: Model files are loaded lazily now, so we don't require them at startup
     # This allows the app to start even on Railway where file paths might be different
