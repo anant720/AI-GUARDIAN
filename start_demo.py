@@ -14,26 +14,64 @@ from pathlib import Path
 
 def check_dependencies():
     """Check if required dependencies are installed."""
-    required_modules = [
-        ('flask', 'Flask web framework'),
-        ('pandas', 'Data processing'),
-        ('waitress', 'WSGI server'),
-        ('sklearn', 'Machine learning'),
-        ('joblib', 'Model serialization'),
-        ('requests', 'HTTP requests'),
-        ('urlextract', 'URL extraction'),
-        ('flask_cors', 'CORS handling')
-    ]
-
     missing_deps = []
 
-    for module_name, description in required_modules:
-        try:
-            __import__(module_name)
-            print(f"[OK] {module_name} - {description}")
-        except ImportError:
-            missing_deps.append(module_name)
-            print(f"[MISSING] {module_name} - {description}")
+    # Test each module individually with direct imports
+    try:
+        import flask
+        print("[OK] flask - Flask web framework")
+    except ImportError:
+        missing_deps.append('flask')
+        print("[MISSING] flask - Flask web framework")
+
+    try:
+        import pandas
+        print("[OK] pandas - Data processing")
+    except ImportError:
+        missing_deps.append('pandas')
+        print("[MISSING] pandas - Data processing")
+
+    try:
+        import waitress
+        print("[OK] waitress - WSGI server")
+    except ImportError:
+        missing_deps.append('waitress')
+        print("[MISSING] waitress - WSGI server")
+
+    try:
+        import sklearn
+        print("[OK] sklearn - Machine learning")
+    except ImportError:
+        missing_deps.append('sklearn')
+        print("[MISSING] sklearn - Machine learning")
+
+    try:
+        import joblib
+        print("[OK] joblib - Model serialization")
+    except ImportError:
+        missing_deps.append('joblib')
+        print("[MISSING] joblib - Model serialization")
+
+    try:
+        import requests
+        print("[OK] requests - HTTP requests")
+    except ImportError:
+        missing_deps.append('requests')
+        print("[MISSING] requests - HTTP requests")
+
+    try:
+        import urlextract
+        print("[OK] urlextract - URL extraction")
+    except ImportError:
+        missing_deps.append('urlextract')
+        print("[MISSING] urlextract - URL extraction")
+
+    try:
+        import flask_cors
+        print("[OK] flask_cors - CORS handling")
+    except ImportError:
+        missing_deps.append('flask_cors')
+        print("[MISSING] flask_cors - CORS handling")
 
     if missing_deps:
         print(f"\nMissing dependencies: {', '.join(missing_deps)}")
