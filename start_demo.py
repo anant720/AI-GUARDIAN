@@ -14,6 +14,14 @@ from pathlib import Path
 
 def check_dependencies():
     """Check if required dependencies are installed."""
+    import os
+
+    # Skip strict dependency checking on Railway - let deployment handle it
+    if os.getenv('RAILWAY_ENVIRONMENT'):
+        print("Running on Railway - dependencies will be installed automatically")
+        print("Skipping local dependency checks...")
+        return True
+
     missing_deps = []
 
     # Test each module individually with direct imports
@@ -77,6 +85,10 @@ def check_dependencies():
         print(f"\nMissing dependencies: {', '.join(missing_deps)}")
         print("Please install required packages by running:")
         print("pip install -r requirements.txt")
+        # Don't exit in Railway environment - let deployment handle missing deps
+        if os.getenv('RAILWAY_ENVIRONMENT'):
+            print("Continuing with Railway deployment...")
+            return True
         return False
     else:
         print("\nAll dependencies are installed and working!")
