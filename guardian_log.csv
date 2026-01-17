@@ -175,3 +175,9 @@ MIT ADT University",Dangerous,13,"Message contains suspicious keyword: 'pan'; De
 2025-10-08T17:47:04.026656,Click here to verify: https://google.com,Safe,0,Message contains 1 link(s): https://google.com
 2025-10-08T17:47:17.386068,URGENT: Verify your account at http://bit.ly/fake-bank-login,Dangerous,12,Message has suspicious words like 'urgent' that scammers often use.; Message has suspicious words like 'verify your account' that scammers often use.; Tries to rush you with words like 'urgent' or 'now'. Don't panic!; Message contains 1 link(s): http://bit.ly/fake-bank-login; Link is shortened (like bit.ly). It hides where it really goes.; Our smart AI thinks this looks exactly like scam messages it's seen before.
 2025-10-08T17:58:23.066976,Amazon Prime membership expired. Update payment at http://amzan-prime.com to continue service,Safe,-4,Message has suspicious words like 'expired' that scammers often use.; Lots of BIG LETTERS. Scammers shout to scare you.; Message contains a known safe keyword: 'amazon' (Score adjusted); Message contains 1 link(s): http://amzan-prime.com
+2026-01-17T12:20:06.520877,Hiii How are you???,Safe,1,"Too many !!! or ???. Looks unprofessional, like a scam.; Our smart AI thinks this looks exactly like scam messages it's seen before."
+2026-01-17T12:20:20.819160,Hiii How are you?,Safe,0,
+2026-01-17T12:20:37.502441,"Hiii How are you? Can you send me 5 ruppe?
+",Safe,0,
+2026-01-17T12:21:01.555514,"Hiii How are you? Hii i want 5000 ruppe urgently? can u give me ?
+",Safe,2,Message has suspicious words like 'urgent' that scammers often use.; Our smart AI thinks this looks exactly like scam messages it's seen before.
