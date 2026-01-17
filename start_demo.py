@@ -30,18 +30,18 @@ def check_dependencies():
     for module_name, description in required_modules:
         try:
             __import__(module_name)
-            print(f"✓ {module_name} - {description}")
+            print(f"[OK] {module_name} - {description}")
         except ImportError:
             missing_deps.append(module_name)
-            print(f"✗ {module_name} - {description} (MISSING)")
+            print(f"[MISSING] {module_name} - {description}")
 
     if missing_deps:
-        print(f"\n❌ Missing dependencies: {', '.join(missing_deps)}")
+        print(f"\nMissing dependencies: {', '.join(missing_deps)}")
         print("Please install required packages by running:")
         print("pip install -r requirements.txt")
         return False
     else:
-        print("\n✅ All dependencies are installed and working!")
+        print("\nAll dependencies are installed and working!")
         return True
 
 def start_server():
