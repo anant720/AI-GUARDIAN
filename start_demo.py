@@ -14,23 +14,35 @@ from pathlib import Path
 
 def check_dependencies():
     """Check if required dependencies are installed."""
-    try:
-        import flask
-        import pandas
-        import waitress
-        import sklearn
-        import joblib
-        import requests
-        import urlextract
-        import flask_cors
-        print("All dependencies are installed.")
-        return True
-    except ImportError as e:
-        missing_pkg = e.name
-        print(f"Missing dependency: '{missing_pkg}'")
+    required_modules = [
+        ('flask', 'Flask web framework'),
+        ('pandas', 'Data processing'),
+        ('waitress', 'WSGI server'),
+        ('sklearn', 'Machine learning'),
+        ('joblib', 'Model serialization'),
+        ('requests', 'HTTP requests'),
+        ('urlextract', 'URL extraction'),
+        ('flask_cors', 'CORS handling')
+    ]
+
+    missing_deps = []
+
+    for module_name, description in required_modules:
+        try:
+            __import__(module_name)
+            print(f"✓ {module_name} - {description}")
+        except ImportError:
+            missing_deps.append(module_name)
+            print(f"✗ {module_name} - {description} (MISSING)")
+
+    if missing_deps:
+        print(f"\n❌ Missing dependencies: {', '.join(missing_deps)}")
         print("Please install required packages by running:")
         print("pip install -r requirements.txt")
         return False
+    else:
+        print("\n✅ All dependencies are installed and working!")
+        return True
 
 def start_server():
     """Start the Flask server."""
