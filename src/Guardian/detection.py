@@ -70,12 +70,12 @@ def _load_ml_models():
         if os.path.exists(MODEL_PATH) and os.path.exists(VECTORIZER_PATH):
             _ml_model = joblib.load(MODEL_PATH)
             _vectorizer = joblib.load(VECTORIZER_PATH)
-            logging.info("✅ Successfully loaded ML model and vectorizer.")
+            logging.info("Successfully loaded ML model and vectorizer.")
         else:
             logging.warning("ML model files not found. Using rule-based analysis only.")
             _model_load_error = "Model files not found"
     except Exception as e:
-        logging.error(f"❌ Error loading ML model: {e}")
+        logging.error(f"Error loading ML model: {e}")
         _model_load_error = str(e)
 
     _ml_model_loaded = True

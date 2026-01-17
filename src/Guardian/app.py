@@ -7,7 +7,7 @@ from .logger import setup_csv_logging
 
 # Always import detection module - it handles lazy loading internally
 from .detection import analyse_message
-print("✅ Detection module imported (models will load lazily)")
+print("Detection module imported (models will load lazily)")
 
 # The template folder is inside the Guardian package, so we specify the path relative to the package.
 import os

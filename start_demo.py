@@ -109,7 +109,17 @@ def start_server():
         from waitress import serve # waitress import can stay here
 
         # Use Railway's PORT environment variable, fallback to config
-        port = int(os.environ.get('PORT', config.FLASK_PORT))
+        port_env = os.environ.get('PORT')
+        if port_env:
+            try:
+                port = int(port_env)
+                print(f"Using Railway PORT: {port}")
+            except ValueError:
+                print(f"Invalid PORT value '{port_env}', using default {config.FLASK_PORT}")
+                port = config.FLASK_PORT
+        else:
+            port = config.FLASK_PORT
+            print(f"No PORT environment variable, using default {port}")
 
         print(f"Server starting on http://{config.FLASK_HOST}:{port}")
         print(f"Open the demo interface at: http://127.0.0.1:{port}/")
@@ -124,7 +134,13 @@ def start_server():
             webbrowser.open_new_tab(demo_url)
 
         # Use a production-ready server instead of Flask's development server
-        serve(app, host=config.FLASK_HOST, port=port)
+        print(f"Starting waitress server on {config.FLASK_HOST}:{port}")
+        try:
+            serve(app, host=config.FLASK_HOST, port=port)
+        except Exception as server_error:
+            print(f"Failed to start server: {server_error}")
+            print("This might be due to port binding issues or missing dependencies")
+            raise
 
     except Exception as e:
         print(f"Error starting server: {e}")
@@ -135,17 +151,21 @@ def main():
     """Main function to start the demo."""
     print("AI Guardian - Scam Detection Demo")
     print("=" * 50)
+    print(f"Current working directory: {os.getcwd()}")
+    print(f"Python path: {sys.path[:3]}...")  # Show first 3 paths
 
     # Check dependencies
     if not check_dependencies():
         sys.exit(1)
 
-    # Verify that the essential model files exist before starting.
+    # Note: Model files are loaded lazily now, so we don't require them at startup
+    # This allows the app to start even on Railway where file paths might be different
     model_path = Path(__file__).parent / config.MODEL_CONFIG['MODEL_PATH']
     if not model_path.exists():
-        print(f"Error: Model file not found at '{model_path}'")
-        print("Please ensure the model.joblib and vectorizer.joblib files are in src/Guardian/model/.")
-        sys.exit(1)
+        print(f"Warning: Model file not found at '{model_path}' - models will load lazily on first request")
+        print("This is normal for Railway deployment - models will be loaded when first needed")
+    else:
+        print(f"Model file found at '{model_path}' - ready for lazy loading")
 
     # Start the server
     print("\n" + "=" * 50)
