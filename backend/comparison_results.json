@@ -1,0 +1,1845 @@
+{
+  "timestamp": "2026-03-20T02:07:28.906393",
+  "summary": {
+    "total": 100,
+    "guardian_overall_accuracy": 0.63,
+    "industry_overall_accuracy": 0.43,
+    "guardian_catch_rate": 0.6470588235294118,
+    "industry_catch_rate": 0.32941176470588235,
+    "avg_latency_ms": 3783.408504999825
+  },
+  "breakdown": {
+    "delivery": {
+      "guardian": 0.6,
+      "industry": 0.5,
+      "count": 10
+    },
+    "banking": {
+      "guardian": 0.4782608695652174,
+      "industry": 0.21739130434782608,
+      "count": 23
+    },
+    "safe": {
+      "guardian": 0.5333333333333333,
+      "industry": 1.0,
+      "count": 15
+    },
+    "tax": {
+      "guardian": 0.7727272727272727,
+      "industry": 0.09090909090909091,
+      "count": 22
+    },
+    "indian_sms": {
+      "guardian": 0.7333333333333333,
+      "industry": 0.5333333333333333,
+      "count": 15
+    },
+    "crypto": {
+      "guardian": 0.6666666666666666,
+      "industry": 0.5333333333333333,
+      "count": 15
+    }
+  },
+  "raw_results": [
+    {
+      "id": "B01",
+      "name": "SBI Card Blocked",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SCAM DETECTED",
+        "score": 78,
+        "correct": true,
+        "latency_ms": 5725.9655999951065
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B02",
+      "name": "HDFC Rewards Phish",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 63,
+        "correct": true,
+        "latency_ms": 3450.6785000048694
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "T01",
+      "name": "IRS Tax Docs Phish",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 69,
+        "correct": true,
+        "latency_ms": 3063.0518999969354
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "T02",
+      "name": "Energy365 CPA Lure",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 66,
+        "correct": true,
+        "latency_ms": 3507.6932000010856
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "C01",
+      "name": "OpenClaw Crypto Theft",
+      "category": "crypto",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 20,
+        "correct": false,
+        "latency_ms": 6543.925499994657
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "C02",
+      "name": "Fake Pudgy World",
+      "category": "crypto",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 64,
+        "correct": true,
+        "latency_ms": 2815.846000004967
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "D01",
+      "name": "USPS Fee Scam",
+      "category": "delivery",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "LOW RISK",
+        "score": 42,
+        "correct": false,
+        "latency_ms": 5526.4141999941785
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "I01",
+      "name": "Digital Arrest Scam",
+      "category": "indian_sms",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 2,
+        "correct": false,
+        "latency_ms": 3947.4144999985583
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": false,
+        "truecaller": true
+      }
+    },
+    {
+      "id": "I02",
+      "name": "Electricity Disconnection",
+      "category": "indian_sms",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 22,
+        "correct": false,
+        "latency_ms": 4991.608100004669
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "S01",
+      "name": "Legit Zomato Tracking",
+      "category": "safe",
+      "expected": "SAFE",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 7,
+        "correct": true,
+        "latency_ms": 6401.628699997673
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": true,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "S02",
+      "name": "Legit Amazon OTP",
+      "category": "safe",
+      "expected": "SAFE",
+      "guardian": {
+        "verdict": "LOW RISK",
+        "score": 30,
+        "correct": false,
+        "latency_ms": 4135.4473999963375
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": true,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "T11",
+      "name": "Scenario 12 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SCAM DETECTED",
+        "score": 84,
+        "correct": true,
+        "latency_ms": 3434.6424999966985
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B12",
+      "name": "Scenario 13 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 73,
+        "correct": true,
+        "latency_ms": 3468.5126000040327
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "I13",
+      "name": "Scenario 14 (INDIAN_SMS)",
+      "category": "indian_sms",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 61,
+        "correct": true,
+        "latency_ms": 1924.9947999996948
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": false,
+        "truecaller": true
+      }
+    },
+    {
+      "id": "C14",
+      "name": "Scenario 15 (CRYPTO)",
+      "category": "crypto",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 28,
+        "correct": false,
+        "latency_ms": 5672.862699997495
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": true,
+        "truecaller": true
+      }
+    },
+    {
+      "id": "C15",
+      "name": "Scenario 16 (CRYPTO)",
+      "category": "crypto",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 67,
+        "correct": true,
+        "latency_ms": 3419.434799994633
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": true,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B16",
+      "name": "Scenario 17 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 25,
+        "correct": false,
+        "latency_ms": 5193.144899996696
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "C17",
+      "name": "Scenario 18 (CRYPTO)",
+      "category": "crypto",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "LOW RISK",
+        "score": 42,
+        "correct": false,
+        "latency_ms": 6151.9149000014295
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "T18",
+      "name": "Scenario 19 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 14,
+        "correct": false,
+        "latency_ms": 5639.917000000423
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B19",
+      "name": "Scenario 20 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 26,
+        "correct": false,
+        "latency_ms": 5784.348499997577
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "D20",
+      "name": "Scenario 21 (DELIVERY)",
+      "category": "delivery",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 63,
+        "correct": true,
+        "latency_ms": 3489.0397999988636
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "I21",
+      "name": "Scenario 22 (INDIAN_SMS)",
+      "category": "indian_sms",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 55,
+        "correct": true,
+        "latency_ms": 5294.476900002337
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": false,
+        "truecaller": true
+      }
+    },
+    {
+      "id": "D22",
+      "name": "Scenario 23 (DELIVERY)",
+      "category": "delivery",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 60,
+        "correct": true,
+        "latency_ms": 4120.520199998282
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "T23",
+      "name": "Scenario 24 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "LOW RISK",
+        "score": 42,
+        "correct": false,
+        "latency_ms": 5304.632500003208
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": true,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "I24",
+      "name": "Scenario 25 (INDIAN_SMS)",
+      "category": "indian_sms",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 61,
+        "correct": true,
+        "latency_ms": 1831.650999993144
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": false,
+        "truecaller": true
+      }
+    },
+    {
+      "id": "S25",
+      "name": "Scenario 26 (SAFE)",
+      "category": "safe",
+      "expected": "SAFE",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 72,
+        "correct": false,
+        "latency_ms": 1788.8812999954098
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": true,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B26",
+      "name": "Scenario 27 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 73,
+        "correct": true,
+        "latency_ms": 3347.2477000032086
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "D27",
+      "name": "Scenario 28 (DELIVERY)",
+      "category": "delivery",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "LOW RISK",
+        "score": 42,
+        "correct": false,
+        "latency_ms": 5469.653300002392
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": true,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "I28",
+      "name": "Scenario 29 (INDIAN_SMS)",
+      "category": "indian_sms",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 2,
+        "correct": false,
+        "latency_ms": 4716.673399998399
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B29",
+      "name": "Scenario 30 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 25,
+        "correct": false,
+        "latency_ms": 5883.986500004539
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B30",
+      "name": "Scenario 31 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 25,
+        "correct": false,
+        "latency_ms": 5646.441099997901
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": true,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B31",
+      "name": "Scenario 32 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 25,
+        "correct": false,
+        "latency_ms": 5798.253799999657
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "C32",
+      "name": "Scenario 33 (CRYPTO)",
+      "category": "crypto",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SCAM DETECTED",
+        "score": 76,
+        "correct": true,
+        "latency_ms": 3799.7724000015296
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": false,
+        "truecaller": true
+      }
+    },
+    {
+      "id": "D33",
+      "name": "Scenario 34 (DELIVERY)",
+      "category": "delivery",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 63,
+        "correct": true,
+        "latency_ms": 4217.547799999011
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "C34",
+      "name": "Scenario 35 (CRYPTO)",
+      "category": "crypto",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 28,
+        "correct": false,
+        "latency_ms": 5528.760899993358
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": true,
+        "truecaller": true
+      }
+    },
+    {
+      "id": "T35",
+      "name": "Scenario 36 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 71,
+        "correct": true,
+        "latency_ms": 3403.2380000062403
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "D36",
+      "name": "Scenario 37 (DELIVERY)",
+      "category": "delivery",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "LOW RISK",
+        "score": 42,
+        "correct": false,
+        "latency_ms": 5858.239100001811
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": true,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B37",
+      "name": "Scenario 38 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 14,
+        "correct": false,
+        "latency_ms": 5675.780199999281
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "S38",
+      "name": "Scenario 39 (SAFE)",
+      "category": "safe",
+      "expected": "SAFE",
+      "guardian": {
+        "verdict": "SCAM DETECTED",
+        "score": 76,
+        "correct": false,
+        "latency_ms": 5272.71660000406
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": true,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "S39",
+      "name": "Scenario 40 (SAFE)",
+      "category": "safe",
+      "expected": "SAFE",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 1,
+        "correct": true,
+        "latency_ms": 3495.7357999956002
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": true,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "T40",
+      "name": "Scenario 41 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 72,
+        "correct": true,
+        "latency_ms": 3563.3387999987463
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": true,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B41",
+      "name": "Scenario 42 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 74,
+        "correct": true,
+        "latency_ms": 3272.258299999521
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "C42",
+      "name": "Scenario 43 (CRYPTO)",
+      "category": "crypto",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 67,
+        "correct": true,
+        "latency_ms": 3015.359700002591
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "S43",
+      "name": "Scenario 44 (SAFE)",
+      "category": "safe",
+      "expected": "SAFE",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 0,
+        "correct": true,
+        "latency_ms": 1777.7644000016153
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": true,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "T44",
+      "name": "Scenario 45 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 72,
+        "correct": true,
+        "latency_ms": 3220.0350999992224
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "I45",
+      "name": "Scenario 46 (INDIAN_SMS)",
+      "category": "indian_sms",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 69,
+        "correct": true,
+        "latency_ms": 1943.0393000002368
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "S46",
+      "name": "Scenario 47 (SAFE)",
+      "category": "safe",
+      "expected": "SAFE",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 1,
+        "correct": true,
+        "latency_ms": 1801.2692000047537
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": true,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "D47",
+      "name": "Scenario 48 (DELIVERY)",
+      "category": "delivery",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SCAM DETECTED",
+        "score": 84,
+        "correct": true,
+        "latency_ms": 3938.9295000000857
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": true,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B48",
+      "name": "Scenario 49 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 26,
+        "correct": false,
+        "latency_ms": 5430.867200004286
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "C49",
+      "name": "Scenario 50 (CRYPTO)",
+      "category": "crypto",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SCAM DETECTED",
+        "score": 84,
+        "correct": true,
+        "latency_ms": 3469.535899996117
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "T50",
+      "name": "Scenario 51 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 71,
+        "correct": true,
+        "latency_ms": 3133.7001000065356
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "C51",
+      "name": "Scenario 52 (CRYPTO)",
+      "category": "crypto",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 28,
+        "correct": false,
+        "latency_ms": 5704.501200001687
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "T52",
+      "name": "Scenario 53 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SCAM DETECTED",
+        "score": 84,
+        "correct": true,
+        "latency_ms": 3149.037800001679
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B53",
+      "name": "Scenario 54 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 67,
+        "correct": true,
+        "latency_ms": 3141.853599998285
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B54",
+      "name": "Scenario 55 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 26,
+        "correct": false,
+        "latency_ms": 5541.2278000003425
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "S55",
+      "name": "Scenario 56 (SAFE)",
+      "category": "safe",
+      "expected": "SAFE",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 53,
+        "correct": false,
+        "latency_ms": 1611.130299999786
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": true,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "S56",
+      "name": "Scenario 57 (SAFE)",
+      "category": "safe",
+      "expected": "SAFE",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 1,
+        "correct": true,
+        "latency_ms": 1038.9388000039617
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": true,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "C57",
+      "name": "Scenario 58 (CRYPTO)",
+      "category": "crypto",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 67,
+        "correct": true,
+        "latency_ms": 3369.8828000051435
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": false,
+        "truecaller": true
+      }
+    },
+    {
+      "id": "T58",
+      "name": "Scenario 59 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 71,
+        "correct": true,
+        "latency_ms": 2991.261900002428
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "D59",
+      "name": "Scenario 60 (DELIVERY)",
+      "category": "delivery",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "LOW RISK",
+        "score": 42,
+        "correct": false,
+        "latency_ms": 5463.622399998712
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "T60",
+      "name": "Scenario 61 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 72,
+        "correct": true,
+        "latency_ms": 3475.1660999972955
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B61",
+      "name": "Scenario 62 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 67,
+        "correct": true,
+        "latency_ms": 3167.1302000031574
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "T62",
+      "name": "Scenario 63 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 14,
+        "correct": false,
+        "latency_ms": 5182.076600001892
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "T63",
+      "name": "Scenario 64 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 72,
+        "correct": true,
+        "latency_ms": 3260.6301000050735
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "C64",
+      "name": "Scenario 65 (CRYPTO)",
+      "category": "crypto",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SCAM DETECTED",
+        "score": 84,
+        "correct": true,
+        "latency_ms": 3566.8119999972987
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": true,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "T65",
+      "name": "Scenario 66 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 72,
+        "correct": true,
+        "latency_ms": 3792.663399995945
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B66",
+      "name": "Scenario 67 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 25,
+        "correct": false,
+        "latency_ms": 5422.79299999791
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "I67",
+      "name": "Scenario 68 (INDIAN_SMS)",
+      "category": "indian_sms",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SCAM DETECTED",
+        "score": 87,
+        "correct": true,
+        "latency_ms": 3285.5332999970415
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "S68",
+      "name": "Scenario 69 (SAFE)",
+      "category": "safe",
+      "expected": "SAFE",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 53,
+        "correct": false,
+        "latency_ms": 974.9342000068282
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": true,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B69",
+      "name": "Scenario 70 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 68,
+        "correct": true,
+        "latency_ms": 3324.5135999968625
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": true,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "T70",
+      "name": "Scenario 71 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 72,
+        "correct": true,
+        "latency_ms": 3234.6653999993578
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "S71",
+      "name": "Scenario 72 (SAFE)",
+      "category": "safe",
+      "expected": "SAFE",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 53,
+        "correct": false,
+        "latency_ms": 945.5144999956246
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": true,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "C72",
+      "name": "Scenario 73 (CRYPTO)",
+      "category": "crypto",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 69,
+        "correct": true,
+        "latency_ms": 3609.877499999129
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": false,
+        "truecaller": true
+      }
+    },
+    {
+      "id": "T73",
+      "name": "Scenario 74 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 14,
+        "correct": false,
+        "latency_ms": 5486.764599998423
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "C74",
+      "name": "Scenario 75 (CRYPTO)",
+      "category": "crypto",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 67,
+        "correct": true,
+        "latency_ms": 3357.0839000021806
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": false,
+        "truecaller": true
+      }
+    },
+    {
+      "id": "I75",
+      "name": "Scenario 76 (INDIAN_SMS)",
+      "category": "indian_sms",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 69,
+        "correct": true,
+        "latency_ms": 2316.2151999931666
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": false,
+        "truecaller": true
+      }
+    },
+    {
+      "id": "B76",
+      "name": "Scenario 77 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 26,
+        "correct": false,
+        "latency_ms": 5358.294199999364
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": true,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "S77",
+      "name": "Scenario 78 (SAFE)",
+      "category": "safe",
+      "expected": "SAFE",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 1,
+        "correct": true,
+        "latency_ms": 950.5907999991905
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": true,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "S78",
+      "name": "Scenario 79 (SAFE)",
+      "category": "safe",
+      "expected": "SAFE",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 1,
+        "correct": true,
+        "latency_ms": 995.335100000375
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": true,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "I79",
+      "name": "Scenario 80 (INDIAN_SMS)",
+      "category": "indian_sms",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 61,
+        "correct": true,
+        "latency_ms": 1951.1146000004373
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B80",
+      "name": "Scenario 81 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 63,
+        "correct": true,
+        "latency_ms": 3027.457099997264
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B81",
+      "name": "Scenario 82 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 73,
+        "correct": true,
+        "latency_ms": 3242.3243000012008
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "S82",
+      "name": "Scenario 83 (SAFE)",
+      "category": "safe",
+      "expected": "SAFE",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 1,
+        "correct": true,
+        "latency_ms": 991.6822000013781
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": true,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "I83",
+      "name": "Scenario 84 (INDIAN_SMS)",
+      "category": "indian_sms",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 61,
+        "correct": true,
+        "latency_ms": 1872.6067000025068
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "I84",
+      "name": "Scenario 85 (INDIAN_SMS)",
+      "category": "indian_sms",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 55,
+        "correct": true,
+        "latency_ms": 5246.4484000011
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": true,
+        "truecaller": true
+      }
+    },
+    {
+      "id": "T85",
+      "name": "Scenario 86 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 72,
+        "correct": true,
+        "latency_ms": 3105.6114999955753
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "T86",
+      "name": "Scenario 87 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 71,
+        "correct": true,
+        "latency_ms": 3203.783500001009
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "I87",
+      "name": "Scenario 88 (INDIAN_SMS)",
+      "category": "indian_sms",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 2,
+        "correct": false,
+        "latency_ms": 3872.093300000415
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "I88",
+      "name": "Scenario 89 (INDIAN_SMS)",
+      "category": "indian_sms",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SCAM DETECTED",
+        "score": 87,
+        "correct": true,
+        "latency_ms": 3215.1336000024457
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": true,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "C89",
+      "name": "Scenario 90 (CRYPTO)",
+      "category": "crypto",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SCAM DETECTED",
+        "score": 84,
+        "correct": true,
+        "latency_ms": 3389.933699996618
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "T90",
+      "name": "Scenario 91 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 14,
+        "correct": false,
+        "latency_ms": 5267.400500000804
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "I91",
+      "name": "Scenario 92 (INDIAN_SMS)",
+      "category": "indian_sms",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SCAM DETECTED",
+        "score": 87,
+        "correct": true,
+        "latency_ms": 3476.1791999990237
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": true,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "S92",
+      "name": "Scenario 93 (SAFE)",
+      "category": "safe",
+      "expected": "SAFE",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 53,
+        "correct": false,
+        "latency_ms": 977.5317999956314
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": true,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B93",
+      "name": "Scenario 94 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 63,
+        "correct": true,
+        "latency_ms": 2921.943300003477
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": true,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "D94",
+      "name": "Scenario 95 (DELIVERY)",
+      "category": "delivery",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 63,
+        "correct": true,
+        "latency_ms": 3263.161700000637
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": true,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B95",
+      "name": "Scenario 96 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 14,
+        "correct": false,
+        "latency_ms": 4964.866499998607
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "T96",
+      "name": "Scenario 97 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 70,
+        "correct": true,
+        "latency_ms": 3357.972300000256
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "T97",
+      "name": "Scenario 98 (TAX)",
+      "category": "tax",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SUSPICIOUS",
+        "score": 72,
+        "correct": true,
+        "latency_ms": 3128.8361999977496
+      },
+      "industry_baseline": {
+        "detected": false,
+        "correct": false,
+        "gsb": false,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "D98",
+      "name": "Scenario 99 (DELIVERY)",
+      "category": "delivery",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SCAM DETECTED",
+        "score": 84,
+        "correct": true,
+        "latency_ms": 3753.864300000714
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": true,
+        "truecaller": false
+      }
+    },
+    {
+      "id": "B99",
+      "name": "Scenario 100 (BANKING)",
+      "category": "banking",
+      "expected": "SCAM",
+      "guardian": {
+        "verdict": "SAFE",
+        "score": 14,
+        "correct": false,
+        "latency_ms": 5084.063399997831
+      },
+      "industry_baseline": {
+        "detected": true,
+        "correct": true,
+        "gsb": true,
+        "truecaller": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+    "python.defaultInterpreterPath": "c:/Users/Anant/OneDrive/Desktop/AI Guardian/backend/venv/Scripts/python.exe",
+
+    "python.analysis.extraPaths": [
+        "c:/Users/Anant/OneDrive/Desktop/AI Guardian/backend",
+        "c:/Users/Anant/OneDrive/Desktop/AI Guardian/backend/venv/Lib/site-packages"
+    ],
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "off",
+    "python.analysis.venvPath": "c:/Users/Anant/OneDrive/Desktop/AI Guardian/backend",
+    "python.analysis.venv": "venv",
+    "python.analysis.diagnosticMode": "openFilesOnly",
+    "python.analysis.ignore": ["**/venv/**", "**/__pycache__/**"],
+    "python.analysis.reportMissingImports": "none",
+    "python.analysis.reportMissingModuleSource": "none",
+
+    "python.testing.cwd": "c:/Users/Anant/OneDrive/Desktop/AI Guardian/backend",
+    "terminal.integrated.cwd": "c:/Users/Anant/OneDrive/Desktop/AI Guardian/backend",
+
+    "cursorpyright.analysis.autoImportCompletions": true,
+    "cursorpyright.analysis.extraPaths": [
+        "c:/Users/Anant/OneDrive/Desktop/AI Guardian/backend",
+        "c:/Users/Anant/OneDrive/Desktop/AI Guardian/backend/venv/Lib/site-packages"
+    ],
+    "cursorpyright.analysis.typeCheckingMode": "off",
+    "cursorpyright.analysis.venvPath": "c:/Users/Anant/OneDrive/Desktop/AI Guardian/backend",
+    "cursorpyright.analysis.venv": "venv",
+    "cursorpyright.analysis.diagnosticMode": "openFilesOnly",
+    "cursorpyright.analysis.reportMissingImports": "none",
+    "cursorpyright.analysis.reportMissingModuleSource": "none",
+
+    "pyre.servers": []
+}

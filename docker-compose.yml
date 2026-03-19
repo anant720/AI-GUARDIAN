@@ -1,0 +1,57 @@
+version: "3.9"
+
+services:
+  # ── PostgreSQL Database ─────────────────────────────────────────────────────
+  db:
+    image: postgres:16-alpine
+    container_name: ai-guardian-db
+    restart: always
+    environment:
+      - POSTGRES_DB=ai_guardian
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  # ── Redis (Event Bus / Cache) ────────────────────────────────────────────────
+  redis:
+    image: redis:alpine
+    container_name: ai-guardian-redis
+    restart: always
+    ports:
+      - "6379:6379"
+
+  # ── Python Backend API ──────────────────────────────────────────────────────
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ai-guardian-api
+    depends_on:
+      - db
+      - redis
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@db:5432/ai_guardian
+      - REDIS_URL=redis://redis:6379
+    restart: always
+
+  # ── React Frontend Dashboard ────────────────────────────────────────────────
+  dashboard:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: ai-guardian-dashboard
+    depends_on:
+      - api
+    ports:
+      - "5173:80"
+    restart: always
+
+volumes:
+  pgdata:

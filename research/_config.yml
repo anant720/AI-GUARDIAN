@@ -1,0 +1,13 @@
+title: "AI Guardian v3.0.0: Analytics Lab"
+author: "Idea Spark Research Team"
+logo: logo.png
+execute:
+  execute_notebooks: force
+html:
+  favicon: favicon.ico
+  use_edit_page_button: false
+  use_repository_button: true
+  use_issues_button: true
+repository:
+  url: https://github.com/your-username/ai-guardian
+  branch: main

@@ -1,0 +1,515 @@
+{
+  "timestamp": "2026-03-20T01:23:05.449775",
+  "summary": {
+    "total": 100,
+    "success": 0,
+    "errors": 100,
+    "accuracy": 0,
+    "avg_latency": 0,
+    "p95_latency": 0,
+    "llm_gating": 0
+  },
+  "phase_analysis": {},
+  "results": [
+    {
+      "name": "RBI KYC Update",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "SBI Card Blocked",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "HDFC Rewards",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "ICICI Account Alert",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Axis Bank Loan",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "USPS Package Fee",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "India Post Delay",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "FedEx Customs Fee",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "BlueDart Tracking",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Delhivery Failed Delivery",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Income Tax Refund",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "TRAI SIM Disconnection",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "CBI Fraud Summons",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Pig Butchering Intro",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Free BTC Giveaway",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Telegram VIP Signals",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Romance Scam Hook",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Job Offer - Amazon WFH",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Netflix Billing Issue",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Apple ID Locked",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Casual Lunch",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Legit Amazon OTP",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Zomato Tracking",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Legit Google Security",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Friends Meeting",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Zero-Day HDFC",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Zero-Day SBI",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Zero-Day PayPal",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Hindi Banking Scam",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Indian Tax Dept",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Investment Tip",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Crypto Bonus",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 33 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 34 (INVESTMENT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 35 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 36 (GOVT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 37 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 38 (ACCOUNT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 39 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 40 (GOVT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 41 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 42 (INVESTMENT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 43 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 44 (BANKING)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 45 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 46 (BANKING)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 47 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 48 (DELIVERY)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 49 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 50 (ACCOUNT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 51 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 52 (GOVT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 53 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 54 (INVESTMENT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 55 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 56 (BANKING)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 57 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 58 (DELIVERY)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 59 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 60 (BANKING)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 61 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 62 (ACCOUNT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 63 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 64 (INVESTMENT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 65 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 66 (ACCOUNT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 67 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 68 (ACCOUNT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 69 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 70 (DELIVERY)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 71 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 72 (INVESTMENT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 73 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 74 (BANKING)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 75 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 76 (SOCIAL)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 77 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 78 (INVESTMENT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 79 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 80 (ACCOUNT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 81 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 82 (ACCOUNT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 83 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 84 (SOCIAL)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 85 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 86 (ACCOUNT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 87 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 88 (DELIVERY)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 89 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 90 (GOVT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 91 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 92 (SOCIAL)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 93 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 94 (INVESTMENT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 95 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 96 (BANKING)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 97 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 98 (DELIVERY)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 99 (SAFE)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    },
+    {
+      "name": "Synthetic Scenario 100 (INVESTMENT)",
+      "error": "'str' object has no attribute 'get'",
+      "latency": -1
+    }
+  ]
+}

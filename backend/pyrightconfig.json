@@ -1,0 +1,13 @@
+{
+  "pythonVersion": "3.11",
+  "pythonPlatform": "Windows",
+  "venvPath": ".",
+  "venv": "venv",
+  "extraPaths": ["."],
+  "typeCheckingMode": "off",
+  "reportMissingImports": "none",
+  "reportMissingModuleSource": "none",
+  "reportUndefinedVariable": "none",
+  "useLibraryCodeForTypes": true,
+  "exclude": ["venv", "**/__pycache__"]
+}
