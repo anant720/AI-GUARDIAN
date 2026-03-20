@@ -258,11 +258,6 @@ Once the healthy status is achieved, visit the dashboard at:
 
 ---
 
----
-
-## 🏆 Idea Spark Jury: The Winning Pitch
-**"AI Guardian v3.0.0 is not just a security tool; it is a Reasoning Engine for the modern web."**
-In a digital landscape where phishing links die in hours and social engineering tactics evolve daily, static blacklists are obsolete. AI Guardian bridges this critical gap with a **10-layer asynchronous pipeline**, beating industry giants by **20% in accuracy**. It is enterprise-ready, self-healing, and purpose-built to protect the next billion users from the most sophisticated digital frauds.
 
 ---
 *Developed for Idea Spark - University Hackathon 2026*
