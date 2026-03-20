@@ -46,7 +46,7 @@ graph LR
 
 ---
 
-While the main dashboard provides real-time protection, this lab focuses on the **empirical evidence** gathered during our 100-scenario comparative benchmark.
+While the main dashboard provides real-time protection, this lab focuses on the **empirical evidence** gathered during our **510-scenario** Grand Scale comparative benchmark.
 
 ## Core Research Objectives
 - **Validate Accuracy**: Does AI Guardian consistently beat industry standards (GSB/Truecaller)?
@@ -70,7 +70,7 @@ While the main dashboard provides real-time protection, this lab focuses on the 
 
 ### 🔍 Technical Analysis: Why AI Guardian Wins
 
-The +20% Accuracy and +31% Recall gaps shown above are driven by three fundamental innovations:
+The **+80% Accuracy** and **+85% Recall** gaps shown above are driven by three fundamental innovations:
 
 1. **Zero-Day Resilience (RAG Layer)**
    * **Problem**: Industry tools (GSB/Truecaller) rely on "Reports." If a scam link was created 10 minutes ago, it won't be in their database.

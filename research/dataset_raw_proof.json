@@ -1,0 +1,4082 @@
+[
+  {
+    "id": "SCAM_CRYPTO_399",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.verify-account.net/login",
+    "message": "Security Alert: Your Coinbase wallet has been restricted. Unlock at http://coinbase.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_461",
+    "name": "Zomato Genuine Message",
+    "category": "safe",
+    "url": "https://hdfcbank.com/support",
+    "message": "Hey! Don't forget our meeting tonight at 8.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_TAX_139",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.secure-login.pro/login",
+    "message": "Final Notice: Discrepancy found in your IRS tax filing. Resolve before penalty: http://irs.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_111",
+    "name": "ATO Australia Tax Phish",
+    "category": "tax",
+    "url": "http://ato-australia.secure-login.pro/login",
+    "message": "Action Required: Your ATO Australia refund has been processed. Confirm bank details: http://ato-australia.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_443",
+    "name": "Myntra Genuine Message",
+    "category": "safe",
+    "url": "https://amazon.in/support",
+    "message": "Hey! Don't forget our meeting tonight at 8.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_359",
+    "name": "ByBit Crypto Phish",
+    "category": "crypto",
+    "url": "http://bybit.update-kyc.info/login",
+    "message": "Aura Drop: You have received 5,000 ByBit tokens! Claim your airdrop: http://bybit.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_85",
+    "name": "ICICI Banking Phish",
+    "category": "banking",
+    "url": "http://icici.verify-account.net/login",
+    "message": "Notification: Your ICICI reward points (Rs. 39343) are expiring today. Claim now: http://icici.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_419",
+    "name": "Coinbase Genuine Message",
+    "category": "safe",
+    "url": "https://amazon.in/support",
+    "message": "Your OTP for Coinbase transaction of Rs. 606 is 733728. Do not share with anyone.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_TAX_152",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.claim-rewards.biz/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 15349. Apply at http://cra-canada.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_2",
+    "name": "Revolut Banking Phish",
+    "category": "banking",
+    "url": "http://revolut.logistics-track.org/login",
+    "message": "Urgent: Your Revolut account is locked due to suspicious activity. Verify here: http://revolut.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_177",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.security-verify.com/login",
+    "message": "Final Notice: Discrepancy found in your CRA Canada tax filing. Resolve before penalty: http://cra-canada.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_203",
+    "name": "Aramex Logistics Phish",
+    "category": "logistics",
+    "url": "http://aramex.verify-account.net/login",
+    "message": "Tracking Alert: Your parcel from Aramex is arriving today. Confirm location: http://aramex.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_493",
+    "name": "Kraken Genuine Message",
+    "category": "safe",
+    "url": "https://ups.com/support",
+    "message": "Your appointment with Kraken consultant is confirmed for 612711 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_320",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.tax-refund-gov.in.net/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Binance account. Cancel here: http://binance.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_490",
+    "name": "DHL Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Welcome to DHL! We are excited to have you on board. Follow us for updates.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_BANKING_73",
+    "name": "SBI Banking Phish",
+    "category": "banking",
+    "url": "http://sbi.verify-account.net/login",
+    "message": "Notification: Your SBI reward points (Rs. 42189) are expiring today. Claim now: http://sbi.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_412",
+    "name": "Flipkart Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Welcome to Flipkart! We are excited to have you on board. Follow us for updates.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_TAX_123",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.tax-refund-gov.in.net/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 45596. Apply at http://hmrc.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_256",
+    "name": "Aramex Logistics Phish",
+    "category": "logistics",
+    "url": "http://aramex.secure-login.pro/login",
+    "message": "Delivery Attempt Failed: Our Aramex driver could not find your address. Update here: http://aramex.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_59",
+    "name": "SBI Banking Phish",
+    "category": "banking",
+    "url": "http://sbi.security-verify.com/login",
+    "message": "Dear customer, KYC update is pending for your SBI savings A/c. Complete at http://sbi.security-verify.com/login to avoid suspension.",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_60",
+    "name": "SBI Banking Phish",
+    "category": "banking",
+    "url": "http://sbi.security-verify.com/login",
+    "message": "Notification: Your SBI reward points (Rs. 11771) are expiring today. Claim now: http://sbi.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_367",
+    "name": "Trust Wallet Crypto Phish",
+    "category": "crypto",
+    "url": "http://trust-wallet.security-verify.com/login",
+    "message": "Aura Drop: You have received 5,000 Trust Wallet tokens! Claim your airdrop: http://trust-wallet.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_153",
+    "name": "ATO Australia Tax Phish",
+    "category": "tax",
+    "url": "http://ato-australia.secure-login.pro/login",
+    "message": "Action Required: Your ATO Australia refund has been processed. Confirm bank details: http://ato-australia.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_313",
+    "name": "Kraken Crypto Phish",
+    "category": "crypto",
+    "url": "http://kraken.verify-account.net/login",
+    "message": "Aura Drop: You have received 5,000 Kraken tokens! Claim your airdrop: http://kraken.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_74",
+    "name": "HDFC Banking Phish",
+    "category": "banking",
+    "url": "http://hdfc.secure-login.pro/login",
+    "message": "Urgent: Your HDFC account is locked due to suspicious activity. Verify here: http://hdfc.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_29",
+    "name": "Axis Bank Banking Phish",
+    "category": "banking",
+    "url": "http://axis-bank.update-kyc.info/login",
+    "message": "Urgent: Your Axis Bank account is locked due to suspicious activity. Verify here: http://axis-bank.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_72",
+    "name": "Barclays Banking Phish",
+    "category": "banking",
+    "url": "http://barclays.security-verify.com/login",
+    "message": "Dear customer, KYC update is pending for your Barclays savings A/c. Complete at http://barclays.security-verify.com/login to avoid suspension.",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_138",
+    "name": "ATO Australia Tax Phish",
+    "category": "tax",
+    "url": "http://ato-australia.claim-rewards.biz/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 23166. Apply at http://ato-australia.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_264",
+    "name": "Delhivery Logistics Phish",
+    "category": "logistics",
+    "url": "http://delhivery.verify-account.net/login",
+    "message": "Package Delayed: Your Delhivery shipment #00BC2C4A is held at the local hub. Pay re-delivery fee (Rs. 24261): http://delhivery.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_464",
+    "name": "CRA Canada Genuine Message",
+    "category": "safe",
+    "url": "https://fedex.com/support",
+    "message": "Notification: Your CRA Canada order #948344 has been shipped and will arrive by tomorrow.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_218",
+    "name": "BlueDart Logistics Phish",
+    "category": "logistics",
+    "url": "http://bluedart.secure-login.pro/login",
+    "message": "Package Delayed: Your BlueDart shipment #02F0A2F4 is held at the local hub. Pay re-delivery fee (Rs. 35373): http://bluedart.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_263",
+    "name": "BlueDart Logistics Phish",
+    "category": "logistics",
+    "url": "http://bluedart.update-kyc.info/login",
+    "message": "Package Delayed: Your BlueDart shipment #E384C86E is held at the local hub. Pay re-delivery fee (Rs. 48431): http://bluedart.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_370",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.tax-refund-gov.in.net/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Coinbase account. Cancel here: http://coinbase.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_119",
+    "name": "Income Tax India Tax Phish",
+    "category": "tax",
+    "url": "http://income-tax-india.tax-refund-gov.in.net/login",
+    "message": "Action Required: Your Income Tax India refund has been processed. Confirm bank details: http://income-tax-india.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_200",
+    "name": "DHL Logistics Phish",
+    "category": "logistics",
+    "url": "http://dhl.logistics-track.org/login",
+    "message": "Delivery Attempt Failed: Our DHL driver could not find your address. Update here: http://dhl.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_162",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.security-verify.com/login",
+    "message": "Action Required: Your CRA Canada refund has been processed. Confirm bank details: http://cra-canada.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_141",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.tax-refund-gov.in.net/login",
+    "message": "Final Notice: Discrepancy found in your HMRC tax filing. Resolve before penalty: http://hmrc.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_372",
+    "name": "Trust Wallet Crypto Phish",
+    "category": "crypto",
+    "url": "http://trust-wallet.claim-rewards.biz/login",
+    "message": "Aura Drop: You have received 5,000 Trust Wallet tokens! Claim your airdrop: http://trust-wallet.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_376",
+    "name": "MetaMask Crypto Phish",
+    "category": "crypto",
+    "url": "http://metamask.update-kyc.info/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your MetaMask account. Cancel here: http://metamask.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_9",
+    "name": "J.P. Morgan Banking Phish",
+    "category": "banking",
+    "url": "http://j.p.-morgan.logistics-track.org/login",
+    "message": "Dear customer, KYC update is pending for your J.P. Morgan savings A/c. Complete at http://j.p.-morgan.logistics-track.org/login to avoid suspension.",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_401",
+    "name": "DHL Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Dear Customer, your DHL monthly statement for March 2026 is now available.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_454",
+    "name": "Revolut Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Your OTP for Revolut transaction of Rs. 1029 is 611913. Do not share with anyone.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_292",
+    "name": "UPS Logistics Phish",
+    "category": "logistics",
+    "url": "http://ups.secure-login.pro/login",
+    "message": "Delivery Attempt Failed: Our UPS driver could not find your address. Update here: http://ups.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_258",
+    "name": "Delhivery Logistics Phish",
+    "category": "logistics",
+    "url": "http://delhivery.update-kyc.info/login",
+    "message": "Delivery Attempt Failed: Our Delhivery driver could not find your address. Update here: http://delhivery.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_41",
+    "name": "HSBC Banking Phish",
+    "category": "banking",
+    "url": "http://hsbc.update-kyc.info/login",
+    "message": "Dear customer, KYC update is pending for your HSBC savings A/c. Complete at http://hsbc.update-kyc.info/login to avoid suspension.",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_390",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.secure-login.pro/login",
+    "message": "Aura Drop: You have received 5,000 Binance tokens! Claim your airdrop: http://binance.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_440",
+    "name": "Axis Bank Genuine Message",
+    "category": "safe",
+    "url": "https://amazon.in/support",
+    "message": "Welcome to Axis Bank! We are excited to have you on board. Follow us for updates.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_402",
+    "name": "Axis Bank Genuine Message",
+    "category": "safe",
+    "url": "https://sbi.co.in/support",
+    "message": "Your OTP for Axis Bank transaction of Rs. 1278 is 814633. Do not share with anyone.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_438",
+    "name": "Flipkart Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Dear Customer, your Flipkart monthly statement for March 2026 is now available.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_TAX_102",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.logistics-track.org/login",
+    "message": "Action Required: Your IRS refund has been processed. Confirm bank details: http://irs.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_393",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.logistics-track.org/login",
+    "message": "Security Alert: Your Coinbase wallet has been restricted. Unlock at http://coinbase.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_305",
+    "name": "MetaMask Crypto Phish",
+    "category": "crypto",
+    "url": "http://metamask.claim-rewards.biz/login",
+    "message": "Aura Drop: You have received 5,000 MetaMask tokens! Claim your airdrop: http://metamask.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_147",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.tax-refund-gov.in.net/login",
+    "message": "Action Required: Your HMRC refund has been processed. Confirm bank details: http://hmrc.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_297",
+    "name": "Aramex Logistics Phish",
+    "category": "logistics",
+    "url": "http://aramex.secure-login.pro/login",
+    "message": "Delivery Attempt Failed: Our Aramex driver could not find your address. Update here: http://aramex.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_106",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.claim-rewards.biz/login",
+    "message": "Action Required: Your IRS refund has been processed. Confirm bank details: http://irs.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_80",
+    "name": "HSBC Banking Phish",
+    "category": "banking",
+    "url": "http://hsbc.security-verify.com/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://hsbc.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_38",
+    "name": "ICICI Banking Phish",
+    "category": "banking",
+    "url": "http://icici.claim-rewards.biz/login",
+    "message": "Notification: Your ICICI reward points (Rs. 24399) are expiring today. Claim now: http://icici.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_181",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.security-verify.com/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 25513. Apply at http://cra-canada.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_445",
+    "name": "J.P. Morgan Genuine Message",
+    "category": "safe",
+    "url": "https://incometax.gov.in/support",
+    "message": "Your OTP for J.P. Morgan transaction of Rs. 1861 is 755202. Do not share with anyone.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_BANKING_89",
+    "name": "Barclays Banking Phish",
+    "category": "banking",
+    "url": "http://barclays.secure-login.pro/login",
+    "message": "Notification: Your Barclays reward points (Rs. 14998) are expiring today. Claim now: http://barclays.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_508",
+    "name": "UPS Genuine Message",
+    "category": "safe",
+    "url": "https://icicibank.com/support",
+    "message": "Your OTP for UPS transaction of Rs. 1346 is 296709. Do not share with anyone.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_458",
+    "name": "Coinbase Genuine Message",
+    "category": "safe",
+    "url": "https://fedex.com/support",
+    "message": "Welcome to Coinbase! We are excited to have you on board. Follow us for updates.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_479",
+    "name": "MetaMask Genuine Message",
+    "category": "safe",
+    "url": "https://fedex.com/support",
+    "message": "Your appointment with MetaMask consultant is confirmed for 703053 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_TAX_122",
+    "name": "Income Tax India Tax Phish",
+    "category": "tax",
+    "url": "http://income-tax-india.security-verify.com/login",
+    "message": "Final Notice: Discrepancy found in your Income Tax India tax filing. Resolve before penalty: http://income-tax-india.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_135",
+    "name": "ATO Australia Tax Phish",
+    "category": "tax",
+    "url": "http://ato-australia.secure-login.pro/login",
+    "message": "Action Required: Your ATO Australia refund has been processed. Confirm bank details: http://ato-australia.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_276",
+    "name": "UPS Logistics Phish",
+    "category": "logistics",
+    "url": "http://ups.verify-account.net/login",
+    "message": "Package Delayed: Your UPS shipment #B10D43B8 is held at the local hub. Pay re-delivery fee (Rs. 37053): http://ups.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_410",
+    "name": "HMRC Genuine Message",
+    "category": "safe",
+    "url": "https://amazon.in/support",
+    "message": "Can you send me the documents for the project? Thanks.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_309",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.tax-refund-gov.in.net/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Coinbase account. Cancel here: http://coinbase.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_37",
+    "name": "Barclays Banking Phish",
+    "category": "banking",
+    "url": "http://barclays.secure-login.pro/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://barclays.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_239",
+    "name": "India Post Logistics Phish",
+    "category": "logistics",
+    "url": "http://india-post.update-kyc.info/login",
+    "message": "Tracking Alert: Your parcel from India Post is arriving today. Confirm location: http://india-post.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_347",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.security-verify.com/login",
+    "message": "Aura Drop: You have received 5,000 Coinbase tokens! Claim your airdrop: http://coinbase.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_242",
+    "name": "BlueDart Logistics Phish",
+    "category": "logistics",
+    "url": "http://bluedart.verify-account.net/login",
+    "message": "Delivery Attempt Failed: Our BlueDart driver could not find your address. Update here: http://bluedart.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_99",
+    "name": "J.P. Morgan Banking Phish",
+    "category": "banking",
+    "url": "http://j.p.-morgan.secure-login.pro/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://j.p.-morgan.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_455",
+    "name": "Myntra Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Hey! Don't forget our meeting tonight at 8.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_389",
+    "name": "Trust Wallet Crypto Phish",
+    "category": "crypto",
+    "url": "http://trust-wallet.logistics-track.org/login",
+    "message": "Aura Drop: You have received 5,000 Trust Wallet tokens! Claim your airdrop: http://trust-wallet.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_87",
+    "name": "HDFC Banking Phish",
+    "category": "banking",
+    "url": "http://hdfc.security-verify.com/login",
+    "message": "Urgent: Your HDFC account is locked due to suspicious activity. Verify here: http://hdfc.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_506",
+    "name": "HMRC Genuine Message",
+    "category": "safe",
+    "url": "https://fedex.com/support",
+    "message": "Notification: Your HMRC order #753210 has been shipped and will arrive by tomorrow.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_BANKING_17",
+    "name": "ICICI Banking Phish",
+    "category": "banking",
+    "url": "http://icici.security-verify.com/login",
+    "message": "Notification: Your ICICI reward points (Rs. 36076) are expiring today. Claim now: http://icici.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_195",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.update-kyc.info/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 42493. Apply at http://cra-canada.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_65",
+    "name": "SBI Banking Phish",
+    "category": "banking",
+    "url": "http://sbi.secure-login.pro/login",
+    "message": "Dear customer, KYC update is pending for your SBI savings A/c. Complete at http://sbi.secure-login.pro/login to avoid suspension.",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_325",
+    "name": "ByBit Crypto Phish",
+    "category": "crypto",
+    "url": "http://bybit.logistics-track.org/login",
+    "message": "Aura Drop: You have received 5,000 ByBit tokens! Claim your airdrop: http://bybit.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_277",
+    "name": "DHL Logistics Phish",
+    "category": "logistics",
+    "url": "http://dhl.logistics-track.org/login",
+    "message": "Delivery Attempt Failed: Our DHL driver could not find your address. Update here: http://dhl.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_57",
+    "name": "J.P. Morgan Banking Phish",
+    "category": "banking",
+    "url": "http://j.p.-morgan.update-kyc.info/login",
+    "message": "Notification: Your J.P. Morgan reward points (Rs. 14480) are expiring today. Claim now: http://j.p.-morgan.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_19",
+    "name": "J.P. Morgan Banking Phish",
+    "category": "banking",
+    "url": "http://j.p.-morgan.secure-login.pro/login",
+    "message": "Urgent: Your J.P. Morgan account is locked due to suspicious activity. Verify here: http://j.p.-morgan.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_133",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.security-verify.com/login",
+    "message": "Final Notice: Discrepancy found in your CRA Canada tax filing. Resolve before penalty: http://cra-canada.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_35",
+    "name": "J.P. Morgan Banking Phish",
+    "category": "banking",
+    "url": "http://j.p.-morgan.logistics-track.org/login",
+    "message": "Notification: Your J.P. Morgan reward points (Rs. 41871) are expiring today. Claim now: http://j.p.-morgan.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_340",
+    "name": "MetaMask Crypto Phish",
+    "category": "crypto",
+    "url": "http://metamask.update-kyc.info/login",
+    "message": "Security Alert: Your MetaMask wallet has been restricted. Unlock at http://metamask.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_423",
+    "name": "DHL Genuine Message",
+    "category": "safe",
+    "url": "https://amazon.in/support",
+    "message": "Your OTP for DHL transaction of Rs. 106 is 403422. Do not share with anyone.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_328",
+    "name": "MetaMask Crypto Phish",
+    "category": "crypto",
+    "url": "http://metamask.update-kyc.info/login",
+    "message": "Aura Drop: You have received 5,000 MetaMask tokens! Claim your airdrop: http://metamask.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_503",
+    "name": "IRS Genuine Message",
+    "category": "safe",
+    "url": "https://hdfcbank.com/support",
+    "message": "Your appointment with IRS consultant is confirmed for 601014 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_BANKING_66",
+    "name": "Axis Bank Banking Phish",
+    "category": "banking",
+    "url": "http://axis-bank.claim-rewards.biz/login",
+    "message": "Urgent: Your Axis Bank account is locked due to suspicious activity. Verify here: http://axis-bank.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_223",
+    "name": "DHL Logistics Phish",
+    "category": "logistics",
+    "url": "http://dhl.verify-account.net/login",
+    "message": "Package Delayed: Your DHL shipment #79BFF7D9 is held at the local hub. Pay re-delivery fee (Rs. 14207): http://dhl.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_121",
+    "name": "Income Tax India Tax Phish",
+    "category": "tax",
+    "url": "http://income-tax-india.claim-rewards.biz/login",
+    "message": "Action Required: Your Income Tax India refund has been processed. Confirm bank details: http://income-tax-india.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_504",
+    "name": "Flipkart Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Welcome to Flipkart! We are excited to have you on board. Follow us for updates.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_333",
+    "name": "ByBit Crypto Phish",
+    "category": "crypto",
+    "url": "http://bybit.update-kyc.info/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your ByBit account. Cancel here: http://bybit.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_20",
+    "name": "Chase Banking Phish",
+    "category": "banking",
+    "url": "http://chase.claim-rewards.biz/login",
+    "message": "Notification: Your Chase reward points (Rs. 21679) are expiring today. Claim now: http://chase.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_120",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.claim-rewards.biz/login",
+    "message": "Final Notice: Discrepancy found in your HMRC tax filing. Resolve before penalty: http://hmrc.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_444",
+    "name": "HMRC Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Hey! Don't forget our meeting tonight at 8.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_287",
+    "name": "UPS Logistics Phish",
+    "category": "logistics",
+    "url": "http://ups.claim-rewards.biz/login",
+    "message": "Delivery Attempt Failed: Our UPS driver could not find your address. Update here: http://ups.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_319",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.update-kyc.info/login",
+    "message": "Security Alert: Your Binance wallet has been restricted. Unlock at http://binance.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_134",
+    "name": "Income Tax India Tax Phish",
+    "category": "tax",
+    "url": "http://income-tax-india.tax-refund-gov.in.net/login",
+    "message": "Action Required: Your Income Tax India refund has been processed. Confirm bank details: http://income-tax-india.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_160",
+    "name": "Income Tax India Tax Phish",
+    "category": "tax",
+    "url": "http://income-tax-india.logistics-track.org/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 9996. Apply at http://income-tax-india.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_361",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.tax-refund-gov.in.net/login",
+    "message": "Security Alert: Your Coinbase wallet has been restricted. Unlock at http://coinbase.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_363",
+    "name": "MetaMask Crypto Phish",
+    "category": "crypto",
+    "url": "http://metamask.claim-rewards.biz/login",
+    "message": "Aura Drop: You have received 5,000 MetaMask tokens! Claim your airdrop: http://metamask.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_40",
+    "name": "Chase Banking Phish",
+    "category": "banking",
+    "url": "http://chase.logistics-track.org/login",
+    "message": "Urgent: Your Chase account is locked due to suspicious activity. Verify here: http://chase.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_155",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.logistics-track.org/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 5067. Apply at http://irs.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_435",
+    "name": "Barclays Genuine Message",
+    "category": "safe",
+    "url": "https://sbi.co.in/support",
+    "message": "Your OTP for Barclays transaction of Rs. 748 is 179880. Do not share with anyone.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_BANKING_48",
+    "name": "Axis Bank Banking Phish",
+    "category": "banking",
+    "url": "http://axis-bank.claim-rewards.biz/login",
+    "message": "Notification: Your Axis Bank reward points (Rs. 9539) are expiring today. Claim now: http://axis-bank.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_289",
+    "name": "India Post Logistics Phish",
+    "category": "logistics",
+    "url": "http://india-post.security-verify.com/login",
+    "message": "Package Delayed: Your India Post shipment #C09193CB is held at the local hub. Pay re-delivery fee (Rs. 41543): http://india-post.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_417",
+    "name": "Trust Wallet Genuine Message",
+    "category": "safe",
+    "url": "https://hdfcbank.com/support",
+    "message": "Dear Customer, your Trust Wallet monthly statement for March 2026 is now available.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_441",
+    "name": "IRS Genuine Message",
+    "category": "safe",
+    "url": "https://hdfcbank.com/support",
+    "message": "Welcome to IRS! We are excited to have you on board. Follow us for updates.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_321",
+    "name": "ByBit Crypto Phish",
+    "category": "crypto",
+    "url": "http://bybit.update-kyc.info/login",
+    "message": "Security Alert: Your ByBit wallet has been restricted. Unlock at http://bybit.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_407",
+    "name": "Zomato Genuine Message",
+    "category": "safe",
+    "url": "https://hdfcbank.com/support",
+    "message": "Welcome to Zomato! We are excited to have you on board. Follow us for updates.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_245",
+    "name": "BlueDart Logistics Phish",
+    "category": "logistics",
+    "url": "http://bluedart.update-kyc.info/login",
+    "message": "Package Delayed: Your BlueDart shipment #FB3BDA7B is held at the local hub. Pay re-delivery fee (Rs. 14955): http://bluedart.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_39",
+    "name": "Barclays Banking Phish",
+    "category": "banking",
+    "url": "http://barclays.verify-account.net/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://barclays.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_507",
+    "name": "Chase Genuine Message",
+    "category": "safe",
+    "url": "https://sbi.co.in/support",
+    "message": "Hey! Don't forget our meeting tonight at 8.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_296",
+    "name": "BlueDart Logistics Phish",
+    "category": "logistics",
+    "url": "http://bluedart.logistics-track.org/login",
+    "message": "Delivery Attempt Failed: Our BlueDart driver could not find your address. Update here: http://bluedart.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_43",
+    "name": "HSBC Banking Phish",
+    "category": "banking",
+    "url": "http://hsbc.secure-login.pro/login",
+    "message": "Dear customer, KYC update is pending for your HSBC savings A/c. Complete at http://hsbc.secure-login.pro/login to avoid suspension.",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_33",
+    "name": "HDFC Banking Phish",
+    "category": "banking",
+    "url": "http://hdfc.secure-login.pro/login",
+    "message": "Notification: Your HDFC reward points (Rs. 27918) are expiring today. Claim now: http://hdfc.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_83",
+    "name": "SBI Banking Phish",
+    "category": "banking",
+    "url": "http://sbi.tax-refund-gov.in.net/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://sbi.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_388",
+    "name": "Trust Wallet Crypto Phish",
+    "category": "crypto",
+    "url": "http://trust-wallet.tax-refund-gov.in.net/login",
+    "message": "Security Alert: Your Trust Wallet wallet has been restricted. Unlock at http://trust-wallet.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_387",
+    "name": "Trust Wallet Crypto Phish",
+    "category": "crypto",
+    "url": "http://trust-wallet.security-verify.com/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Trust Wallet account. Cancel here: http://trust-wallet.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_499",
+    "name": "ATO Australia Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Hey! Don't forget our meeting tonight at 8.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_335",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.security-verify.com/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Coinbase account. Cancel here: http://coinbase.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_496",
+    "name": "ByBit Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Your appointment with ByBit consultant is confirmed for 729776 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_489",
+    "name": "Coinbase Genuine Message",
+    "category": "safe",
+    "url": "https://sbi.co.in/support",
+    "message": "Hey! Don't forget our meeting tonight at 8.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_351",
+    "name": "MetaMask Crypto Phish",
+    "category": "crypto",
+    "url": "http://metamask.logistics-track.org/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your MetaMask account. Cancel here: http://metamask.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_241",
+    "name": "BlueDart Logistics Phish",
+    "category": "logistics",
+    "url": "http://bluedart.security-verify.com/login",
+    "message": "Package Delayed: Your BlueDart shipment #75CA5934 is held at the local hub. Pay re-delivery fee (Rs. 10554): http://bluedart.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_317",
+    "name": "Kraken Crypto Phish",
+    "category": "crypto",
+    "url": "http://kraken.update-kyc.info/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Kraken account. Cancel here: http://kraken.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_350",
+    "name": "MetaMask Crypto Phish",
+    "category": "crypto",
+    "url": "http://metamask.tax-refund-gov.in.net/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your MetaMask account. Cancel here: http://metamask.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_76",
+    "name": "HSBC Banking Phish",
+    "category": "banking",
+    "url": "http://hsbc.security-verify.com/login",
+    "message": "Urgent: Your HSBC account is locked due to suspicious activity. Verify here: http://hsbc.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_180",
+    "name": "Income Tax India Tax Phish",
+    "category": "tax",
+    "url": "http://income-tax-india.claim-rewards.biz/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 6921. Apply at http://income-tax-india.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_406",
+    "name": "UPS Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Dear Customer, your UPS monthly statement for March 2026 is now available.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_364",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.tax-refund-gov.in.net/login",
+    "message": "Security Alert: Your Coinbase wallet has been restricted. Unlock at http://coinbase.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_483",
+    "name": "Coinbase Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Your appointment with Coinbase consultant is confirmed for 708398 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_352",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.logistics-track.org/login",
+    "message": "Security Alert: Your Binance wallet has been restricted. Unlock at http://binance.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_434",
+    "name": "IRS Genuine Message",
+    "category": "safe",
+    "url": "https://ups.com/support",
+    "message": "Can you send me the documents for the project? Thanks.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_BANKING_15",
+    "name": "Barclays Banking Phish",
+    "category": "banking",
+    "url": "http://barclays.security-verify.com/login",
+    "message": "Urgent: Your Barclays account is locked due to suspicious activity. Verify here: http://barclays.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_128",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.tax-refund-gov.in.net/login",
+    "message": "Action Required: Your HMRC refund has been processed. Confirm bank details: http://hmrc.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_231",
+    "name": "Aramex Logistics Phish",
+    "category": "logistics",
+    "url": "http://aramex.tax-refund-gov.in.net/login",
+    "message": "Delivery Attempt Failed: Our Aramex driver could not find your address. Update here: http://aramex.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_207",
+    "name": "FedEx Logistics Phish",
+    "category": "logistics",
+    "url": "http://fedex.tax-refund-gov.in.net/login",
+    "message": "Delivery Attempt Failed: Our FedEx driver could not find your address. Update here: http://fedex.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_151",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.claim-rewards.biz/login",
+    "message": "Action Required: Your IRS refund has been processed. Confirm bank details: http://irs.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_500",
+    "name": "Amazon Genuine Message",
+    "category": "safe",
+    "url": "https://hdfcbank.com/support",
+    "message": "Hey! Don't forget our meeting tonight at 8.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_459",
+    "name": "Myntra Genuine Message",
+    "category": "safe",
+    "url": "https://hdfcbank.com/support",
+    "message": "Notification: Your Myntra order #935086 has been shipped and will arrive by tomorrow.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_243",
+    "name": "FedEx Logistics Phish",
+    "category": "logistics",
+    "url": "http://fedex.verify-account.net/login",
+    "message": "Delivery Attempt Failed: Our FedEx driver could not find your address. Update here: http://fedex.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_431",
+    "name": "CRA Canada Genuine Message",
+    "category": "safe",
+    "url": "https://incometax.gov.in/support",
+    "message": "Notification: Your CRA Canada order #406964 has been shipped and will arrive by tomorrow.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_494",
+    "name": "Coinbase Genuine Message",
+    "category": "safe",
+    "url": "https://fedex.com/support",
+    "message": "Hey! Don't forget our meeting tonight at 8.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_448",
+    "name": "FedEx Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Your appointment with FedEx consultant is confirmed for 615915 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_221",
+    "name": "UPS Logistics Phish",
+    "category": "logistics",
+    "url": "http://ups.logistics-track.org/login",
+    "message": "Tracking Alert: Your parcel from UPS is arriving today. Confirm location: http://ups.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_146",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.claim-rewards.biz/login",
+    "message": "Action Required: Your HMRC refund has been processed. Confirm bank details: http://hmrc.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_269",
+    "name": "BlueDart Logistics Phish",
+    "category": "logistics",
+    "url": "http://bluedart.logistics-track.org/login",
+    "message": "Tracking Alert: Your parcel from BlueDart is arriving today. Confirm location: http://bluedart.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_137",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.claim-rewards.biz/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 21718. Apply at http://irs.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_354",
+    "name": "MetaMask Crypto Phish",
+    "category": "crypto",
+    "url": "http://metamask.security-verify.com/login",
+    "message": "Aura Drop: You have received 5,000 MetaMask tokens! Claim your airdrop: http://metamask.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_96",
+    "name": "HSBC Banking Phish",
+    "category": "banking",
+    "url": "http://hsbc.security-verify.com/login",
+    "message": "Dear customer, KYC update is pending for your HSBC savings A/c. Complete at http://hsbc.security-verify.com/login to avoid suspension.",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_154",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.tax-refund-gov.in.net/login",
+    "message": "Final Notice: Discrepancy found in your HMRC tax filing. Resolve before penalty: http://hmrc.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_234",
+    "name": "UPS Logistics Phish",
+    "category": "logistics",
+    "url": "http://ups.security-verify.com/login",
+    "message": "Package Delayed: Your UPS shipment #830D879C is held at the local hub. Pay re-delivery fee (Rs. 16802): http://ups.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_230",
+    "name": "India Post Logistics Phish",
+    "category": "logistics",
+    "url": "http://india-post.security-verify.com/login",
+    "message": "Delivery Attempt Failed: Our India Post driver could not find your address. Update here: http://india-post.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_268",
+    "name": "India Post Logistics Phish",
+    "category": "logistics",
+    "url": "http://india-post.claim-rewards.biz/login",
+    "message": "Tracking Alert: Your parcel from India Post is arriving today. Confirm location: http://india-post.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_416",
+    "name": "Barclays Genuine Message",
+    "category": "safe",
+    "url": "https://amazon.in/support",
+    "message": "Dear Customer, your Barclays monthly statement for March 2026 is now available.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_TAX_185",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.secure-login.pro/login",
+    "message": "Final Notice: Discrepancy found in your HMRC tax filing. Resolve before penalty: http://hmrc.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_196",
+    "name": "Income Tax India Tax Phish",
+    "category": "tax",
+    "url": "http://income-tax-india.tax-refund-gov.in.net/login",
+    "message": "Final Notice: Discrepancy found in your Income Tax India tax filing. Resolve before penalty: http://income-tax-india.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_214",
+    "name": "India Post Logistics Phish",
+    "category": "logistics",
+    "url": "http://india-post.verify-account.net/login",
+    "message": "Delivery Attempt Failed: Our India Post driver could not find your address. Update here: http://india-post.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_473",
+    "name": "BlueDart Genuine Message",
+    "category": "safe",
+    "url": "https://incometax.gov.in/support",
+    "message": "Hey! Don't forget our meeting tonight at 8.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_TAX_179",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.verify-account.net/login",
+    "message": "Final Notice: Discrepancy found in your HMRC tax filing. Resolve before penalty: http://hmrc.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_300",
+    "name": "Kraken Crypto Phish",
+    "category": "crypto",
+    "url": "http://kraken.verify-account.net/login",
+    "message": "Security Alert: Your Kraken wallet has been restricted. Unlock at http://kraken.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_163",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.secure-login.pro/login",
+    "message": "Final Notice: Discrepancy found in your HMRC tax filing. Resolve before penalty: http://hmrc.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_369",
+    "name": "Trust Wallet Crypto Phish",
+    "category": "crypto",
+    "url": "http://trust-wallet.tax-refund-gov.in.net/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Trust Wallet account. Cancel here: http://trust-wallet.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_144",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.verify-account.net/login",
+    "message": "Final Notice: Discrepancy found in your IRS tax filing. Resolve before penalty: http://irs.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_204",
+    "name": "BlueDart Logistics Phish",
+    "category": "logistics",
+    "url": "http://bluedart.update-kyc.info/login",
+    "message": "Tracking Alert: Your parcel from BlueDart is arriving today. Confirm location: http://bluedart.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_24",
+    "name": "Barclays Banking Phish",
+    "category": "banking",
+    "url": "http://barclays.update-kyc.info/login",
+    "message": "Notification: Your Barclays reward points (Rs. 35370) are expiring today. Claim now: http://barclays.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_405",
+    "name": "HMRC Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Hey! Don't forget our meeting tonight at 8.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_217",
+    "name": "India Post Logistics Phish",
+    "category": "logistics",
+    "url": "http://india-post.security-verify.com/login",
+    "message": "Tracking Alert: Your parcel from India Post is arriving today. Confirm location: http://india-post.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_306",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.secure-login.pro/login",
+    "message": "Security Alert: Your Binance wallet has been restricted. Unlock at http://binance.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_474",
+    "name": "Delhivery Genuine Message",
+    "category": "safe",
+    "url": "https://icicibank.com/support",
+    "message": "Welcome to Delhivery! We are excited to have you on board. Follow us for updates.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_368",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.secure-login.pro/login",
+    "message": "Security Alert: Your Binance wallet has been restricted. Unlock at http://binance.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_386",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.claim-rewards.biz/login",
+    "message": "Security Alert: Your Binance wallet has been restricted. Unlock at http://binance.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_357",
+    "name": "MetaMask Crypto Phish",
+    "category": "crypto",
+    "url": "http://metamask.security-verify.com/login",
+    "message": "Aura Drop: You have received 5,000 MetaMask tokens! Claim your airdrop: http://metamask.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_52",
+    "name": "HDFC Banking Phish",
+    "category": "banking",
+    "url": "http://hdfc.update-kyc.info/login",
+    "message": "Dear customer, KYC update is pending for your HDFC savings A/c. Complete at http://hdfc.update-kyc.info/login to avoid suspension.",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_395",
+    "name": "ByBit Crypto Phish",
+    "category": "crypto",
+    "url": "http://bybit.claim-rewards.biz/login",
+    "message": "Security Alert: Your ByBit wallet has been restricted. Unlock at http://bybit.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_446",
+    "name": "FedEx Genuine Message",
+    "category": "safe",
+    "url": "https://fedex.com/support",
+    "message": "Your appointment with FedEx consultant is confirmed for 330127 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_BANKING_90",
+    "name": "HSBC Banking Phish",
+    "category": "banking",
+    "url": "http://hsbc.claim-rewards.biz/login",
+    "message": "Notification: Your HSBC reward points (Rs. 6751) are expiring today. Claim now: http://hsbc.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_252",
+    "name": "Aramex Logistics Phish",
+    "category": "logistics",
+    "url": "http://aramex.security-verify.com/login",
+    "message": "Package Delayed: Your Aramex shipment #9774FC6D is held at the local hub. Pay re-delivery fee (Rs. 29355): http://aramex.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_380",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.update-kyc.info/login",
+    "message": "Aura Drop: You have received 5,000 Coinbase tokens! Claim your airdrop: http://coinbase.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_481",
+    "name": "Coinbase Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Hey! Don't forget our meeting tonight at 8.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_224",
+    "name": "Aramex Logistics Phish",
+    "category": "logistics",
+    "url": "http://aramex.security-verify.com/login",
+    "message": "Package Delayed: Your Aramex shipment #D7E9E6B6 is held at the local hub. Pay re-delivery fee (Rs. 47716): http://aramex.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_379",
+    "name": "ByBit Crypto Phish",
+    "category": "crypto",
+    "url": "http://bybit.logistics-track.org/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your ByBit account. Cancel here: http://bybit.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_501",
+    "name": "UPS Genuine Message",
+    "category": "safe",
+    "url": "https://icicibank.com/support",
+    "message": "Notification: Your UPS order #632377 has been shipped and will arrive by tomorrow.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_TAX_125",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.secure-login.pro/login",
+    "message": "Action Required: Your HMRC refund has been processed. Confirm bank details: http://hmrc.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_229",
+    "name": "BlueDart Logistics Phish",
+    "category": "logistics",
+    "url": "http://bluedart.security-verify.com/login",
+    "message": "Tracking Alert: Your parcel from BlueDart is arriving today. Confirm location: http://bluedart.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_356",
+    "name": "Kraken Crypto Phish",
+    "category": "crypto",
+    "url": "http://kraken.tax-refund-gov.in.net/login",
+    "message": "Security Alert: Your Kraken wallet has been restricted. Unlock at http://kraken.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_453",
+    "name": "Aramex Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Notification: Your Aramex order #859564 has been shipped and will arrive by tomorrow.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_TAX_189",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.verify-account.net/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 48055. Apply at http://cra-canada.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_44",
+    "name": "Chase Banking Phish",
+    "category": "banking",
+    "url": "http://chase.tax-refund-gov.in.net/login",
+    "message": "Urgent: Your Chase account is locked due to suspicious activity. Verify here: http://chase.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_345",
+    "name": "ByBit Crypto Phish",
+    "category": "crypto",
+    "url": "http://bybit.verify-account.net/login",
+    "message": "Aura Drop: You have received 5,000 ByBit tokens! Claim your airdrop: http://bybit.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_259",
+    "name": "DHL Logistics Phish",
+    "category": "logistics",
+    "url": "http://dhl.logistics-track.org/login",
+    "message": "Delivery Attempt Failed: Our DHL driver could not find your address. Update here: http://dhl.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_110",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.tax-refund-gov.in.net/login",
+    "message": "Action Required: Your CRA Canada refund has been processed. Confirm bank details: http://cra-canada.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_307",
+    "name": "Trust Wallet Crypto Phish",
+    "category": "crypto",
+    "url": "http://trust-wallet.tax-refund-gov.in.net/login",
+    "message": "Security Alert: Your Trust Wallet wallet has been restricted. Unlock at http://trust-wallet.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_397",
+    "name": "Trust Wallet Crypto Phish",
+    "category": "crypto",
+    "url": "http://trust-wallet.verify-account.net/login",
+    "message": "Aura Drop: You have received 5,000 Trust Wallet tokens! Claim your airdrop: http://trust-wallet.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_236",
+    "name": "UPS Logistics Phish",
+    "category": "logistics",
+    "url": "http://ups.logistics-track.org/login",
+    "message": "Package Delayed: Your UPS shipment #218E005D is held at the local hub. Pay re-delivery fee (Rs. 39146): http://ups.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_432",
+    "name": "Binance Genuine Message",
+    "category": "safe",
+    "url": "https://ups.com/support",
+    "message": "Notification: Your Binance order #838352 has been shipped and will arrive by tomorrow.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_TAX_187",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.claim-rewards.biz/login",
+    "message": "Action Required: Your IRS refund has been processed. Confirm bank details: http://irs.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_409",
+    "name": "FedEx Genuine Message",
+    "category": "safe",
+    "url": "https://ups.com/support",
+    "message": "Notification: Your FedEx order #595881 has been shipped and will arrive by tomorrow.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_509",
+    "name": "UPS Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Your appointment with UPS consultant is confirmed for 527967 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_384",
+    "name": "Trust Wallet Crypto Phish",
+    "category": "crypto",
+    "url": "http://trust-wallet.verify-account.net/login",
+    "message": "Aura Drop: You have received 5,000 Trust Wallet tokens! Claim your airdrop: http://trust-wallet.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_161",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.logistics-track.org/login",
+    "message": "Final Notice: Discrepancy found in your IRS tax filing. Resolve before penalty: http://irs.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_190",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.logistics-track.org/login",
+    "message": "Action Required: Your CRA Canada refund has been processed. Confirm bank details: http://cra-canada.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_392",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.logistics-track.org/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Coinbase account. Cancel here: http://coinbase.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_476",
+    "name": "HSBC Genuine Message",
+    "category": "safe",
+    "url": "https://fedex.com/support",
+    "message": "Your OTP for HSBC transaction of Rs. 517 is 207629. Do not share with anyone.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_290",
+    "name": "UPS Logistics Phish",
+    "category": "logistics",
+    "url": "http://ups.tax-refund-gov.in.net/login",
+    "message": "Package Delayed: Your UPS shipment #5229EEE0 is held at the local hub. Pay re-delivery fee (Rs. 44891): http://ups.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_485",
+    "name": "Amazon Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Can you send me the documents for the project? Thanks.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_495",
+    "name": "ICICI Genuine Message",
+    "category": "safe",
+    "url": "https://sbi.co.in/support",
+    "message": "Can you send me the documents for the project? Thanks.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_396",
+    "name": "Trust Wallet Crypto Phish",
+    "category": "crypto",
+    "url": "http://trust-wallet.claim-rewards.biz/login",
+    "message": "Aura Drop: You have received 5,000 Trust Wallet tokens! Claim your airdrop: http://trust-wallet.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_502",
+    "name": "Swiggy Genuine Message",
+    "category": "safe",
+    "url": "https://icicibank.com/support",
+    "message": "Welcome to Swiggy! We are excited to have you on board. Follow us for updates.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_344",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.secure-login.pro/login",
+    "message": "Aura Drop: You have received 5,000 Binance tokens! Claim your airdrop: http://binance.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_302",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.secure-login.pro/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Coinbase account. Cancel here: http://coinbase.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_94",
+    "name": "SBI Banking Phish",
+    "category": "banking",
+    "url": "http://sbi.logistics-track.org/login",
+    "message": "Notification: Your SBI reward points (Rs. 38989) are expiring today. Claim now: http://sbi.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_116",
+    "name": "Income Tax India Tax Phish",
+    "category": "tax",
+    "url": "http://income-tax-india.verify-account.net/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 43744. Apply at http://income-tax-india.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_167",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.security-verify.com/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 30456. Apply at http://cra-canada.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_172",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.claim-rewards.biz/login",
+    "message": "Final Notice: Discrepancy found in your CRA Canada tax filing. Resolve before penalty: http://cra-canada.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_23",
+    "name": "Chase Banking Phish",
+    "category": "banking",
+    "url": "http://chase.tax-refund-gov.in.net/login",
+    "message": "Notification: Your Chase reward points (Rs. 34089) are expiring today. Claim now: http://chase.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_411",
+    "name": "UPS Genuine Message",
+    "category": "safe",
+    "url": "https://ups.com/support",
+    "message": "Can you send me the documents for the project? Thanks.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_BANKING_3",
+    "name": "SBI Banking Phish",
+    "category": "banking",
+    "url": "http://sbi.claim-rewards.biz/login",
+    "message": "Dear customer, KYC update is pending for your SBI savings A/c. Complete at http://sbi.claim-rewards.biz/login to avoid suspension.",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_371",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.tax-refund-gov.in.net/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Binance account. Cancel here: http://binance.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_104",
+    "name": "ATO Australia Tax Phish",
+    "category": "tax",
+    "url": "http://ato-australia.logistics-track.org/login",
+    "message": "Action Required: Your ATO Australia refund has been processed. Confirm bank details: http://ato-australia.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_301",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.verify-account.net/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Binance account. Cancel here: http://binance.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_182",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.claim-rewards.biz/login",
+    "message": "Action Required: Your HMRC refund has been processed. Confirm bank details: http://hmrc.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_205",
+    "name": "Delhivery Logistics Phish",
+    "category": "logistics",
+    "url": "http://delhivery.secure-login.pro/login",
+    "message": "Package Delayed: Your Delhivery shipment #DF63D824 is held at the local hub. Pay re-delivery fee (Rs. 14459): http://delhivery.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_31",
+    "name": "HSBC Banking Phish",
+    "category": "banking",
+    "url": "http://hsbc.update-kyc.info/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://hsbc.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_439",
+    "name": "Uber Eats Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Your appointment with Uber Eats consultant is confirmed for 338219 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_394",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.secure-login.pro/login",
+    "message": "Security Alert: Your Coinbase wallet has been restricted. Unlock at http://coinbase.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_457",
+    "name": "Uber Eats Genuine Message",
+    "category": "safe",
+    "url": "https://amazon.in/support",
+    "message": "Your OTP for Uber Eats transaction of Rs. 850 is 346608. Do not share with anyone.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_498",
+    "name": "Flipkart Genuine Message",
+    "category": "safe",
+    "url": "https://incometax.gov.in/support",
+    "message": "Your OTP for Flipkart transaction of Rs. 1290 is 965347. Do not share with anyone.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_403",
+    "name": "HMRC Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Your OTP for HMRC transaction of Rs. 987 is 373367. Do not share with anyone.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_349",
+    "name": "Trust Wallet Crypto Phish",
+    "category": "crypto",
+    "url": "http://trust-wallet.update-kyc.info/login",
+    "message": "Aura Drop: You have received 5,000 Trust Wallet tokens! Claim your airdrop: http://trust-wallet.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_360",
+    "name": "ByBit Crypto Phish",
+    "category": "crypto",
+    "url": "http://bybit.security-verify.com/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your ByBit account. Cancel here: http://bybit.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_64",
+    "name": "SBI Banking Phish",
+    "category": "banking",
+    "url": "http://sbi.verify-account.net/login",
+    "message": "Notification: Your SBI reward points (Rs. 37504) are expiring today. Claim now: http://sbi.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_113",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.secure-login.pro/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 8716. Apply at http://hmrc.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_442",
+    "name": "HSBC Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Your appointment with HSBC consultant is confirmed for 419922 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_TAX_171",
+    "name": "Income Tax India Tax Phish",
+    "category": "tax",
+    "url": "http://income-tax-india.verify-account.net/login",
+    "message": "Action Required: Your Income Tax India refund has been processed. Confirm bank details: http://income-tax-india.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_86",
+    "name": "SBI Banking Phish",
+    "category": "banking",
+    "url": "http://sbi.verify-account.net/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://sbi.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_281",
+    "name": "FedEx Logistics Phish",
+    "category": "logistics",
+    "url": "http://fedex.security-verify.com/login",
+    "message": "Package Delayed: Your FedEx shipment #226A7808 is held at the local hub. Pay re-delivery fee (Rs. 35031): http://fedex.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_129",
+    "name": "ATO Australia Tax Phish",
+    "category": "tax",
+    "url": "http://ato-australia.verify-account.net/login",
+    "message": "Action Required: Your ATO Australia refund has been processed. Confirm bank details: http://ato-australia.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_84",
+    "name": "SBI Banking Phish",
+    "category": "banking",
+    "url": "http://sbi.claim-rewards.biz/login",
+    "message": "Dear customer, KYC update is pending for your SBI savings A/c. Complete at http://sbi.claim-rewards.biz/login to avoid suspension.",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_358",
+    "name": "ByBit Crypto Phish",
+    "category": "crypto",
+    "url": "http://bybit.tax-refund-gov.in.net/login",
+    "message": "Security Alert: Your ByBit wallet has been restricted. Unlock at http://bybit.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_12",
+    "name": "SBI Banking Phish",
+    "category": "banking",
+    "url": "http://sbi.update-kyc.info/login",
+    "message": "Dear customer, KYC update is pending for your SBI savings A/c. Complete at http://sbi.update-kyc.info/login to avoid suspension.",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_467",
+    "name": "Swiggy Genuine Message",
+    "category": "safe",
+    "url": "https://incometax.gov.in/support",
+    "message": "Notification: Your Swiggy order #374016 has been shipped and will arrive by tomorrow.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_449",
+    "name": "Zomato Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Your OTP for Zomato transaction of Rs. 708 is 241224. Do not share with anyone.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_BANKING_11",
+    "name": "Axis Bank Banking Phish",
+    "category": "banking",
+    "url": "http://axis-bank.logistics-track.org/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://axis-bank.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_491",
+    "name": "DHL Genuine Message",
+    "category": "safe",
+    "url": "https://hdfcbank.com/support",
+    "message": "Your appointment with DHL consultant is confirmed for 666235 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_460",
+    "name": "Binance Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Your OTP for Binance transaction of Rs. 1923 is 289604. Do not share with anyone.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_420",
+    "name": "FedEx Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Your appointment with FedEx consultant is confirmed for 946468 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_BANKING_54",
+    "name": "Chase Banking Phish",
+    "category": "banking",
+    "url": "http://chase.update-kyc.info/login",
+    "message": "Dear customer, KYC update is pending for your Chase savings A/c. Complete at http://chase.update-kyc.info/login to avoid suspension.",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_330",
+    "name": "Trust Wallet Crypto Phish",
+    "category": "crypto",
+    "url": "http://trust-wallet.update-kyc.info/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Trust Wallet account. Cancel here: http://trust-wallet.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_93",
+    "name": "Axis Bank Banking Phish",
+    "category": "banking",
+    "url": "http://axis-bank.tax-refund-gov.in.net/login",
+    "message": "Urgent: Your Axis Bank account is locked due to suspicious activity. Verify here: http://axis-bank.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_418",
+    "name": "CRA Canada Genuine Message",
+    "category": "safe",
+    "url": "https://fedex.com/support",
+    "message": "Dear Customer, your CRA Canada monthly statement for March 2026 is now available.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_415",
+    "name": "Binance Genuine Message",
+    "category": "safe",
+    "url": "https://fedex.com/support",
+    "message": "Dear Customer, your Binance monthly statement for March 2026 is now available.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_TAX_115",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.tax-refund-gov.in.net/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 11345. Apply at http://irs.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_81",
+    "name": "Axis Bank Banking Phish",
+    "category": "banking",
+    "url": "http://axis-bank.claim-rewards.biz/login",
+    "message": "Urgent: Your Axis Bank account is locked due to suspicious activity. Verify here: http://axis-bank.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_353",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.claim-rewards.biz/login",
+    "message": "Aura Drop: You have received 5,000 Binance tokens! Claim your airdrop: http://binance.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_193",
+    "name": "Income Tax India Tax Phish",
+    "category": "tax",
+    "url": "http://income-tax-india.logistics-track.org/login",
+    "message": "Final Notice: Discrepancy found in your Income Tax India tax filing. Resolve before penalty: http://income-tax-india.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_82",
+    "name": "HDFC Banking Phish",
+    "category": "banking",
+    "url": "http://hdfc.verify-account.net/login",
+    "message": "Dear customer, KYC update is pending for your HDFC savings A/c. Complete at http://hdfc.verify-account.net/login to avoid suspension.",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_382",
+    "name": "MetaMask Crypto Phish",
+    "category": "crypto",
+    "url": "http://metamask.secure-login.pro/login",
+    "message": "Security Alert: Your MetaMask wallet has been restricted. Unlock at http://metamask.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_492",
+    "name": "FedEx Genuine Message",
+    "category": "safe",
+    "url": "https://hdfcbank.com/support",
+    "message": "Your appointment with FedEx consultant is confirmed for 132075 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_255",
+    "name": "Delhivery Logistics Phish",
+    "category": "logistics",
+    "url": "http://delhivery.tax-refund-gov.in.net/login",
+    "message": "Package Delayed: Your Delhivery shipment #7FF660D4 is held at the local hub. Pay re-delivery fee (Rs. 7937): http://delhivery.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_261",
+    "name": "India Post Logistics Phish",
+    "category": "logistics",
+    "url": "http://india-post.claim-rewards.biz/login",
+    "message": "Tracking Alert: Your parcel from India Post is arriving today. Confirm location: http://india-post.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_184",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.security-verify.com/login",
+    "message": "Action Required: Your IRS refund has been processed. Confirm bank details: http://irs.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_294",
+    "name": "UPS Logistics Phish",
+    "category": "logistics",
+    "url": "http://ups.tax-refund-gov.in.net/login",
+    "message": "Package Delayed: Your UPS shipment #C46DA0AA is held at the local hub. Pay re-delivery fee (Rs. 15484): http://ups.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_336",
+    "name": "Kraken Crypto Phish",
+    "category": "crypto",
+    "url": "http://kraken.claim-rewards.biz/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Kraken account. Cancel here: http://kraken.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_247",
+    "name": "Aramex Logistics Phish",
+    "category": "logistics",
+    "url": "http://aramex.update-kyc.info/login",
+    "message": "Delivery Attempt Failed: Our Aramex driver could not find your address. Update here: http://aramex.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_326",
+    "name": "Trust Wallet Crypto Phish",
+    "category": "crypto",
+    "url": "http://trust-wallet.claim-rewards.biz/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Trust Wallet account. Cancel here: http://trust-wallet.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_49",
+    "name": "Axis Bank Banking Phish",
+    "category": "banking",
+    "url": "http://axis-bank.update-kyc.info/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://axis-bank.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_346",
+    "name": "MetaMask Crypto Phish",
+    "category": "crypto",
+    "url": "http://metamask.claim-rewards.biz/login",
+    "message": "Security Alert: Your MetaMask wallet has been restricted. Unlock at http://metamask.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_51",
+    "name": "Revolut Banking Phish",
+    "category": "banking",
+    "url": "http://revolut.logistics-track.org/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://revolut.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_278",
+    "name": "UPS Logistics Phish",
+    "category": "logistics",
+    "url": "http://ups.secure-login.pro/login",
+    "message": "Package Delayed: Your UPS shipment #E1425D27 is held at the local hub. Pay re-delivery fee (Rs. 49972): http://ups.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_91",
+    "name": "ICICI Banking Phish",
+    "category": "banking",
+    "url": "http://icici.update-kyc.info/login",
+    "message": "Urgent: Your ICICI account is locked due to suspicious activity. Verify here: http://icici.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_391",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.tax-refund-gov.in.net/login",
+    "message": "Aura Drop: You have received 5,000 Coinbase tokens! Claim your airdrop: http://coinbase.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_213",
+    "name": "DHL Logistics Phish",
+    "category": "logistics",
+    "url": "http://dhl.tax-refund-gov.in.net/login",
+    "message": "Tracking Alert: Your parcel from DHL is arriving today. Confirm location: http://dhl.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_158",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.secure-login.pro/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 30928. Apply at http://cra-canada.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_165",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.tax-refund-gov.in.net/login",
+    "message": "Final Notice: Discrepancy found in your HMRC tax filing. Resolve before penalty: http://hmrc.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_348",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.update-kyc.info/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Binance account. Cancel here: http://binance.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_169",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.tax-refund-gov.in.net/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 31777. Apply at http://irs.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_197",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.tax-refund-gov.in.net/login",
+    "message": "Action Required: Your HMRC refund has been processed. Confirm bank details: http://hmrc.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_366",
+    "name": "MetaMask Crypto Phish",
+    "category": "crypto",
+    "url": "http://metamask.update-kyc.info/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your MetaMask account. Cancel here: http://metamask.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_298",
+    "name": "FedEx Logistics Phish",
+    "category": "logistics",
+    "url": "http://fedex.update-kyc.info/login",
+    "message": "Tracking Alert: Your parcel from FedEx is arriving today. Confirm location: http://fedex.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_118",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.claim-rewards.biz/login",
+    "message": "Final Notice: Discrepancy found in your HMRC tax filing. Resolve before penalty: http://hmrc.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_478",
+    "name": "Binance Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Your appointment with Binance consultant is confirmed for 395126 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_246",
+    "name": "UPS Logistics Phish",
+    "category": "logistics",
+    "url": "http://ups.logistics-track.org/login",
+    "message": "Delivery Attempt Failed: Our UPS driver could not find your address. Update here: http://ups.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_304",
+    "name": "MetaMask Crypto Phish",
+    "category": "crypto",
+    "url": "http://metamask.logistics-track.org/login",
+    "message": "Aura Drop: You have received 5,000 MetaMask tokens! Claim your airdrop: http://metamask.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_381",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.update-kyc.info/login",
+    "message": "Aura Drop: You have received 5,000 Binance tokens! Claim your airdrop: http://binance.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_6",
+    "name": "HDFC Banking Phish",
+    "category": "banking",
+    "url": "http://hdfc.logistics-track.org/login",
+    "message": "Urgent: Your HDFC account is locked due to suspicious activity. Verify here: http://hdfc.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_168",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.secure-login.pro/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 8530. Apply at http://irs.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_130",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.tax-refund-gov.in.net/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 47590. Apply at http://irs.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_437",
+    "name": "Trust Wallet Genuine Message",
+    "category": "safe",
+    "url": "https://amazon.in/support",
+    "message": "Your appointment with Trust Wallet consultant is confirmed for 173498 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_343",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.claim-rewards.biz/login",
+    "message": "Aura Drop: You have received 5,000 Coinbase tokens! Claim your airdrop: http://coinbase.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_383",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.security-verify.com/login",
+    "message": "Security Alert: Your Binance wallet has been restricted. Unlock at http://binance.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_4",
+    "name": "HDFC Banking Phish",
+    "category": "banking",
+    "url": "http://hdfc.logistics-track.org/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://hdfc.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_468",
+    "name": "Coinbase Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Your appointment with Coinbase consultant is confirmed for 432752 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_421",
+    "name": "MetaMask Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Your appointment with MetaMask consultant is confirmed for 352491 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_362",
+    "name": "Trust Wallet Crypto Phish",
+    "category": "crypto",
+    "url": "http://trust-wallet.verify-account.net/login",
+    "message": "Aura Drop: You have received 5,000 Trust Wallet tokens! Claim your airdrop: http://trust-wallet.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_233",
+    "name": "Aramex Logistics Phish",
+    "category": "logistics",
+    "url": "http://aramex.logistics-track.org/login",
+    "message": "Package Delayed: Your Aramex shipment #9B7215AE is held at the local hub. Pay re-delivery fee (Rs. 37555): http://aramex.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_482",
+    "name": "Delhivery Genuine Message",
+    "category": "safe",
+    "url": "https://hdfcbank.com/support",
+    "message": "Your appointment with Delhivery consultant is confirmed for 747717 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_TAX_156",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.claim-rewards.biz/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 19002. Apply at http://irs.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_77",
+    "name": "Barclays Banking Phish",
+    "category": "banking",
+    "url": "http://barclays.update-kyc.info/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://barclays.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_254",
+    "name": "India Post Logistics Phish",
+    "category": "logistics",
+    "url": "http://india-post.secure-login.pro/login",
+    "message": "Delivery Attempt Failed: Our India Post driver could not find your address. Update here: http://india-post.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_183",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.logistics-track.org/login",
+    "message": "Action Required: Your HMRC refund has been processed. Confirm bank details: http://hmrc.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_311",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.update-kyc.info/login",
+    "message": "Security Alert: Your Binance wallet has been restricted. Unlock at http://binance.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_107",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.tax-refund-gov.in.net/login",
+    "message": "Final Notice: Discrepancy found in your IRS tax filing. Resolve before penalty: http://irs.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_126",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.verify-account.net/login",
+    "message": "Final Notice: Discrepancy found in your HMRC tax filing. Resolve before penalty: http://hmrc.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_378",
+    "name": "MetaMask Crypto Phish",
+    "category": "crypto",
+    "url": "http://metamask.logistics-track.org/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your MetaMask account. Cancel here: http://metamask.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_462",
+    "name": "ICICI Genuine Message",
+    "category": "safe",
+    "url": "https://sbi.co.in/support",
+    "message": "Notification: Your ICICI order #585688 has been shipped and will arrive by tomorrow.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_TAX_192",
+    "name": "ATO Australia Tax Phish",
+    "category": "tax",
+    "url": "http://ato-australia.update-kyc.info/login",
+    "message": "Action Required: Your ATO Australia refund has been processed. Confirm bank details: http://ato-australia.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_497",
+    "name": "Barclays Genuine Message",
+    "category": "safe",
+    "url": "https://amazon.in/support",
+    "message": "Hey! Don't forget our meeting tonight at 8.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_212",
+    "name": "Delhivery Logistics Phish",
+    "category": "logistics",
+    "url": "http://delhivery.security-verify.com/login",
+    "message": "Tracking Alert: Your parcel from Delhivery is arriving today. Confirm location: http://delhivery.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_97",
+    "name": "Chase Banking Phish",
+    "category": "banking",
+    "url": "http://chase.logistics-track.org/login",
+    "message": "Dear customer, KYC update is pending for your Chase savings A/c. Complete at http://chase.logistics-track.org/login to avoid suspension.",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_250",
+    "name": "Delhivery Logistics Phish",
+    "category": "logistics",
+    "url": "http://delhivery.claim-rewards.biz/login",
+    "message": "Delivery Attempt Failed: Our Delhivery driver could not find your address. Update here: http://delhivery.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_425",
+    "name": "Binance Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Your appointment with Binance consultant is confirmed for 349783 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_288",
+    "name": "FedEx Logistics Phish",
+    "category": "logistics",
+    "url": "http://fedex.tax-refund-gov.in.net/login",
+    "message": "Delivery Attempt Failed: Our FedEx driver could not find your address. Update here: http://fedex.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_299",
+    "name": "BlueDart Logistics Phish",
+    "category": "logistics",
+    "url": "http://bluedart.tax-refund-gov.in.net/login",
+    "message": "Delivery Attempt Failed: Our BlueDart driver could not find your address. Update here: http://bluedart.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_322",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.secure-login.pro/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Coinbase account. Cancel here: http://coinbase.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_70",
+    "name": "Barclays Banking Phish",
+    "category": "banking",
+    "url": "http://barclays.tax-refund-gov.in.net/login",
+    "message": "Notification: Your Barclays reward points (Rs. 33998) are expiring today. Claim now: http://barclays.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_178",
+    "name": "ATO Australia Tax Phish",
+    "category": "tax",
+    "url": "http://ato-australia.logistics-track.org/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 15392. Apply at http://ato-australia.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_400",
+    "name": "Income Tax India Genuine Message",
+    "category": "safe",
+    "url": "https://icicibank.com/support",
+    "message": "Dear Customer, your Income Tax India monthly statement for March 2026 is now available.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_TAX_100",
+    "name": "ATO Australia Tax Phish",
+    "category": "tax",
+    "url": "http://ato-australia.logistics-track.org/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 49863. Apply at http://ato-australia.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_466",
+    "name": "Amazon Genuine Message",
+    "category": "safe",
+    "url": "https://incometax.gov.in/support",
+    "message": "Your OTP for Amazon transaction of Rs. 1519 is 703350. Do not share with anyone.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_BANKING_88",
+    "name": "Revolut Banking Phish",
+    "category": "banking",
+    "url": "http://revolut.claim-rewards.biz/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://revolut.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_227",
+    "name": "DHL Logistics Phish",
+    "category": "logistics",
+    "url": "http://dhl.secure-login.pro/login",
+    "message": "Delivery Attempt Failed: Our DHL driver could not find your address. Update here: http://dhl.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_291",
+    "name": "FedEx Logistics Phish",
+    "category": "logistics",
+    "url": "http://fedex.security-verify.com/login",
+    "message": "Tracking Alert: Your parcel from FedEx is arriving today. Confirm location: http://fedex.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_71",
+    "name": "HDFC Banking Phish",
+    "category": "banking",
+    "url": "http://hdfc.verify-account.net/login",
+    "message": "Notification: Your HDFC reward points (Rs. 11211) are expiring today. Claim now: http://hdfc.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_219",
+    "name": "UPS Logistics Phish",
+    "category": "logistics",
+    "url": "http://ups.update-kyc.info/login",
+    "message": "Delivery Attempt Failed: Our UPS driver could not find your address. Update here: http://ups.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_267",
+    "name": "BlueDart Logistics Phish",
+    "category": "logistics",
+    "url": "http://bluedart.update-kyc.info/login",
+    "message": "Tracking Alert: Your parcel from BlueDart is arriving today. Confirm location: http://bluedart.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_226",
+    "name": "Aramex Logistics Phish",
+    "category": "logistics",
+    "url": "http://aramex.claim-rewards.biz/login",
+    "message": "Package Delayed: Your Aramex shipment #2A585B00 is held at the local hub. Pay re-delivery fee (Rs. 28953): http://aramex.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_248",
+    "name": "UPS Logistics Phish",
+    "category": "logistics",
+    "url": "http://ups.secure-login.pro/login",
+    "message": "Delivery Attempt Failed: Our UPS driver could not find your address. Update here: http://ups.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_222",
+    "name": "DHL Logistics Phish",
+    "category": "logistics",
+    "url": "http://dhl.verify-account.net/login",
+    "message": "Delivery Attempt Failed: Our DHL driver could not find your address. Update here: http://dhl.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_78",
+    "name": "HDFC Banking Phish",
+    "category": "banking",
+    "url": "http://hdfc.security-verify.com/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://hdfc.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_374",
+    "name": "Kraken Crypto Phish",
+    "category": "crypto",
+    "url": "http://kraken.tax-refund-gov.in.net/login",
+    "message": "Security Alert: Your Kraken wallet has been restricted. Unlock at http://kraken.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_206",
+    "name": "Delhivery Logistics Phish",
+    "category": "logistics",
+    "url": "http://delhivery.update-kyc.info/login",
+    "message": "Tracking Alert: Your parcel from Delhivery is arriving today. Confirm location: http://delhivery.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_463",
+    "name": "BlueDart Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Welcome to BlueDart! We are excited to have you on board. Follow us for updates.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_BANKING_63",
+    "name": "Revolut Banking Phish",
+    "category": "banking",
+    "url": "http://revolut.verify-account.net/login",
+    "message": "Notification: Your Revolut reward points (Rs. 13643) are expiring today. Claim now: http://revolut.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_377",
+    "name": "Trust Wallet Crypto Phish",
+    "category": "crypto",
+    "url": "http://trust-wallet.claim-rewards.biz/login",
+    "message": "Aura Drop: You have received 5,000 Trust Wallet tokens! Claim your airdrop: http://trust-wallet.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_25",
+    "name": "HSBC Banking Phish",
+    "category": "banking",
+    "url": "http://hsbc.verify-account.net/login",
+    "message": "Urgent: Your HSBC account is locked due to suspicious activity. Verify here: http://hsbc.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_109",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.tax-refund-gov.in.net/login",
+    "message": "Action Required: Your CRA Canada refund has been processed. Confirm bank details: http://cra-canada.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_164",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.verify-account.net/login",
+    "message": "Action Required: Your IRS refund has been processed. Confirm bank details: http://irs.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_166",
+    "name": "Income Tax India Tax Phish",
+    "category": "tax",
+    "url": "http://income-tax-india.tax-refund-gov.in.net/login",
+    "message": "Final Notice: Discrepancy found in your Income Tax India tax filing. Resolve before penalty: http://income-tax-india.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_237",
+    "name": "BlueDart Logistics Phish",
+    "category": "logistics",
+    "url": "http://bluedart.update-kyc.info/login",
+    "message": "Package Delayed: Your BlueDart shipment #D3797478 is held at the local hub. Pay re-delivery fee (Rs. 36806): http://bluedart.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_194",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.logistics-track.org/login",
+    "message": "Action Required: Your CRA Canada refund has been processed. Confirm bank details: http://cra-canada.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_198",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.secure-login.pro/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 40728. Apply at http://cra-canada.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_398",
+    "name": "Kraken Crypto Phish",
+    "category": "crypto",
+    "url": "http://kraken.secure-login.pro/login",
+    "message": "Security Alert: Your Kraken wallet has been restricted. Unlock at http://kraken.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_484",
+    "name": "Income Tax India Genuine Message",
+    "category": "safe",
+    "url": "https://ups.com/support",
+    "message": "Dear Customer, your Income Tax India monthly statement for March 2026 is now available.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_TAX_136",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.tax-refund-gov.in.net/login",
+    "message": "Final Notice: Discrepancy found in your CRA Canada tax filing. Resolve before penalty: http://cra-canada.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_215",
+    "name": "Aramex Logistics Phish",
+    "category": "logistics",
+    "url": "http://aramex.security-verify.com/login",
+    "message": "Delivery Attempt Failed: Our Aramex driver could not find your address. Update here: http://aramex.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_27",
+    "name": "HSBC Banking Phish",
+    "category": "banking",
+    "url": "http://hsbc.claim-rewards.biz/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://hsbc.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_149",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.verify-account.net/login",
+    "message": "Action Required: Your IRS refund has been processed. Confirm bank details: http://irs.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_68",
+    "name": "Revolut Banking Phish",
+    "category": "banking",
+    "url": "http://revolut.claim-rewards.biz/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://revolut.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_140",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.update-kyc.info/login",
+    "message": "Action Required: Your HMRC refund has been processed. Confirm bank details: http://hmrc.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_173",
+    "name": "ATO Australia Tax Phish",
+    "category": "tax",
+    "url": "http://ato-australia.secure-login.pro/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 45686. Apply at http://ato-australia.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_404",
+    "name": "BlueDart Genuine Message",
+    "category": "safe",
+    "url": "https://sbi.co.in/support",
+    "message": "Your appointment with BlueDart consultant is confirmed for 141650 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_472",
+    "name": "Myntra Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Can you send me the documents for the project? Thanks.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_408",
+    "name": "Trust Wallet Genuine Message",
+    "category": "safe",
+    "url": "https://fedex.com/support",
+    "message": "Can you send me the documents for the project? Thanks.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_BANKING_56",
+    "name": "J.P. Morgan Banking Phish",
+    "category": "banking",
+    "url": "http://j.p.-morgan.tax-refund-gov.in.net/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://j.p.-morgan.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_488",
+    "name": "Trust Wallet Genuine Message",
+    "category": "safe",
+    "url": "https://hdfcbank.com/support",
+    "message": "Notification: Your Trust Wallet order #553219 has been shipped and will arrive by tomorrow.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_BANKING_58",
+    "name": "HSBC Banking Phish",
+    "category": "banking",
+    "url": "http://hsbc.logistics-track.org/login",
+    "message": "Notification: Your HSBC reward points (Rs. 18127) are expiring today. Claim now: http://hsbc.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_14",
+    "name": "J.P. Morgan Banking Phish",
+    "category": "banking",
+    "url": "http://j.p.-morgan.tax-refund-gov.in.net/login",
+    "message": "Urgent: Your J.P. Morgan account is locked due to suspicious activity. Verify here: http://j.p.-morgan.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_186",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.tax-refund-gov.in.net/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 43833. Apply at http://cra-canada.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_456",
+    "name": "J.P. Morgan Genuine Message",
+    "category": "safe",
+    "url": "https://amazon.in/support",
+    "message": "Welcome to J.P. Morgan! We are excited to have you on board. Follow us for updates.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_285",
+    "name": "India Post Logistics Phish",
+    "category": "logistics",
+    "url": "http://india-post.secure-login.pro/login",
+    "message": "Package Delayed: Your India Post shipment #FAE10104 is held at the local hub. Pay re-delivery fee (Rs. 48851): http://india-post.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_433",
+    "name": "Coinbase Genuine Message",
+    "category": "safe",
+    "url": "https://amazon.in/support",
+    "message": "Welcome to Coinbase! We are excited to have you on board. Follow us for updates.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_293",
+    "name": "DHL Logistics Phish",
+    "category": "logistics",
+    "url": "http://dhl.verify-account.net/login",
+    "message": "Package Delayed: Your DHL shipment #E08A7C18 is held at the local hub. Pay re-delivery fee (Rs. 36597): http://dhl.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_339",
+    "name": "ByBit Crypto Phish",
+    "category": "crypto",
+    "url": "http://bybit.verify-account.net/login",
+    "message": "Security Alert: Your ByBit wallet has been restricted. Unlock at http://bybit.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_216",
+    "name": "BlueDart Logistics Phish",
+    "category": "logistics",
+    "url": "http://bluedart.verify-account.net/login",
+    "message": "Tracking Alert: Your parcel from BlueDart is arriving today. Confirm location: http://bluedart.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_28",
+    "name": "Chase Banking Phish",
+    "category": "banking",
+    "url": "http://chase.tax-refund-gov.in.net/login",
+    "message": "Urgent: Your Chase account is locked due to suspicious activity. Verify here: http://chase.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_337",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.tax-refund-gov.in.net/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Binance account. Cancel here: http://binance.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_159",
+    "name": "ATO Australia Tax Phish",
+    "category": "tax",
+    "url": "http://ato-australia.claim-rewards.biz/login",
+    "message": "Final Notice: Discrepancy found in your ATO Australia tax filing. Resolve before penalty: http://ato-australia.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_201",
+    "name": "India Post Logistics Phish",
+    "category": "logistics",
+    "url": "http://india-post.logistics-track.org/login",
+    "message": "Package Delayed: Your India Post shipment #26A88C64 is held at the local hub. Pay re-delivery fee (Rs. 19693): http://india-post.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_10",
+    "name": "HSBC Banking Phish",
+    "category": "banking",
+    "url": "http://hsbc.tax-refund-gov.in.net/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://hsbc.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_26",
+    "name": "SBI Banking Phish",
+    "category": "banking",
+    "url": "http://sbi.verify-account.net/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://sbi.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_274",
+    "name": "DHL Logistics Phish",
+    "category": "logistics",
+    "url": "http://dhl.logistics-track.org/login",
+    "message": "Package Delayed: Your DHL shipment #81C88A67 is held at the local hub. Pay re-delivery fee (Rs. 14998): http://dhl.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_331",
+    "name": "Kraken Crypto Phish",
+    "category": "crypto",
+    "url": "http://kraken.tax-refund-gov.in.net/login",
+    "message": "Security Alert: Your Kraken wallet has been restricted. Unlock at http://kraken.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_310",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.tax-refund-gov.in.net/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Coinbase account. Cancel here: http://coinbase.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_447",
+    "name": "Income Tax India Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Your OTP for Income Tax India transaction of Rs. 773 is 493487. Do not share with anyone.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_TAX_127",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.secure-login.pro/login",
+    "message": "Action Required: Your CRA Canada refund has been processed. Confirm bank details: http://cra-canada.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_327",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.tax-refund-gov.in.net/login",
+    "message": "Aura Drop: You have received 5,000 Binance tokens! Claim your airdrop: http://binance.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_30",
+    "name": "J.P. Morgan Banking Phish",
+    "category": "banking",
+    "url": "http://j.p.-morgan.logistics-track.org/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://j.p.-morgan.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_21",
+    "name": "Barclays Banking Phish",
+    "category": "banking",
+    "url": "http://barclays.update-kyc.info/login",
+    "message": "Dear customer, KYC update is pending for your Barclays savings A/c. Complete at http://barclays.update-kyc.info/login to avoid suspension.",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_142",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.update-kyc.info/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 32406. Apply at http://irs.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_132",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.tax-refund-gov.in.net/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 11489. Apply at http://hmrc.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_61",
+    "name": "J.P. Morgan Banking Phish",
+    "category": "banking",
+    "url": "http://j.p.-morgan.claim-rewards.biz/login",
+    "message": "Notification: Your J.P. Morgan reward points (Rs. 21292) are expiring today. Claim now: http://j.p.-morgan.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_108",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.claim-rewards.biz/login",
+    "message": "Final Notice: Discrepancy found in your IRS tax filing. Resolve before penalty: http://irs.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_16",
+    "name": "Chase Banking Phish",
+    "category": "banking",
+    "url": "http://chase.security-verify.com/login",
+    "message": "Urgent: Your Chase account is locked due to suspicious activity. Verify here: http://chase.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_53",
+    "name": "ICICI Banking Phish",
+    "category": "banking",
+    "url": "http://icici.logistics-track.org/login",
+    "message": "Dear customer, KYC update is pending for your ICICI savings A/c. Complete at http://icici.logistics-track.org/login to avoid suspension.",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_67",
+    "name": "Barclays Banking Phish",
+    "category": "banking",
+    "url": "http://barclays.update-kyc.info/login",
+    "message": "Notification: Your Barclays reward points (Rs. 24930) are expiring today. Claim now: http://barclays.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_471",
+    "name": "Coinbase Genuine Message",
+    "category": "safe",
+    "url": "https://fedex.com/support",
+    "message": "Hey! Don't forget our meeting tonight at 8.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_BANKING_75",
+    "name": "SBI Banking Phish",
+    "category": "banking",
+    "url": "http://sbi.tax-refund-gov.in.net/login",
+    "message": "Dear customer, KYC update is pending for your SBI savings A/c. Complete at http://sbi.tax-refund-gov.in.net/login to avoid suspension.",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_46",
+    "name": "Axis Bank Banking Phish",
+    "category": "banking",
+    "url": "http://axis-bank.security-verify.com/login",
+    "message": "Urgent: Your Axis Bank account is locked due to suspicious activity. Verify here: http://axis-bank.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_422",
+    "name": "Swiggy Genuine Message",
+    "category": "safe",
+    "url": "https://hdfcbank.com/support",
+    "message": "Can you send me the documents for the project? Thanks.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_202",
+    "name": "UPS Logistics Phish",
+    "category": "logistics",
+    "url": "http://ups.security-verify.com/login",
+    "message": "Delivery Attempt Failed: Our UPS driver could not find your address. Update here: http://ups.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_32",
+    "name": "Revolut Banking Phish",
+    "category": "banking",
+    "url": "http://revolut.update-kyc.info/login",
+    "message": "Urgent: Your Revolut account is locked due to suspicious activity. Verify here: http://revolut.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_424",
+    "name": "Coinbase Genuine Message",
+    "category": "safe",
+    "url": "https://ups.com/support",
+    "message": "Dear Customer, your Coinbase monthly statement for March 2026 is now available.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_324",
+    "name": "MetaMask Crypto Phish",
+    "category": "crypto",
+    "url": "http://metamask.tax-refund-gov.in.net/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your MetaMask account. Cancel here: http://metamask.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_257",
+    "name": "BlueDart Logistics Phish",
+    "category": "logistics",
+    "url": "http://bluedart.tax-refund-gov.in.net/login",
+    "message": "Tracking Alert: Your parcel from BlueDart is arriving today. Confirm location: http://bluedart.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_477",
+    "name": "Income Tax India Genuine Message",
+    "category": "safe",
+    "url": "https://incometax.gov.in/support",
+    "message": "Your OTP for Income Tax India transaction of Rs. 893 is 568203. Do not share with anyone.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_314",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.verify-account.net/login",
+    "message": "Security Alert: Your Binance wallet has been restricted. Unlock at http://binance.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_486",
+    "name": "Kraken Genuine Message",
+    "category": "safe",
+    "url": "https://amazon.in/support",
+    "message": "Your appointment with Kraken consultant is confirmed for 936618 at 10 AM.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_436",
+    "name": "UPS Genuine Message",
+    "category": "safe",
+    "url": "https://sbi.co.in/support",
+    "message": "Welcome to UPS! We are excited to have you on board. Follow us for updates.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_428",
+    "name": "FedEx Genuine Message",
+    "category": "safe",
+    "url": "https://hdfcbank.com/support",
+    "message": "Hey! Don't forget our meeting tonight at 8.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_232",
+    "name": "DHL Logistics Phish",
+    "category": "logistics",
+    "url": "http://dhl.update-kyc.info/login",
+    "message": "Delivery Attempt Failed: Our DHL driver could not find your address. Update here: http://dhl.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_329",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.claim-rewards.biz/login",
+    "message": "Security Alert: Your Coinbase wallet has been restricted. Unlock at http://coinbase.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_175",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.tax-refund-gov.in.net/login",
+    "message": "Final Notice: Discrepancy found in your IRS tax filing. Resolve before penalty: http://irs.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_469",
+    "name": "BlueDart Genuine Message",
+    "category": "safe",
+    "url": "https://ups.com/support",
+    "message": "Notification: Your BlueDart order #393002 has been shipped and will arrive by tomorrow.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_TAX_145",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.logistics-track.org/login",
+    "message": "Action Required: Your HMRC refund has been processed. Confirm bank details: http://hmrc.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_262",
+    "name": "BlueDart Logistics Phish",
+    "category": "logistics",
+    "url": "http://bluedart.claim-rewards.biz/login",
+    "message": "Package Delayed: Your BlueDart shipment #73EB1328 is held at the local hub. Pay re-delivery fee (Rs. 20285): http://bluedart.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_199",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.logistics-track.org/login",
+    "message": "Action Required: Your IRS refund has been processed. Confirm bank details: http://irs.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_365",
+    "name": "Trust Wallet Crypto Phish",
+    "category": "crypto",
+    "url": "http://trust-wallet.tax-refund-gov.in.net/login",
+    "message": "Aura Drop: You have received 5,000 Trust Wallet tokens! Claim your airdrop: http://trust-wallet.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_430",
+    "name": "India Post Genuine Message",
+    "category": "safe",
+    "url": "https://hdfcbank.com/support",
+    "message": "Your OTP for India Post transaction of Rs. 779 is 879465. Do not share with anyone.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_270",
+    "name": "India Post Logistics Phish",
+    "category": "logistics",
+    "url": "http://india-post.security-verify.com/login",
+    "message": "Delivery Attempt Failed: Our India Post driver could not find your address. Update here: http://india-post.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_338",
+    "name": "ByBit Crypto Phish",
+    "category": "crypto",
+    "url": "http://bybit.secure-login.pro/login",
+    "message": "Security Alert: Your ByBit wallet has been restricted. Unlock at http://bybit.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_332",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.claim-rewards.biz/login",
+    "message": "Security Alert: Your Coinbase wallet has been restricted. Unlock at http://coinbase.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_272",
+    "name": "FedEx Logistics Phish",
+    "category": "logistics",
+    "url": "http://fedex.update-kyc.info/login",
+    "message": "Tracking Alert: Your parcel from FedEx is arriving today. Confirm location: http://fedex.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_316",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.security-verify.com/login",
+    "message": "Security Alert: Your Coinbase wallet has been restricted. Unlock at http://coinbase.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_318",
+    "name": "Trust Wallet Crypto Phish",
+    "category": "crypto",
+    "url": "http://trust-wallet.tax-refund-gov.in.net/login",
+    "message": "Aura Drop: You have received 5,000 Trust Wallet tokens! Claim your airdrop: http://trust-wallet.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_265",
+    "name": "UPS Logistics Phish",
+    "category": "logistics",
+    "url": "http://ups.secure-login.pro/login",
+    "message": "Delivery Attempt Failed: Our UPS driver could not find your address. Update here: http://ups.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_451",
+    "name": "Barclays Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Notification: Your Barclays order #812616 has been shipped and will arrive by tomorrow.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_BANKING_42",
+    "name": "Barclays Banking Phish",
+    "category": "banking",
+    "url": "http://barclays.claim-rewards.biz/login",
+    "message": "Notification: Your Barclays reward points (Rs. 42218) are expiring today. Claim now: http://barclays.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_157",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.secure-login.pro/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 6223. Apply at http://irs.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_69",
+    "name": "Axis Bank Banking Phish",
+    "category": "banking",
+    "url": "http://axis-bank.logistics-track.org/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://axis-bank.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_283",
+    "name": "BlueDart Logistics Phish",
+    "category": "logistics",
+    "url": "http://bluedart.security-verify.com/login",
+    "message": "Package Delayed: Your BlueDart shipment #E95AA7B6 is held at the local hub. Pay re-delivery fee (Rs. 47959): http://bluedart.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_465",
+    "name": "HMRC Genuine Message",
+    "category": "safe",
+    "url": "https://sbi.co.in/support",
+    "message": "Hey! Don't forget our meeting tonight at 8.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_280",
+    "name": "DHL Logistics Phish",
+    "category": "logistics",
+    "url": "http://dhl.tax-refund-gov.in.net/login",
+    "message": "Delivery Attempt Failed: Our DHL driver could not find your address. Update here: http://dhl.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_176",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.claim-rewards.biz/login",
+    "message": "Final Notice: Discrepancy found in your HMRC tax filing. Resolve before penalty: http://hmrc.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_174",
+    "name": "Income Tax India Tax Phish",
+    "category": "tax",
+    "url": "http://income-tax-india.logistics-track.org/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 46675. Apply at http://income-tax-india.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_266",
+    "name": "India Post Logistics Phish",
+    "category": "logistics",
+    "url": "http://india-post.security-verify.com/login",
+    "message": "Delivery Attempt Failed: Our India Post driver could not find your address. Update here: http://india-post.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_251",
+    "name": "BlueDart Logistics Phish",
+    "category": "logistics",
+    "url": "http://bluedart.logistics-track.org/login",
+    "message": "Package Delayed: Your BlueDart shipment #4DC172CD is held at the local hub. Pay re-delivery fee (Rs. 43429): http://bluedart.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_282",
+    "name": "BlueDart Logistics Phish",
+    "category": "logistics",
+    "url": "http://bluedart.secure-login.pro/login",
+    "message": "Tracking Alert: Your parcel from BlueDart is arriving today. Confirm location: http://bluedart.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_62",
+    "name": "Axis Bank Banking Phish",
+    "category": "banking",
+    "url": "http://axis-bank.tax-refund-gov.in.net/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://axis-bank.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_208",
+    "name": "BlueDart Logistics Phish",
+    "category": "logistics",
+    "url": "http://bluedart.security-verify.com/login",
+    "message": "Delivery Attempt Failed: Our BlueDart driver could not find your address. Update here: http://bluedart.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_244",
+    "name": "Aramex Logistics Phish",
+    "category": "logistics",
+    "url": "http://aramex.security-verify.com/login",
+    "message": "Delivery Attempt Failed: Our Aramex driver could not find your address. Update here: http://aramex.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_429",
+    "name": "ATO Australia Genuine Message",
+    "category": "safe",
+    "url": "https://hdfcbank.com/support",
+    "message": "Hey! Don't forget our meeting tonight at 8.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_308",
+    "name": "ByBit Crypto Phish",
+    "category": "crypto",
+    "url": "http://bybit.secure-login.pro/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your ByBit account. Cancel here: http://bybit.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_0",
+    "name": "Chase Banking Phish",
+    "category": "banking",
+    "url": "http://chase.secure-login.pro/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://chase.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_45",
+    "name": "HSBC Banking Phish",
+    "category": "banking",
+    "url": "http://hsbc.verify-account.net/login",
+    "message": "Notification: Your HSBC reward points (Rs. 25294) are expiring today. Claim now: http://hsbc.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_79",
+    "name": "J.P. Morgan Banking Phish",
+    "category": "banking",
+    "url": "http://j.p.-morgan.security-verify.com/login",
+    "message": "Urgent: Your J.P. Morgan account is locked due to suspicious activity. Verify here: http://j.p.-morgan.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_342",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.security-verify.com/login",
+    "message": "Aura Drop: You have received 5,000 Binance tokens! Claim your airdrop: http://binance.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_235",
+    "name": "UPS Logistics Phish",
+    "category": "logistics",
+    "url": "http://ups.security-verify.com/login",
+    "message": "Tracking Alert: Your parcel from UPS is arriving today. Confirm location: http://ups.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_480",
+    "name": "IRS Genuine Message",
+    "category": "safe",
+    "url": "https://amazon.in/support",
+    "message": "Welcome to IRS! We are excited to have you on board. Follow us for updates.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_426",
+    "name": "SBI Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Notification: Your SBI order #353172 has been shipped and will arrive by tomorrow.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_BANKING_7",
+    "name": "Axis Bank Banking Phish",
+    "category": "banking",
+    "url": "http://axis-bank.tax-refund-gov.in.net/login",
+    "message": "Dear customer, KYC update is pending for your Axis Bank savings A/c. Complete at http://axis-bank.tax-refund-gov.in.net/login to avoid suspension.",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_323",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.update-kyc.info/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Binance account. Cancel here: http://binance.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_240",
+    "name": "Aramex Logistics Phish",
+    "category": "logistics",
+    "url": "http://aramex.claim-rewards.biz/login",
+    "message": "Package Delayed: Your Aramex shipment #9747902C is held at the local hub. Pay re-delivery fee (Rs. 45263): http://aramex.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_295",
+    "name": "UPS Logistics Phish",
+    "category": "logistics",
+    "url": "http://ups.secure-login.pro/login",
+    "message": "Package Delayed: Your UPS shipment #6BAD332D is held at the local hub. Pay re-delivery fee (Rs. 33922): http://ups.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_413",
+    "name": "HSBC Genuine Message",
+    "category": "safe",
+    "url": "https://hdfcbank.com/support",
+    "message": "Dear Customer, your HSBC monthly statement for March 2026 is now available.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_BANKING_36",
+    "name": "Revolut Banking Phish",
+    "category": "banking",
+    "url": "http://revolut.secure-login.pro/login",
+    "message": "Urgent: Your Revolut account is locked due to suspicious activity. Verify here: http://revolut.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_105",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.security-verify.com/login",
+    "message": "Action Required: Your CRA Canada refund has been processed. Confirm bank details: http://cra-canada.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_427",
+    "name": "DHL Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Dear Customer, your DHL monthly statement for March 2026 is now available.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_334",
+    "name": "MetaMask Crypto Phish",
+    "category": "crypto",
+    "url": "http://metamask.security-verify.com/login",
+    "message": "Security Alert: Your MetaMask wallet has been restricted. Unlock at http://metamask.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_209",
+    "name": "DHL Logistics Phish",
+    "category": "logistics",
+    "url": "http://dhl.security-verify.com/login",
+    "message": "Package Delayed: Your DHL shipment #419B4205 is held at the local hub. Pay re-delivery fee (Rs. 34456): http://dhl.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_112",
+    "name": "Income Tax India Tax Phish",
+    "category": "tax",
+    "url": "http://income-tax-india.update-kyc.info/login",
+    "message": "Final Notice: Discrepancy found in your Income Tax India tax filing. Resolve before penalty: http://income-tax-india.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_101",
+    "name": "ATO Australia Tax Phish",
+    "category": "tax",
+    "url": "http://ato-australia.tax-refund-gov.in.net/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 7005. Apply at http://ato-australia.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_103",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.tax-refund-gov.in.net/login",
+    "message": "Action Required: Your IRS refund has been processed. Confirm bank details: http://irs.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_13",
+    "name": "J.P. Morgan Banking Phish",
+    "category": "banking",
+    "url": "http://j.p.-morgan.logistics-track.org/login",
+    "message": "Urgent: Your J.P. Morgan account is locked due to suspicious activity. Verify here: http://j.p.-morgan.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_385",
+    "name": "MetaMask Crypto Phish",
+    "category": "crypto",
+    "url": "http://metamask.logistics-track.org/login",
+    "message": "Aura Drop: You have received 5,000 MetaMask tokens! Claim your airdrop: http://metamask.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_148",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.logistics-track.org/login",
+    "message": "Action Required: Your IRS refund has been processed. Confirm bank details: http://irs.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_92",
+    "name": "HDFC Banking Phish",
+    "category": "banking",
+    "url": "http://hdfc.update-kyc.info/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://hdfc.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_50",
+    "name": "Axis Bank Banking Phish",
+    "category": "banking",
+    "url": "http://axis-bank.logistics-track.org/login",
+    "message": "Notification: Your Axis Bank reward points (Rs. 17120) are expiring today. Claim now: http://axis-bank.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_271",
+    "name": "Aramex Logistics Phish",
+    "category": "logistics",
+    "url": "http://aramex.security-verify.com/login",
+    "message": "Tracking Alert: Your parcel from Aramex is arriving today. Confirm location: http://aramex.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_253",
+    "name": "DHL Logistics Phish",
+    "category": "logistics",
+    "url": "http://dhl.secure-login.pro/login",
+    "message": "Package Delayed: Your DHL shipment #E7598AC4 is held at the local hub. Pay re-delivery fee (Rs. 41225): http://dhl.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_131",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.claim-rewards.biz/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 9751. Apply at http://cra-canada.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_150",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.update-kyc.info/login",
+    "message": "Action Required: Your HMRC refund has been processed. Confirm bank details: http://hmrc.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_284",
+    "name": "UPS Logistics Phish",
+    "category": "logistics",
+    "url": "http://ups.update-kyc.info/login",
+    "message": "Package Delayed: Your UPS shipment #7908B48C is held at the local hub. Pay re-delivery fee (Rs. 24992): http://ups.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_375",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.update-kyc.info/login",
+    "message": "Security Alert: Your Coinbase wallet has been restricted. Unlock at http://coinbase.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_18",
+    "name": "Barclays Banking Phish",
+    "category": "banking",
+    "url": "http://barclays.verify-account.net/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://barclays.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_279",
+    "name": "UPS Logistics Phish",
+    "category": "logistics",
+    "url": "http://ups.logistics-track.org/login",
+    "message": "Tracking Alert: Your parcel from UPS is arriving today. Confirm location: http://ups.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_98",
+    "name": "Barclays Banking Phish",
+    "category": "banking",
+    "url": "http://barclays.update-kyc.info/login",
+    "message": "Notification: Your Barclays reward points (Rs. 7064) are expiring today. Claim now: http://barclays.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_117",
+    "name": "IRS Tax Phish",
+    "category": "tax",
+    "url": "http://irs.verify-account.net/login",
+    "message": "Final Notice: Discrepancy found in your IRS tax filing. Resolve before penalty: http://irs.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_341",
+    "name": "Coinbase Crypto Phish",
+    "category": "crypto",
+    "url": "http://coinbase.tax-refund-gov.in.net/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Coinbase account. Cancel here: http://coinbase.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_211",
+    "name": "DHL Logistics Phish",
+    "category": "logistics",
+    "url": "http://dhl.claim-rewards.biz/login",
+    "message": "Tracking Alert: Your parcel from DHL is arriving today. Confirm location: http://dhl.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_170",
+    "name": "ATO Australia Tax Phish",
+    "category": "tax",
+    "url": "http://ato-australia.secure-login.pro/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 30434. Apply at http://ato-australia.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_275",
+    "name": "India Post Logistics Phish",
+    "category": "logistics",
+    "url": "http://india-post.secure-login.pro/login",
+    "message": "Package Delayed: Your India Post shipment #C5ED56E9 is held at the local hub. Pay re-delivery fee (Rs. 11524): http://india-post.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_191",
+    "name": "Income Tax India Tax Phish",
+    "category": "tax",
+    "url": "http://income-tax-india.logistics-track.org/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 7932. Apply at http://income-tax-india.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_355",
+    "name": "Trust Wallet Crypto Phish",
+    "category": "crypto",
+    "url": "http://trust-wallet.secure-login.pro/login",
+    "message": "Aura Drop: You have received 5,000 Trust Wallet tokens! Claim your airdrop: http://trust-wallet.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_450",
+    "name": "Zomato Genuine Message",
+    "category": "safe",
+    "url": "https://amazon.in/support",
+    "message": "Notification: Your Zomato order #506484 has been shipped and will arrive by tomorrow.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_312",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.verify-account.net/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Binance account. Cancel here: http://binance.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_47",
+    "name": "HSBC Banking Phish",
+    "category": "banking",
+    "url": "http://hsbc.update-kyc.info/login",
+    "message": "Urgent: Your HSBC account is locked due to suspicious activity. Verify here: http://hsbc.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_249",
+    "name": "FedEx Logistics Phish",
+    "category": "logistics",
+    "url": "http://fedex.verify-account.net/login",
+    "message": "Delivery Attempt Failed: Our FedEx driver could not find your address. Update here: http://fedex.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_22",
+    "name": "J.P. Morgan Banking Phish",
+    "category": "banking",
+    "url": "http://j.p.-morgan.logistics-track.org/login",
+    "message": "Urgent: Your J.P. Morgan account is locked due to suspicious activity. Verify here: http://j.p.-morgan.logistics-track.org/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_114",
+    "name": "CRA Canada Tax Phish",
+    "category": "tax",
+    "url": "http://cra-canada.update-kyc.info/login",
+    "message": "Tax Refund Alert: You are eligible for a refund of Rs. 34008. Apply at http://cra-canada.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_8",
+    "name": "SBI Banking Phish",
+    "category": "banking",
+    "url": "http://sbi.secure-login.pro/login",
+    "message": "Urgent: Your SBI account is locked due to suspicious activity. Verify here: http://sbi.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_470",
+    "name": "FedEx Genuine Message",
+    "category": "safe",
+    "url": "https://hdfcbank.com/support",
+    "message": "Can you send me the documents for the project? Thanks.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_BANKING_95",
+    "name": "ICICI Banking Phish",
+    "category": "banking",
+    "url": "http://icici.claim-rewards.biz/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://icici.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_286",
+    "name": "DHL Logistics Phish",
+    "category": "logistics",
+    "url": "http://dhl.update-kyc.info/login",
+    "message": "Package Delayed: Your DHL shipment #0FF4D902 is held at the local hub. Pay re-delivery fee (Rs. 40710): http://dhl.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_505",
+    "name": "Delhivery Genuine Message",
+    "category": "safe",
+    "url": "https://icicibank.com/support",
+    "message": "Welcome to Delhivery! We are excited to have you on board. Follow us for updates.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_414",
+    "name": "FedEx Genuine Message",
+    "category": "safe",
+    "url": "https://icicibank.com/support",
+    "message": "Hey! Don't forget our meeting tonight at 8.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_210",
+    "name": "Delhivery Logistics Phish",
+    "category": "logistics",
+    "url": "http://delhivery.security-verify.com/login",
+    "message": "Delivery Attempt Failed: Our Delhivery driver could not find your address. Update here: http://delhivery.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_487",
+    "name": "J.P. Morgan Genuine Message",
+    "category": "safe",
+    "url": "https://sbi.co.in/support",
+    "message": "Your OTP for J.P. Morgan transaction of Rs. 1480 is 894905. Do not share with anyone.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SAFE_452",
+    "name": "Aramex Genuine Message",
+    "category": "safe",
+    "url": "https://sbi.co.in/support",
+    "message": "Notification: Your Aramex order #639962 has been shipped and will arrive by tomorrow.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_LOGISTICS_273",
+    "name": "UPS Logistics Phish",
+    "category": "logistics",
+    "url": "http://ups.secure-login.pro/login",
+    "message": "Tracking Alert: Your parcel from UPS is arriving today. Confirm location: http://ups.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SAFE_475",
+    "name": "ATO Australia Genuine Message",
+    "category": "safe",
+    "url": "",
+    "message": "Dear Customer, your ATO Australia monthly statement for March 2026 is now available.",
+    "expected": "SAFE"
+  },
+  {
+    "id": "SCAM_CRYPTO_315",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.secure-login.pro/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Binance account. Cancel here: http://binance.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_303",
+    "name": "MetaMask Crypto Phish",
+    "category": "crypto",
+    "url": "http://metamask.secure-login.pro/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your MetaMask account. Cancel here: http://metamask.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_5",
+    "name": "SBI Banking Phish",
+    "category": "banking",
+    "url": "http://sbi.update-kyc.info/login",
+    "message": "Notification: Your SBI reward points (Rs. 41014) are expiring today. Claim now: http://sbi.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_124",
+    "name": "ATO Australia Tax Phish",
+    "category": "tax",
+    "url": "http://ato-australia.secure-login.pro/login",
+    "message": "Final Notice: Discrepancy found in your ATO Australia tax filing. Resolve before penalty: http://ato-australia.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_225",
+    "name": "Delhivery Logistics Phish",
+    "category": "logistics",
+    "url": "http://delhivery.tax-refund-gov.in.net/login",
+    "message": "Delivery Attempt Failed: Our Delhivery driver could not find your address. Update here: http://delhivery.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_188",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.verify-account.net/login",
+    "message": "Action Required: Your HMRC refund has been processed. Confirm bank details: http://hmrc.verify-account.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_1",
+    "name": "Revolut Banking Phish",
+    "category": "banking",
+    "url": "http://revolut.secure-login.pro/login",
+    "message": "Urgent: Your Revolut account is locked due to suspicious activity. Verify here: http://revolut.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_CRYPTO_373",
+    "name": "Binance Crypto Phish",
+    "category": "crypto",
+    "url": "http://binance.security-verify.com/login",
+    "message": "Withdrawal Request: A transfer of 0.5 BTC is pending from your Binance account. Cancel here: http://binance.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_55",
+    "name": "ICICI Banking Phish",
+    "category": "banking",
+    "url": "http://icici.secure-login.pro/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://icici.secure-login.pro/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_220",
+    "name": "DHL Logistics Phish",
+    "category": "logistics",
+    "url": "http://dhl.update-kyc.info/login",
+    "message": "Package Delayed: Your DHL shipment #2F773F31 is held at the local hub. Pay re-delivery fee (Rs. 26879): http://dhl.update-kyc.info/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_238",
+    "name": "India Post Logistics Phish",
+    "category": "logistics",
+    "url": "http://india-post.claim-rewards.biz/login",
+    "message": "Tracking Alert: Your parcel from India Post is arriving today. Confirm location: http://india-post.claim-rewards.biz/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_TAX_143",
+    "name": "HMRC Tax Phish",
+    "category": "tax",
+    "url": "http://hmrc.security-verify.com/login",
+    "message": "Action Required: Your HMRC refund has been processed. Confirm bank details: http://hmrc.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_260",
+    "name": "India Post Logistics Phish",
+    "category": "logistics",
+    "url": "http://india-post.security-verify.com/login",
+    "message": "Package Delayed: Your India Post shipment #5122A059 is held at the local hub. Pay re-delivery fee (Rs. 36961): http://india-post.security-verify.com/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_LOGISTICS_228",
+    "name": "Delhivery Logistics Phish",
+    "category": "logistics",
+    "url": "http://delhivery.tax-refund-gov.in.net/login",
+    "message": "Package Delayed: Your Delhivery shipment #820E1DA1 is held at the local hub. Pay re-delivery fee (Rs. 21270): http://delhivery.tax-refund-gov.in.net/login",
+    "expected": "SCAM"
+  },
+  {
+    "id": "SCAM_BANKING_34",
+    "name": "ICICI Banking Phish",
+    "category": "banking",
+    "url": "http://icici.verify-account.net/login",
+    "message": "Alert: A login attempt was made from a new device in London. If not you, block instantly: http://icici.verify-account.net/login",
+    "expected": "SCAM"
+  }
+]
