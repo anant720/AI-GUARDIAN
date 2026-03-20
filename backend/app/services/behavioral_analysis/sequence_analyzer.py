@@ -25,7 +25,7 @@ _THREAT_PATTERNS = [
     r"\baccount\s+(blocked|suspended|frozen|locked|restricted)\b",
     r"\b(permanent|permanently)\s+(ban|block|suspension|closure)\b",
     r"\bpenalt(y|ies)\b", r"\blegal\s+action\b", r"\bpolice\b",
-    r"\bwarrant\b", r"\bfine\s+of\b",
+    r"\bwarrant\b", r"\bfine\s+of\b", r"\barrest\b", r"\bcourt\s+summons\b",
 ]
 
 _REWARD_PATTERNS = [
@@ -37,7 +37,17 @@ _REWARD_PATTERNS = [
 _AUTHORITY_PATTERNS = [
     r"\bgovernment\b", r"\bpolice\s+department\b", r"\b(rbi|irs|hmrc|ssa)\b",
     r"\bofficial\s+notice\b", r"\bfederal\b", r"\blegal\s+department\b",
-    r"\bcybercrime\b", r"\btax\s+authority\b",
+    r"\bcybercrime\b", r"\btax\s+authority\b", r"\bexecutive\s+office\b",
+    r"\bdepartment\s+of\b", r"\binternal\s+revenue\b", r"\bnotice\s+of\s+compliance\b",
+    r"\badministrator\b", r"\bsystem\s+admin\b", r"\bcustomer\s+support\b",
+    r"\bsecurity\s+team\b", r"\btrust\s+and\s+safety\b",
+]
+
+_MASKING_PATTERNS = [
+    r"\bverification\s+successful\b", r"\bsecurity\s+audit\b", 
+    r"\bidentity\s+confirmed\b", r"\baccount\s+protected\b",
+    r"\bdue\s+diligence\b", r"\bcompliance\s+check\b",
+    r"\bofficial\s+correspondence\b", r"\bsecure\s+payload\b",
 ]
 
 _CREDENTIAL_PATTERNS = [
@@ -94,28 +104,35 @@ def analyze_sequences(message: str) -> Dict[str, Any]:
     authority_hits  = _match_patterns(text, _AUTHORITY_PATTERNS)
     credential_hits = _match_patterns(text, _CREDENTIAL_PATTERNS)
     financial_hits  = _match_patterns(text, _FINANCIAL_PATTERNS)
+    masking_hits    = _match_patterns(text, _MASKING_PATTERNS)
 
-    all_cues = urgency_hits + threat_hits + reward_hits + authority_hits + credential_hits + financial_hits
+    all_cues: List[str] = list(set(urgency_hits + threat_hits + reward_hits + authority_hits + credential_hits + financial_hits + masking_hits))
 
     # Weighted urgency score — more signals = higher risk
-    score_raw = (
+    score_raw: float = (
         len(urgency_hits)    * 0.20 +
-        len(threat_hits)     * 0.25 +
+        len(threat_hits)     * 0.30 +
         len(reward_hits)     * 0.15 +
-        len(authority_hits)  * 0.15 +
-        len(credential_hits) * 0.20 +
-        len(financial_hits)  * 0.20
+        len(authority_hits)  * 0.25 +
+        len(credential_hits) * 0.25 +
+        len(financial_hits)  * 0.20 +
+        len(masking_hits)    * 0.10
     )
-    urgency_score = min(score_raw, 1.0)
+    urgency_score: float = float(min(score_raw, 1.0))
+    rounded_score: float = float(round(urgency_score, 3))
 
     # SEP labels
-    sep = []
+    sep: List[str] = []
     if urgency_hits:    sep.append("urgency_pressure")
     if threat_hits:     sep.append("threat_language")
     if reward_hits:     sep.append("reward_bait")
     if authority_hits:  sep.append("authority_claim")
     if credential_hits: sep.append("credential_request")
     if financial_hits:  sep.append("financial_pressure")
+    if masking_hits:    sep.append("institutional_masking")
+
+    # Limit cues to 10
+    safe_cues: List[str] = all_cues[:10]
 
     logger.info(
         f"Sequence analysis: urgency={urgency_score:.2f} "
@@ -123,12 +140,13 @@ def analyze_sequences(message: str) -> Dict[str, Any]:
     )
 
     return {
-        "urgency_score": round(urgency_score, 3),
-        "manipulation_cues": list(set(all_cues))[:10],
+        "urgency_score": rounded_score,
+        "manipulation_cues": safe_cues,
         "social_engineering_patterns": sep,
         "credential_request": bool(credential_hits),
         "financial_pressure": bool(financial_hits),
         "authority_claim": bool(authority_hits),
         "threat_detected": bool(threat_hits),
         "reward_bait": bool(reward_hits),
+        "was_masked": bool(masking_hits),
     }

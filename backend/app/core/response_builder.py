@@ -22,10 +22,10 @@ def build_scan_response(ctx: ScanContext) -> Dict[str, Any]:
     if score >= 60:
         verdict = "SCAM DETECTED"
         risk_level = "critical"
-    elif score >= 40:
+    elif score >= 30:
         verdict = "SUSPICIOUS"
         risk_level = "high"
-    elif score >= 20:
+    elif score >= 15:
         verdict = "LOW RISK"
         risk_level = "medium"
     else:
@@ -52,16 +52,20 @@ def build_scan_response(ctx: ScanContext) -> Dict[str, Any]:
         "verdict": verdict,
         "risk_level": risk_level,
         "combined_score": score,
+        "confidence_score": int((ctx.llm.confidence or 0) * 100) if ctx.llm.used else 0,
         "evidence": evidence,
         "explanation": final_explanation,
 
-        # ── Intelligence Discovery Scores ──────────────────────────────────────
+        # ── Simplified Metrics ────────────────────────────────────────────────
+        "main_metrics": {
+            "risk_score": score,
+            "confidence": int((ctx.llm.confidence or 0) * 100) if ctx.llm.used else 0
+        },
+
+        # ── Simplified Analytics Discovery ─────────────────────────────────────
         "system_discovery": {
-            "url_infrastructure":   ctx.url_signals.risk_score,
-            "message_semantics":    ctx.message_signals.message_risk_score,
-            "threat_intelligence":  ctx.threat_signals.threat_score,
-            "behavioral_intelligence": ctx.behavioral.score,
-            "ai_deep_reasoning":    ctx.llm.scam_probability,
+            "risk_score": score,
+            "confidence": int((ctx.llm.confidence or 0) * 100) if ctx.llm.used else 0
         },
 
         # ── Threat Intel Summary ──────────────────────────────────────────────

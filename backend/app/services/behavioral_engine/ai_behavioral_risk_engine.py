@@ -61,7 +61,7 @@ async def run_behavioral_analysis(
 
     logger.info(f"Adaptive Behavioral analysis starting for: {url}")
 
-    # ── Concurrent Phase 5 sub-engine execution with 2.0s strict timeout ──────
+    # ── Concurrent Phase 5 sub-engine execution with 10.0s strict timeout ──────
     try:
         behavioral, semantic, domain_behavior = await asyncio.wait_for(
             asyncio.gather(
@@ -69,10 +69,10 @@ async def run_behavioral_analysis(
                 assess_semantic_risk(message, url, url_signals),
                 analyze_domain_behavior(url, cached_html, claimed_brand or None)
             ),
-            timeout=2.0
+            timeout=10.0
         )
     except asyncio.TimeoutError:
-        logger.warning(f"Adaptive Behavioral sub-engines timed out after 2.0s for {url}")
+        logger.warning(f"Adaptive Behavioral sub-engines timed out after 10.0s for {url}")
         # Fallback to neutral results
         behavioral, semantic, domain_behavior = {}, {}, {}
     except Exception as e:
@@ -104,42 +104,92 @@ async def run_behavioral_analysis(
     # ── Evidence list (ranked by strength) ───────────────────────────────────
     evidence: list = []
 
-    conflict = semantic.get("intent_conflict", {})
-    if conflict.get("conflict_detected"):
-        evidence.append(f"Brand conflict: {conflict.get('conflict_reason', 'domain mismatch')}")
-
+    # Prepare extraction variables for summary builder
     timing = behavioral.get("timing_analysis", {})
-    if timing.get("time_pressure"):
-        triggers = ", ".join(timing.get("triggers", [])[:2])
-        evidence.append(f"Urgency: {triggers}")
+    seq = behavioral.get("sequence_analysis", {})
+    conflict = semantic.get("intent_conflict", {})
+    claimed_brand = conflict.get("claimed_brand") or conflict.get("brand") or "a known brand"
 
+    # 0. High-Level "Perfect" Evidence (The Summary)
+    # If the risk is high, provide a technical, human-readable summary
+    if adaptive_score >= 15:
+        summary_parts = []
+        
+        # Priority 1: High-Confidence AI Insight (Filtered for accuracy)
+        is_safe_ai = llm_verdict.get("threat_type") == "safe"
+        has_mismatch = conflict.get("conflict_detected")
+        
+        if llm_verdict.get("confidence", 0) >= 0.75:
+            if is_safe_ai and has_mismatch:
+                summary_parts.append(f"System detected a brand mismatch despite a professional message tone")
+            else:
+                threat = llm_verdict.get("threat_type", "scam").replace("_", " ")
+                summary_parts.append(f"AI identifies this as a potential {threat}")
+
+        # Priority 2: Message & Tone
+        if seq.get("financial_pressure") or seq.get("reward_bait"):
+            summary_parts.append("uses financial/reward baiting")
+        if seq.get("credential_request"):
+            summary_parts.append("requests sensitive credentials or identity verification")
+        if timing.get("time_pressure"):
+            summary_parts.append("employs high psychological urgency")
+        if seq.get("authority_claim"):
+            summary_parts.append("claims questionable official authority")
+        
+        # Priority 3: Infrastructure
+        if has_mismatch:
+            summary_parts.append(f"contains a deceptive domain mismatch impersonating {claimed_brand}")
+        
+        if summary_parts:
+            # Combine into a perfect sentence
+            main_point = summary_parts[0]
+            others = summary_parts[1:]
+            if others:
+                summary = f"{main_point} which {', '.join(others[:-1])}{' and ' if len(others) > 1 else ''}{others[-1]}."
+            else:
+                summary = f"{main_point}."
+            evidence.append(summary)
+
+    # 1. Critical Conflicts & Verified Threats
+    if threat_report.get("phishing_match"):
+        evidence.append("GLOBAL ALERT: Known phishing signature detected in database")
+    
+    if conflict.get("conflict_detected"):
+        evidence.append(f"BRAND DECEPTION: Claims to be {claimed_brand} but links to a different domain")
+
+    # 2. Specific Attack Vectors
+    if seq.get("financial_pressure") or "crypto" in message.lower():
+        evidence.append("ASSET DRAINER: Detected patterns common in wallet/crypto-drainer attacks")
+    
+    if seq.get("credential_request"):
+        evidence.append("CREDENTIAL HARVESTING: Detected attempts to solicit login or personal data")
+
+    # 3. Pattern Match (Highly strict)
     template = semantic.get("template_matching", {})
-    if template.get("template_matched"):
-        sim = semantic.get("contextual_similarity", {}).get("max_similarity", 0)
-        evidence.append(
-            f"Template match: '{template['matched_template'].get('title')}' "
-            f"(similarity {sim:.2f})"
-        )
+    sim = semantic.get("contextual_similarity", {}).get("max_similarity", 0)
+    if template.get("template_matched") and sim >= 0.8:
+        evidence.append(f"SIGNATURE MATCH: High-fidelity match to known '{template['matched_template'].get('title')}' pattern")
 
+    # 4. Behavioral Signals (Professional Labels)
+    if timing.get("time_pressure"):
+        evidence.append(f"PSYCHOLOGICAL TRIGGER: Use of urgency to bypass user critical thinking")
+    
+    if seq.get("authority_claim") or seq.get("threat_detected"):
+        evidence.append("AUTHORITY IMPERSONATION: Claims official power to coerce action")
+
+    # 5. Infrastructure & DNS
     obf = domain_behavior.get("js_obfuscation", {})
     if obf.get("obfuscation_detected"):
-        evidence.append(f"JS obfuscation: {', '.join(obf.get('indicators', [])[:2])}")
+        evidence.append(f"Technical obfuscation: JS-layer hiding detected")
 
     redir = domain_behavior.get("redirect_analysis", {})
     if redir.get("cloaking_detected"):
-        evidence.append("Redirect cloaking detected")
-    elif redir.get("domain_changed"):
-        evidence.append(f"Domain redirect: → {redir.get('final_domain')}")
-
-    seq = behavioral.get("sequence_analysis", {})
-    sep = seq.get("social_engineering_patterns", [])
-    if sep:
-        evidence.append(f"Social engineering: {', '.join(sep[:3])}")
-
+        evidence.append("Cloaking: Page is hiding from security scanners")
+    
     if threat_report.get("phishing_match"):
-        evidence.append("Phishing database match")
+        evidence.append("Verified threat: Found in global phishing database")
     if threat_report.get("malware_detected"):
-        evidence.append("Malware detected in URL")
+        evidence.append("Malware: URL is blacklisted for malicious payloads")
 
     logger.info(
         f"Behavioral Engine complete — adaptive_score={adaptive_score} "

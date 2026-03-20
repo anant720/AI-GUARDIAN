@@ -56,10 +56,93 @@ _BRAND_DOMAINS: Dict[str, List[str]] = {
     "steam":        ["steampowered.com", "store.steampowered.com"],
 }
 
+# ── Generic Authority Keywords ───────────────────────────────────────────────
+_AUTHORITY_KEYWORDS = {
+    "government": ["gov", "gov.in", "gov.uk", "mil"],
+    "police":     ["gov", "police.uk", "police.in"],
+    "income tax": ["incometax.gov.in", "irs.gov"],
+    "rbi":        ["rbi.org.in"],
+    "bank":       ["trusted-bank-list"], # We use this as a flag for high-scrutiny
+    "court":      ["gov", "judiciary.uk", "sci.gov.in"],
+    "official notice": ["gov", "org"],
+}
+
+_AUTHORITY_PATTERN = re.compile(
+    r"\b(" + "|".join(re.escape(k) for k in _AUTHORITY_KEYWORDS.keys()) + r")\b",
+    re.IGNORECASE
+)
+
 _BRAND_PATTERN = re.compile(
     r"\b(" + "|".join(re.escape(b) for b in _BRAND_DOMAINS.keys()) + r")\b",
     re.IGNORECASE
 )
+
+
+def _extract_potential_entities(text: str) -> List[str]:
+    """Finds potential service names or brands using fuzzy extraction (Capitalized words)."""
+    # Look for capitalized words of length 3-15 that aren't common sentence starters
+    # This is a heuristic for "Brand-like" strings
+    potential = re.findall(r"\b([A-Z][a-z]{2,15})\b", text)
+    # Filter out common non-brand capitalized words if needed, but for phish detection, 
+    # we'd rather over-extract and then check if they appear in the domain.
+    return list(set(p.lower() for p in potential))
+
+
+def _detect_structural_deception(entities: List[str], actual_domain: str) -> Optional[Dict[str, Any]]:
+    """Detects 'Keyword Stuffing' where a brand/entity name appears in a foreign domain."""
+    if not entities or not actual_domain:
+        return None
+
+    # Common TLDs/Suffixes to ignore for root matching
+    root_domain = actual_domain.split(".")[-2] if "." in actual_domain else actual_domain
+    
+    for entity in entities:
+        # Ignore extremely common words
+        if entity in ["the", "your", "this", "from", "with"]:
+            continue
+            
+        # Is the entity name inside the domain/subdomain?
+        # e.g. entity='meta', domain='meta-support.io' -> matches
+        if entity in actual_domain.replace("-", "").replace(".", ""):
+            # But is it the OFFICIAL domain? 
+            # We check if the root domain IS the entity
+            if root_domain != entity:
+                # Structural deception detected: Brand used in a domain it doesn't own
+                return {
+                    "conflict_detected": True,
+                    "claimed_brand": entity,
+                    "mismatch_severity": 0.9,
+                    "conflict_reason": f"System detected the keyword '{entity.upper()}' used in a deceptive domain structure '{actual_domain}'"
+                }
+    return None
+
+
+def _detect_generic_authority_conflict(message: str, actual_domain: str) -> Optional[Dict[str, Any]]:
+    """Detects if a message claims general authority but links to a non-government/official domain."""
+    message_lower = message.lower()
+    matches = _AUTHORITY_PATTERN.findall(message_lower)
+    
+    if not matches or not actual_domain:
+        return None
+
+    # Check if the domain is a known official TLD or in our allowed list
+    is_gov_tld = any(actual_domain.endswith(f".{tld}") for tld in ["gov", "gov.in", "gov.uk", "mil", "nic.in"])
+    
+    # If the message claims "Government" or "Police" but isn't on a .gov domain
+    for match in set(matches):
+        m_str = str(match)
+        # We don't want too many false positives, so we focus on high-risk generic claims
+        if m_str in ["government", "income tax", "rbi", "court", "police"]:
+            if not is_gov_tld:
+                # Potential impersonation of an entire institution
+                return {
+                    "conflict_detected": True,
+                    "claimed_brand": m_str,
+                    "mismatch_severity": 1.0, # High severity for gov impersonation
+                    "conflict_reason": f"Message claims official {m_str.upper()} authority but links to a non-government domain '{actual_domain}'"
+                }
+
+    return None
 
 
 def _extract_brands(text: str) -> List[str]:
@@ -79,22 +162,15 @@ def _get_url_domain(url: str) -> Optional[str]:
 def detect_intent_conflict(
     message: str = "",
     url: str = "",
-    url_signals: Dict[str, Any] = None
+    url_signals: Optional[Dict[str, Any]] = None
 ) -> Dict[str, Any]:
     """
     Detect brand-intent mismatch between message and URL.
-
-    Args:
-        message: Raw message text
-        url: Scanned URL
-        url_signals: Optional url_report signals dict (for brand_impersonation hint)
-
-    Returns:
-        Dict with conflict_detected, claimed_brand, actual_domain, mismatch_severity (0-1)
+    Includes Universal Authority Verification and Structural Deception.
     """
     url_signals = url_signals or {}
 
-    result = {
+    result: Dict[str, Any] = {
         "conflict_detected": False,
         "claimed_brands": [],
         "actual_domain": None,
@@ -102,7 +178,29 @@ def detect_intent_conflict(
         "conflict_reason": None,
     }
 
-    # Extract brands from message
+    actual_domain = _get_url_domain(url)
+    result["actual_domain"] = actual_domain
+
+    if not actual_domain:
+        return result
+
+    # 1. Start with Universal Authority Verification (Heuristic)
+    auth_conflict = _detect_generic_authority_conflict(message, actual_domain)
+    if auth_conflict:
+        result.update(auth_conflict)
+        result["claimed_brands"] = [auth_conflict["claimed_brand"]]
+        return result
+
+    # 2. Universal Structural Deception (Zero-Whitelist protection)
+    # Extracts ANY capitalized potential entities (Meta, Amazon, Steam, etc.)
+    potential_entities = _extract_potential_entities(message)
+    structural_conflict = _detect_structural_deception(potential_entities, actual_domain)
+    if structural_conflict:
+        result.update(structural_conflict)
+        result["claimed_brands"] = potential_entities
+        return result
+
+    # 3. Traditional Brand Mismatch (Dictionary-based fallback)
     claimed_brands = _extract_brands(message)
 
     # Also check brand_impersonation hint from url_report
@@ -113,13 +211,7 @@ def detect_intent_conflict(
     result["claimed_brands"] = claimed_brands
 
     if not claimed_brands:
-        return result  # no brand → no conflict possible
-
-    actual_domain = _get_url_domain(url)
-    result["actual_domain"] = actual_domain
-
-    if not actual_domain:
-        return result
+        return result 
 
     # Check each claimed brand vs actual domain
     for brand in claimed_brands:
@@ -127,19 +219,14 @@ def detect_intent_conflict(
         if not official_domains:
             continue
 
-        # Is the URL on an official domain?
         is_official = any(
             actual_domain == od or actual_domain.endswith("." + od)
             for od in official_domains
         )
 
         if not is_official:
-            # Conflict: brand mentioned but domain is foreign
-            # Check if the brand keyword appears in the domain (keyword stuffing)
             brand_in_domain = brand.replace(" ", "") in actual_domain.replace("-", "")
-
-            severity = 0.9 if not brand_in_domain else 0.6
-            # Lower severity if brand is in domain (could be a legit subdomain)
+            severity = 0.95 if not brand_in_domain else 0.7
 
             result["conflict_detected"] = True
             result["mismatch_severity"] = max(result["mismatch_severity"], severity)
@@ -152,6 +239,6 @@ def detect_intent_conflict(
                 f"Intent conflict: brand='{brand}' domain='{actual_domain}' "
                 f"severity={severity:.1f}"
             )
-            break  # Report first conflict found
+            break 
 
     return result

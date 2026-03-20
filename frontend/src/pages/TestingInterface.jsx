@@ -284,22 +284,19 @@ const TestingInterface = () => {
                   )}
                 </div>
 
-                {/* Detailed Phase Scores */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Result Metrics: 2 Bars */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                    <MetricBox 
-                     label="Threat Intelligence" 
-                     value={result.threat_intelligence?.threat_score || 0} 
-                     info={result.threat_intelligence?.domain_reputation || "Neutral"}
+                     label="Risk Score" 
+                     value={result.main_metrics?.risk_score ?? result.combined_score ?? 0} 
+                     info="Combined Threat Probability"
+                     isRisk={true}
                     />
                    <MetricBox 
-                     label="Behavioral Risk" 
-                     value={result.behavioral_analysis?.risk_score || 0} 
-                     info={result.behavioral_analysis?.verdict || "Standard"}
-                    />
-                   <MetricBox 
-                     label="Semantic Risk" 
-                     value={result.semantic_risk?.score || 0} 
-                     info="AI Pattern Match"
+                     label="Scan Confidence" 
+                     value={result.main_metrics?.confidence ?? (result.llm_verdict?.confidence * 100) ?? 0} 
+                     info="AI Analysis Certainty"
+                     isRisk={false}
                     />
                 </div>
                 </div>
@@ -332,11 +329,18 @@ const TestingInterface = () => {
   );
 };
 
-const MetricBox = ({ label, value, info }) => {
+const MetricBox = ({ label, value, info, isRisk }) => {
   const getProgressColor = () => {
-    if (value >= 70) return 'bg-rose-500';
-    if (value >= 30) return 'bg-amber-500';
-    return 'bg-emerald-500';
+    if (isRisk) {
+      if (value >= 70) return 'bg-rose-500 shadow-[0_0_12px_rgba(244,63,94,0.4)]';
+      if (value >= 30) return 'bg-amber-500 shadow-[0_0_12px_rgba(245,158,11,0.4)]';
+      return 'bg-emerald-500 shadow-[0_0_12px_rgba(16,185,129,0.4)]';
+    } else {
+      // Confidence: High is Good (Emerald)
+      if (value >= 80) return 'bg-emerald-500 shadow-[0_0_12px_rgba(16,185,129,0.4)]';
+      if (value >= 50) return 'bg-sky-500 shadow-[0_0_12px_rgba(14,165,233,0.4)]';
+      return 'bg-slate-500';
+    }
   };
 
   return (

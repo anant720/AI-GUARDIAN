@@ -44,11 +44,11 @@ def retrieve_knowledge(
 
     results = search(query, n_results=n_results)
 
-    # Filter out low-similarity results (< 0.3 threshold)
-    filtered = [r for r in results if r.get("similarity", 0) >= 0.3]
+    # Filter out low-similarity results (< 0.7 threshold for production precision)
+    filtered = [r for r in results if r.get("similarity", 0) >= 0.7]
 
     logger.info(
         f"RAG retrieved {len(filtered)}/{len(results)} knowledge entries "
-        f"(similarity >= 0.3)"
+        f"(similarity >= 0.7)"
     )
     return filtered

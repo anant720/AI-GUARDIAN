@@ -14,12 +14,24 @@ Modern phishing has evolved beyond static blacklists. Traditional tools like **G
 ## 🚀 The Solution: AI Guardian (The Digital Security Guard)
 AI Guardian doesn't wait for a "Wanted Poster." It acts like a **Deep-Reasoning Security Guard** that interrogates every message and link in real-time.
 
-### 🧠 How It Works: The 4-Layer URL Interrogation
-Unlike industry giants that check "Identity" (Who sent it?), we check **"Intent"** (What is it doing?):
-1.  **Look-Alike Detection**: Catches "twin" domains (e.g., `arnazon.com`) using visual similarity algorithms.
+### 🧠 How It Works: The 10-Layer AI Guardian Defense
+Unlike industry giants that check "Identity" (Who sent it?), we check **"Intent" & "Structure"** through 10 distinct architectural layers:
+
+#### **Stage 1: Infrastructural Scan (The "URL" Layers)**
+1.  **Look-Alike Detection**: Catches "twin" domains (e.g., `pаypal.com`) using visual similarity algorithms.
 2.  **Domain Lifecycle Audit**: Checks the "Birth Certificate" of the link. Scams use fresh (<30 day) domains; we flag them instantly.
 3.  **Recursive Redirect Hunt**: We "follow the rabbit hole" through bit.ly links and jumps to find the true final destination.
-4.  **Semantic Intent Match**: Our "Secret Sauce." We cross-check the *claimed* sender (e.g., "HDFC Bank") with the *actual* URL owner. If they don't match, it's blocked.
+4.  **Global Threat Intelligence**: Real-time cross-check with 10M+ confirmed phishing and malware blacklists.
+
+#### **Stage 2: Intelligence Scan (The "Message" Layers)**
+5.  **Semantic Intent NLP**: Analyzes the "emotional weight" (urgency, fear, reward) in real-time.
+6.  **Universal Authority Match**: The "Secret Sauce." We cross-check the *claimed* sender (e.g., "Meta," "Gov") with the *actual* domain.
+7.  **RAG Forensic Layer**: Instantly compares incoming messages against thousands of historical scam patterns in our ChromaDB vector base.
+
+#### **Stage 3: Deep Reasoning (The "Brain" Layers)**
+8.  **Dynamic JavaScript Scan**: Detects page-layer "cloaking" and JS obfuscation used to hide from security bots.
+9.  **Gated AI Reasoning**: Orchestrates between Llama-3 (Fast) and Google Gemini (Deep) for a non-binary final judgment.
+10. **Adaptive Probability Scorer**: Synthesizes all 50+ signals into a unified Unified Risk Index (0-100) with a "Perfect Evidence" summary.
 
 ---
 

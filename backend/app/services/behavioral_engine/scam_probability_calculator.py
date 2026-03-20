@@ -97,11 +97,28 @@ def calculate_adaptive_score(
 
     conflict = semantic.get("intent_conflict", {})
     if conflict.get("conflict_detected"):
-        modifiers += max(5, int(conflict.get("mismatch_severity", 0) * 12))
+        mismatch_sev = conflict.get("mismatch_severity", 0)
+        reason = conflict.get("conflict_reason", "")
+        
+        # Priority 1: Institutional/Authority Deception (Critical)
+        if mismatch_sev >= 1.0 or "authority" in reason.lower():
+            modifiers += 45  # Immediate DANGEROUS/SUSPICIOUS territory
+        
+        # Priority 2: Universal Structural Deception (Keyword Stuffing like meta-support.net)
+        elif "deceptive domain structure" in reason.lower():
+            modifiers += 35  # Force into SUSPICIOUS (score > 35)
+            
+        else:
+            # Traditional brand mismatch
+            modifiers += max(15, int(mismatch_sev * 30))
 
     obf = domain_behavior.get("js_obfuscation", {})
     if obf.get("obfuscation_detected"):
         modifiers += 8
+
+    # Masking Signal (Professional cover stories)
+    if seq.get("was_masked"):
+        modifiers += 7
 
     cm = domain_behavior.get("content_mismatch", {})
     if cm.get("brand_mismatch"):

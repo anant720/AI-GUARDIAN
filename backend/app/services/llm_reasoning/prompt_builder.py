@@ -35,6 +35,7 @@ RULES:
 INTERPRETATION GUIDANCE:
 - If the message asks for OTP, CVV, debit/credit card details, password, PIN, or "verify KYC/login" under urgency,
   treat it as credential phishing/account takeover even if threat intel looks clean/unknown.
+- **PRIORITIZE URL OVER TONE**: A professional, helpful, or boring tone is a common "Soft Phish" tactic. If the URL impersonates a major brand (e.g., Adobe, Microsoft, HDFC) but is on a different root domain, it is ALMOST ALWAYS phishing, regardless of how safe the text sounds.
 - A "clean" reputation is NOT proof of safety for newly registered or unreachable domains.
 
 EXAMPLE RESPONSE:
