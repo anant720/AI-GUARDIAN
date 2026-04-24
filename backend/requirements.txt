@@ -13,7 +13,8 @@ langdetect==1.0.9
 emoji==2.12.1
 sentence-transformers==2.7.0
 transformers==4.40.0
-torch==2.2.2
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
 numpy==1.26.4
 scikit-learn==1.4.2
 openai==1.30.0
