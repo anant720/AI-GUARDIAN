@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="24dp"
+    app:cardBackgroundColor="#0F172A">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            
+            <ImageView
+                android:id="@+id/app_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/ic_launcher"
+                tools:ignore="ContentDescription" />
+                
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+                <TextView
+                    android:id="@+id/sender_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#F1F5F9"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="SBI Customer Support" />
+                <TextView
+                    android:id="@+id/threat_type_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#94A3B8"
+                    android:textSize="10sp"
+                    android:textAllCaps="true"
+                    tools:text="Credential Phishing" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/risk_score_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:background="#F43F5E"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="98/100" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#1E293B"
+            android:layout_marginVertical="10dp"/>
+
+        <TextView
+            android:id="@+id/risk_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="🚨 SCAM DETECTED"
+            tools:textColor="#F43F5E" />
+
+        <TextView
+            android:id="@+id/explanation_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#94A3B8"
+            android:textSize="13sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginTop="6dp"
+            tools:text="This message uses high urgency and claims to be from SBI, but the link points to hostfree.pw rather than the official domain." />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="14dp">
+
+            <Button
+                android:id="@+id/btn_dismiss"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Dismiss"
+                android:textSize="12sp"
+                android:textAllCaps="false"
+                android:textColor="#94A3B8"
+                android:backgroundTint="#1E293B" />
+                
+            <Space android:layout_width="8dp" android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btn_details"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Full Report"
+                android:textSize="12sp"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#0EA5E9" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/countdown_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:max="100"
+            android:progress="100"
+            android:progressTint="#0EA5E9"
+            android:layout_marginTop="10dp"/>
+            
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
