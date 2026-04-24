@@ -25,6 +25,7 @@ class Settings:
         k for k in [
             os.getenv("GROQ_API_KEY_1"),
             os.getenv("GROQ_API_KEY_2"),
+            os.getenv("GROQ_API_KEY_3"),
         ] if k
     ]
     GROQ_MODEL: str = os.getenv("GROQ_MODEL", "llama-3.1-8b-instant")

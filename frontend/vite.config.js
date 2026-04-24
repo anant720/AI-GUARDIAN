@@ -13,7 +13,7 @@ export default defineConfig({
     host: '0.0.0.0', // Allow access from outside the container
     proxy: {
       '/api': {
-        target: 'http://api:8000', // Use docker service name (communication within docker network)
+        target: 'http://localhost:8000', // Local dev — backend running directly on host
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }
