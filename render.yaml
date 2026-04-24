@@ -9,6 +9,8 @@ services:
     plan: free
     healthCheckPath: /health
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.8
       - key: APP_NAME
         value: AI_GUARDIAN
       - key: APP_ENV
