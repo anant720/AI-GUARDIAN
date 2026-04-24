@@ -48,5 +48,3 @@ services:
 databases:
   - name: ai-guardian-db
     plan: free
-    databaseName: ai_guardian
-    user: postgres
