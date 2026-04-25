@@ -44,39 +44,40 @@ class GroqProvider:
     def is_available(self) -> bool:
         return len(self.keys) > 0
 
-    def generate(self, prompt: str) -> str:
+    async def generate(self, prompt: str) -> str:
         """
-        Try each Groq key in round-robin order.
+        Try each Groq key in round-robin order using async HTTP.
         Raises RuntimeError if all keys fail.
         """
         last_error: Exception = RuntimeError("Groq: no keys configured")
 
-        for attempt, _ in enumerate(self.keys, 1):
-            key = _next_key_for(self, attempt)
-            try:
-                logger.info(f"Groq inference — attempt {attempt}/{len(self.keys)}")
-                response = httpx.post(
-                    _GROQ_API_URL,
-                    headers={
-                        "Authorization": f"Bearer {key}",
-                        "Content-Type": "application/json"
-                    },
-                    json={
-                        "model": self.model,
-                        "messages": [{"role": "user", "content": prompt}],
-                        "temperature": 0.1,
-                        "max_tokens": 512
-                    },
-                    timeout=self.timeout
-                )
-                response.raise_for_status()
-                text = response.json()["choices"][0]["message"]["content"]
-                logger.info(f"Groq responded (attempt {attempt})")
-                return text.strip()
+        async with httpx.AsyncClient() as client:
+            for attempt, _ in enumerate(self.keys, 1):
+                key = _next_key_for(self, attempt)
+                try:
+                    logger.info(f"Groq inference — attempt {attempt}/{len(self.keys)} (Async)")
+                    response = await client.post(
+                        _GROQ_API_URL,
+                        headers={
+                            "Authorization": f"Bearer {key}",
+                            "Content-Type": "application/json"
+                        },
+                        json={
+                            "model": self.model,
+                            "messages": [{"role": "user", "content": prompt}],
+                            "temperature": 0.1,
+                            "max_tokens": 512
+                        },
+                        timeout=self.timeout
+                    )
+                    response.raise_for_status()
+                    text = response.json()["choices"][0]["message"]["content"]
+                    logger.info(f"Groq responded (attempt {attempt})")
+                    return text.strip()
 
-            except Exception as e:
-                last_error = e
-                logger.warning(f"Groq key {attempt} failed: {type(e).__name__}: {e}")
+                except Exception as e:
+                    last_error = e
+                    logger.warning(f"Groq key {attempt} failed: {type(e).__name__}: {e}")
 
         raise RuntimeError(f"All Groq keys failed. Last error: {last_error}")
 
@@ -94,6 +95,6 @@ groq_provider = GroqProvider(
 )
 
 
-def call_groq(prompt: str) -> str:
-    """Public function: run inference on Groq."""
-    return groq_provider.generate(prompt)
+async def call_groq(prompt: str) -> str:
+    """Public function: run asynchronous inference on Groq."""
+    return await groq_provider.generate(prompt)

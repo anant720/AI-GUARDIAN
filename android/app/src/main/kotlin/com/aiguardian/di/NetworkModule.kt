@@ -27,8 +27,8 @@ object NetworkModule {
         }
         
         return OkHttpClient.Builder()
-            .connectTimeout(10, TimeUnit.SECONDS)
-            .readTimeout(30, TimeUnit.SECONDS) // AI scans can take time
+            .connectTimeout(15, TimeUnit.SECONDS)
+            .readTimeout(60, TimeUnit.SECONDS) // AI scans can take time on cold starts
             .addInterceptor(logging)
             .build()
     }

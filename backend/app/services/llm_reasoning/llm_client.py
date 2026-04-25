@@ -16,9 +16,9 @@ from app.services.llm_reasoning.groq_provider import groq_provider, call_groq
 from app.services.llm_reasoning.gemini_provider import gemini_provider, call_gemini
 
 
-def run_llm(prompt: str) -> str:
+async def run_llm(prompt: str) -> str:
     """
-    Run LLM inference with Groq as primary and Gemini as fallback.
+    Run async LLM inference with Groq as primary and Gemini as fallback.
 
     Args:
         prompt: Full formatted prompt string
@@ -32,9 +32,9 @@ def run_llm(prompt: str) -> str:
     # ── Groq (primary) ────────────────────────────────────────────────────────
     if groq_provider.is_available():
         try:
-            logger.info("LLM inference started — provider: Groq")
+            logger.info("LLM async inference started — provider: Groq")
             t_start = time.monotonic()
-            response = call_groq(prompt)
+            response = await call_groq(prompt)
             if not isinstance(response, str):
                 logger.error(f"LLM_CLIENT: Groq returned {type(response)} instead of string!")
             latency = time.monotonic() - t_start
@@ -48,9 +48,9 @@ def run_llm(prompt: str) -> str:
     # ── Gemini (fallback) ─────────────────────────────────────────────────────
     if gemini_provider.is_available():
         try:
-            logger.info("LLM inference fallback — provider: Gemini")
+            logger.info("LLM async inference fallback — provider: Gemini")
             t_start = time.monotonic()
-            response = call_gemini(prompt)
+            response = await call_gemini(prompt)
             latency = time.monotonic() - t_start
             logger.info(f"Gemini inference complete — latency: {latency:.2f}s")
             return response

@@ -39,18 +39,18 @@ class FeedbackRequest(BaseModel):
     notes: Optional[str] = None
 
 
+RECENT_SCANS = []
+
 # ── POST /scan ─────────────────────────────────────────────────────────────────
 @router.post("/scan")
 @limiter.limit("30/minute")
 async def scan(request: Request, body: ScanRequest):
     """
     Main detection endpoint. Runs the full optimized detection pipeline.
-
-    Pipeline:
-      Signal Discovery (Parallel) → Adaptive Behavioral Index → AI Deep-Reasoning Gating → Score → Response
-
-    Performance: < 800ms (no LLM) | < 1.5s (with LLM) | < 200ms (cached)
     """
+    RECENT_SCANS.append({"message": body.message, "url": body.url})
+    if len(RECENT_SCANS) > 15: RECENT_SCANS.pop(0)
+
     try:
         return await run_detection_pipeline(
             url=body.url,
@@ -61,6 +61,12 @@ async def scan(request: Request, body: ScanRequest):
     except Exception as e:
         logger.error(f"Scan pipeline error: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/scan/logs")
+async def get_scan_logs():
+    """Returns the last 15 scans received by the server for debugging."""
+    return RECENT_SCANS
 
 
 # ── POST /feedback ─────────────────────────────────────────────────────────────

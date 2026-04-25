@@ -45,7 +45,7 @@ def _is_any_llm_available() -> bool:
     return groq_provider.is_available() or gemini_provider.is_available()
 
 
-def _run_reasoning_sync(
+async def _run_reasoning_async(
     url_report: Dict[str, Any],
     message_report: Optional[Dict[str, Any]],
     message_text: Optional[str] = None,
@@ -53,8 +53,7 @@ def _run_reasoning_sync(
     rag_context: Optional[str] = None
 ) -> Dict[str, Any]:
     """
-    Synchronous reasoning pipeline.
-    Called from run_reasoning() via asyncio.to_thread so it never blocks the event loop.
+    Asynchronous reasoning pipeline.
     """
     # 1. Build signal context block
     context = build_context(url_report, message_report, message_text=message_text)
@@ -62,8 +61,8 @@ def _run_reasoning_sync(
     # 2. Build enriched prompt (with TI + RAG if available)
     prompt = build_prompt(context, threat_context=threat_report, rag_context=rag_context)
 
-    # 3. LLM Inference: Groq (primary) → Gemini (fallback)
-    raw_response = run_llm(prompt)
+    # 3. LLM Inference: Groq (primary) → Gemini (fallback) - NOW ASYNC
+    raw_response = await run_llm(prompt)
 
     # 4. Parse + validate JSON verdict with guardrails
     verdict = parse_verdict(raw_response)
@@ -83,24 +82,13 @@ async def run_reasoning(
 ) -> Dict[str, Any]:
     """
     Async entry point for the LLM reasoning engine.
-
-    Args:
-        url_report: Output from URL Intelligence Engine
-        message_report: Output from Message Intelligence Engine (optional)
-        threat_report: Output from Threat Intelligence Engine (Intelligence Discovery, optional)
-        rag_context: RAG knowledge context string (Intelligence Discovery, optional)
-
-    Returns:
-        Dict with "llm_verdict" and "explanation" keys.
-        Gracefully falls back if LLMs are unavailable.
     """
     if not _is_any_llm_available():
         logger.warning("No LLM provider configured — skipping reasoning")
         return dict(_FALLBACK_RESULT)
 
     try:
-        verdict = await asyncio.to_thread(
-            _run_reasoning_sync,
+        verdict = await _run_reasoning_async(
             url_report,
             message_report,
             message_text,
@@ -113,16 +101,6 @@ async def run_reasoning(
             "llm_verdict": verdict,
             "explanation": explanation
         }
-
-        logger.info(
-            f"AI Deep-Reasoning complete — "
-            f"threat={verdict.get('threat_type')} "
-            f"prob={verdict.get('scam_probability')} "
-            f"conf={verdict.get('confidence')} "
-            f"llm_used={verdict.get('llm_used')} "
-            f"ti_enriched={threat_report is not None} "
-            f"rag_enriched={rag_context is not None}"
-        )
         return result
 
     except Exception as e:

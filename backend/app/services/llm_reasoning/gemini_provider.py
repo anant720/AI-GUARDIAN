@@ -36,41 +36,42 @@ class GeminiProvider:
     def is_available(self) -> bool:
         return len(self.keys) > 0
 
-    def generate(self, prompt: str) -> str:
+    async def generate(self, prompt: str) -> str:
         """
-        Try each Gemini API key in order.
+        Try each Gemini API key in order using async HTTP.
         Raises RuntimeError if all keys fail.
         """
         last_error: Exception = RuntimeError("Gemini: no keys configured")
 
-        for attempt, key in enumerate(self.keys, 1):
-            try:
-                logger.info(f"Gemini inference — attempt {attempt}/{len(self.keys)}")
-                url = _GEMINI_API_URL.format(model=self.model, key=key)
-                payload = {
-                    "contents": [
-                        {
-                            "parts": [{"text": prompt}]
+        async with httpx.AsyncClient() as client:
+            for attempt, key in enumerate(self.keys, 1):
+                try:
+                    logger.info(f"Gemini inference — attempt {attempt}/{len(self.keys)} (Async)")
+                    url = _GEMINI_API_URL.format(model=self.model, key=key)
+                    payload = {
+                        "contents": [
+                            {
+                                "parts": [{"text": prompt}]
+                            }
+                        ],
+                        "generationConfig": {
+                            "temperature": 0.1,
+                            "maxOutputTokens": 512
                         }
-                    ],
-                    "generationConfig": {
-                        "temperature": 0.1,
-                        "maxOutputTokens": 512
                     }
-                }
-                response = httpx.post(url, json=payload, timeout=self.timeout)
-                response.raise_for_status()
+                    response = await client.post(url, json=payload, timeout=self.timeout)
+                    response.raise_for_status()
 
-                data = response.json()
-                text = (
-                    data["candidates"][0]["content"]["parts"][0]["text"]
-                )
-                logger.info(f"Gemini responded (attempt {attempt})")
-                return text.strip()
+                    data = response.json()
+                    text = (
+                        data["candidates"][0]["content"]["parts"][0]["text"]
+                    )
+                    logger.info(f"Gemini responded (attempt {attempt})")
+                    return text.strip()
 
-            except Exception as e:
-                last_error = e
-                logger.warning(f"Gemini key {attempt} failed: {type(e).__name__}: {e}")
+                except Exception as e:
+                    last_error = e
+                    logger.warning(f"Gemini key {attempt} failed: {type(e).__name__}: {e}")
 
         raise RuntimeError(f"All Gemini keys failed. Last error: {last_error}")
 
@@ -83,6 +84,6 @@ gemini_provider = GeminiProvider(
 )
 
 
-def call_gemini(prompt: str) -> str:
-    """Public function: run inference on Gemini."""
-    return gemini_provider.generate(prompt)
+async def call_gemini(prompt: str) -> str:
+    """Public function: run asynchronous inference on Gemini."""
+    return await gemini_provider.generate(prompt)

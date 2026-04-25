@@ -14,7 +14,8 @@ import javax.inject.Singleton
 @Singleton
 class ScanRepository @Inject constructor(
     private val api: GuardianApiService,
-    private val dao: ScanResultDao
+    private val dao: ScanResultDao,
+    @dagger.hilt.android.qualifiers.ApplicationContext private val context: android.content.Context
 ) {
     /**
      * Scans a message/url by first checking the local cache (valid for 30 min).
@@ -70,6 +71,9 @@ class ScanRepository @Inject constructor(
             }
         } catch (e: Exception) {
             Log.e("GuardianRepository", "Network or parsing error", e)
+            android.os.`Handler`(android.os.Looper.getMainLooper()).post {
+                android.widget.Toast.makeText(context, "🛡️ AI Guardian: Network Error. Please check internet.", android.widget.Toast.LENGTH_LONG).show()
+            }
             return@withContext null // Fail open - don't show false alarms on network errors
         }
     }
