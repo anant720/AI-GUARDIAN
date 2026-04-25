@@ -14,7 +14,7 @@ async def init_phase8():
     start_consumer()
     start_analytics_pipeline()
 
-async def shutdown_event_orchestrator():
+async def shutdown_phase8():
     """Shutdown event orchestration resources gracefully."""
     await stop_analytics_pipeline()
     await stop_consumer()
